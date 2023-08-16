@@ -1,17 +1,22 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import LandingPageTemplate from "../templates/LandingPage/LandingPageTemplate";
+import Navbar from "../components/navbar";
+import { HeroSection } from "../components/hero";
+import slides from "../mockup.json"
 
-const Index: NextPage = () => {
+const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>hmti-nextgen</title>
+        <title>HMTI UNSOED</title>
         <meta name="description" content="Bersama prabu meraih impian sejak 2015" />
       </Head>
-      <LandingPageTemplate />
+      <Navbar/>
+      <section className="m-4">
+      <HeroSection slides={slides}/>
+      </section>
     </>
   );
 };
 
-export default Index;
+export default Home;
