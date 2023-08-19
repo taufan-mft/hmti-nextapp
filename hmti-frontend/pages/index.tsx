@@ -11,8 +11,12 @@ const Home: NextPage = () => {
         <title>HMTI UNSOED</title>
         <meta name="description" content="Bersama prabu meraih impian sejak 2015" />
       </Head>
+      <section className="w-full">
       <Navbar/>
-      <section className="m-4">
+
+      </section>
+            <section className="m-4">
+        
       <HeroSection slides={slides}/>
       </section>
     </>
