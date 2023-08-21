@@ -3,3 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.swiper-pagination > .swiper-pagination-bullet-active {
+    background-color: gray;
+}

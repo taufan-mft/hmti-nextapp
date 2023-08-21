@@ -5,7 +5,7 @@ const Article: NextPage = () => {
   return (
     <>
       <Head>
-        <title>hmti-nextgen</title>
+        <title>HMTI UNSOED - News & Article</title>
         <meta name="description" content="Bersama prabu meraih impian sejak 2015" />
       </Head>
       <div>

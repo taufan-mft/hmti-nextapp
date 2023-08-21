@@ -14,11 +14,8 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   return (
     <>
-      <QueryClientProvider client={queryClient}>
-        <ReactQueryDevtools />
         <Component {...pageProps} />
-      </QueryClientProvider>
-    </>
+          </>
   );
 };
 
