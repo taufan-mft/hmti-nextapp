@@ -18,7 +18,7 @@ export const HeroSection = ({ slides }:any) => {
           Penuh semangat membara sejak 2015 dalam membersamai prabu sepanjang perjalanan mereka dalam meraih impian yang luar biasa
         </p>
         <div className='flex justify-center'>
-          <button className='btn btn-active btn-primary mt-3 font-bold border-0 bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-warning'>
+          <button className='btn border-0 btn-active btn-primary mt-3 font-bold bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-warning'>
           Learn More
           </button>
           <button className='btn btn-square ml-2 mt-3'>

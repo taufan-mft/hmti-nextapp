@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Logo from "../public/hmtilogo.jpg";
-import { BiMapAlt } from 'react-icons/bi';
+import { BiMapAlt, BiSolidChevronRight } from 'react-icons/bi';
+import { TbColorSwatch } from "react-icons/tb";
 
 export default function Navbar() {
   const themeValues = [
@@ -51,7 +52,7 @@ export default function Navbar() {
                 <li><a>Organization</a></li>
               </ul>
             </li>
-            <li><a>Event</a></li>
+            <li><a href="/article">Article</a></li>
             <li>
               <a>Academic</a>
               <ul className="p-2">
@@ -98,7 +99,7 @@ export default function Navbar() {
                 </ul>
             </details>
           </li>
-          <li><a>Event</a></li>
+          <li><a href="/article">Article</a></li>
           <li tabIndex={0} className="z-[2]">
             <details>
               <summary>Academic</summary>
@@ -112,15 +113,29 @@ export default function Navbar() {
       </div>
     
       <div className="navbar-end">
-      <select className="select select-sm primary text-primary sm:flex hidden" data-choose-theme>
-          <option className="text-primary" value="">Themes</option>
-          {themeValues.map((value) => (
-            <option className="text-primary" key={value.toLowerCase()}
-            value={value.toLowerCase()}>{value.charAt(0).toUpperCase() + value.slice(1)}
-            </option>
-          ))}
-        </select>
+        <div className="dropdown dropdown-end">
+          <label tabIndex={0} className="flex items-center p-2 cursor-pointer">
+            <TbColorSwatch className="ml-2" size={25}/>
+          </label>
+            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 h-72 overflow-auto rounded-box overflow-y h-18 w-52">
+              <li className="">
+                {themeValues.map((value) => (
+                  <div className="grid mt-2 cursor-pointer bg-base-100 w-44 rounded-md"  data-theme={value}>
+                    <button className="text-left w-20" data-set-theme={value} data-act-class="ACTIVECLASS">
+                    {value.charAt(0).toUpperCase() + value.slice(1)}
+                    </button>
+                    <div className="flex flex-row bg-opacity-0" data-set-theme={value} data-act-class="ACTIVECLASS" data-theme={value}>
+                    <BiSolidChevronRight className="text-primary" size={30}/>
+                    <BiSolidChevronRight className="text-secondary -ml-5"size={30}/>
+                    <BiSolidChevronRight className="text-accent -ml-5" size={30}/>
+                    <BiSolidChevronRight className="text-neutral -ml-5" size={30}/>
+                    </div>
+                  </div>
+              ))}
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
   )
 }
