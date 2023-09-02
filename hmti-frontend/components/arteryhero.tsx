@@ -1,32 +1,40 @@
 import { EffectFade, Autoplay, Scrollbar, A11y } from 'swiper/modules';
-import { BsPlay } from 'react-icons/bs';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
+import { BiFolder, BiSolidHome } from 'react-icons/bi';
+import { HiOutlineDocumentText } from 'react-icons/hi';
 
-export const HeroSection = ({ slides }:any) => {
+export const HeroArtery = ({ slides }:any) => {
   return (
     <div className='relative'>
-      <div className='absolute z-[2] w-3/5 text-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+      <div className='absolute z-[2] w-4/5 text-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>
         <span className='block lg:text-7xl text-5xl cursor-pointer font-raleway text-white'>
-        HMTI UNSOED
+        ARTERY
         </span>
-        <p className='lg:text-xl text-lg font-beautiful text-white'>
-          Since 2015, we've been supporting prabu on their journey to realize their extraordinary dreams with a burning enthusiasm.
-        </p>
-        <div className='flex justify-center'>
-          <button className='btn border-0 btn-active btn-primary mt-3 font-bold bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-warning'>
-          Learn More
-          </button>
-          <button className='btn btn-square ml-2 mt-3'>
-            <BsPlay className='relative' size={30}/>
-          </button>
+        <div className="flex justify-center lg:text-lg text-sm text-white breadcrumbs">
+          <ul>
+            <li><a href='/'>
+              <BiSolidHome className='mr-2'/>
+              Home
+              </a>
+            </li> 
+            <li><a href='/artery'>
+              <BiFolder className='mr-2'/>
+              Artery
+              </a>
+            </li> 
+            <li>
+              <HiOutlineDocumentText className='mr-2'/>
+              Start Learning
+            </li>
+          </ul>
         </div>
       </div>
-      <Swiper className='rounded-lg container max-w-full h-[85vh]'
+      <Swiper className='rounded-lg container max-w-full sm:h-[56vh] h-[36vh]'
       modules={[EffectFade, Autoplay, Scrollbar, A11y]}
       spaceBetween={0}
       effect={'fade'}

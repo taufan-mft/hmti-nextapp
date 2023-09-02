@@ -8,7 +8,7 @@ import 'swiper/css/autoplay';
 
 export const Photopack = ({ pictures }:any) => {
     return (
-        <div className='mt-16'>
+        <div className='my-32'>
             <div className='block lg:text-4xl text-3xl cursor-pointer font-raleway text-center'>
             HMTI MEMORIES
             <p className='lg:text-xl text-lg font-beautiful'>
@@ -43,7 +43,7 @@ export const Photopack = ({ pictures }:any) => {
                             <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                                 {picture.title}
                             </p>
-                            <button className="rounded-full bg-neutral px-3.5 py-2 text-sm text-white shadow shadow-black/60">See More</button>
+                            <button className="rounded-full bg-neutral px-3.5 py-2 text-sm text-white shadow shadow-black/60">Like</button>
                         </div>
                 </div>
                 </article> 

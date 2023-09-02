@@ -5,10 +5,10 @@ const Article: NextPage = () => {
   return (
     <>
       <Head>
-        <title>HMTI UNSOED - News & Article</title>
+        <title>HMTI Update</title>
         <meta name="description" content="Bersama prabu meraih impian sejak 2015" />
       </Head>
-      <div>
+      <div className="bg-primary">
         Hello World
       </div>
     </>

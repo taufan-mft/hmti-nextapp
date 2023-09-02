@@ -4,10 +4,10 @@ import { MdOutlineAlternateEmail } from "react-icons/md";
 
 export default function Contact () {
     return (
-        <div className=" px-4 my-16 mx-auto max-w-screen-lg">
+        <div className=" px-4 my-36 mx-auto max-w-screen-lg">
             <div className='block lg:text-4xl text-3xl cursor-pointer font-raleway text-center'>
                 HMTI CENTER
-                <p className='mb-4 lg:text-xl text-lg font-beautiful'>
+                <p className='lg:text-xl text-lg font-beautiful'>
                 Want to send any feedback? Let us know.
                 </p>
             </div>
@@ -15,7 +15,7 @@ export default function Contact () {
                 <div className="sm:w-1/2 w-full sm:mx-5 mx-auto p-5">
                     <div className="flex-col">
                         <h3 className="font-bold text-2xl sm:text-base-content text-base-100">Get in touch</h3>
-                        <p className="text-sm mt-4 text-justify">
+                        <p className="text-sm text-justify">
                             Use our contact form for all information requests or contact us directly using the contact information below.
                         </p>
                         <p className="text-sm mt-3">
@@ -23,7 +23,7 @@ export default function Contact () {
                         </p>
                         <hr className="my-4 border-1 border-primary sm:mx-auto lg:my-8" />
                     </div>
-                    <div className="my-4 grid lg:grid-cols-8 grid-cols-6">
+                    <div className="grid lg:grid-cols-8 grid-cols-6">
                         <HiOutlineLocationMarker size={40} className="mt-1"/>
                         <div className="flex-col lg:col-span-7 col-span-5">
                             <h3 className="font-bold text-lg">Our Location</h3>
@@ -42,7 +42,7 @@ export default function Contact () {
                         </div>
                     </div>
                 </div>
-                <form action="#" className="flex flex-col sm:w-1/2 w-full mx-auto">
+                <form action="#" className="flex flex-col sm:w-1/2 w-full sm:mr-4 mx-auto">
                     <div className="flex flex-row">
                         <div className="form-control w-full max-w-xs mt-4">
                             <label className="label">Email</label>

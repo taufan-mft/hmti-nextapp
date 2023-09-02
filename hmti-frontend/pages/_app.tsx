@@ -11,7 +11,6 @@ const App = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     themeChange(false)
   });
-
   return (
     <>
         <Component {...pageProps} />

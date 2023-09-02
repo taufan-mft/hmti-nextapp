@@ -8,7 +8,7 @@ import { BiRightArrowAlt } from 'react-icons/bi';
 
 export const NewsCard = ({ cards }:any) => {
     return (
-        <div>
+        <div className='mb-36'>
             <div className='block lg:text-4xl text-3xl cursor-pointer font-raleway text-center'>
                 HMTI UPDATE
                 <p className='lg:text-xl text-lg font-beautiful'>
@@ -31,7 +31,7 @@ export const NewsCard = ({ cards }:any) => {
                 <SwiperSlide key={card.image}>
                     <article className='m-2 rounded-lg shadow-md transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
                         <div className='w-full h-36 px-4 pt-4 mb-2'>
-                            <div className="relative group bg-black relative rounded-lg h-full w-full cursor-pointer object-cover overflow-hidden">
+                            <div className="relative group hover:bg-black relative rounded-lg h-full w-full cursor-pointer object-cover overflow-hidden">
                                 <img className="h-full w-full object-cover transition-transform duration-500 group-hover:opacity-50 group-hover:scale-125" src={card.urlToImage} alt={card.title} />
                             </div>
                         </div>
@@ -75,7 +75,7 @@ export const NewsCard = ({ cards }:any) => {
                 <SwiperSlide key={card.image}>
                     <article className='m-2 rounded-lg shadow-md transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
                         <div className='w-full h-48 px-4 pt-4 mb-2'>
-                            <div className="group bg-black relative rounded-lg h-full w-full cursor-pointer object-cover overflow-hidden">
+                            <div className="group hover:bg-black relative rounded-lg h-full w-full cursor-pointer object-cover overflow-hidden">
                                     <img className="h-full w-full object-cover transition-transform duration-500 group-hover:opacity-50 group-hover:scale-125" src={card.urlToImage} alt={card.title} />
                             </div>
                         </div>
