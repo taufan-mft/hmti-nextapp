@@ -20,8 +20,7 @@ const Update: NextPage = () => {
           <HeroUpdate slides={slides}/>
         </section>
         <section className="py-20"> 
-
-        </section>
+         </section>
         <section className="">
           <Footer/>
         </section>
@@ -31,3 +30,4 @@ const Update: NextPage = () => {
 };
 
 export default Update;
+
