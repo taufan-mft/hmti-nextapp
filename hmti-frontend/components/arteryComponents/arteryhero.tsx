@@ -17,23 +17,19 @@ export const HeroArtery = ({ slides }:any) => {
         </span>
         <div className="flex justify-center lg:text-lg text-sm text-white breadcrumbs">
           <ul>
-            <li><a href='/'>
-              <BiSolidHome className='mr-2'/>
-              Home
-              </a>
-            </li> 
-            <li><a href='/artery'>
-              <BiFolder className='mr-2'/>
-              Artery
-              </a>
+            <li>
+              <a href='/'><BiSolidHome className='mr-2'/>Home</a>
             </li> 
             <li>
-              <HiOutlineDocumentText className='mr-2'/>
-              Start Learning
+              <a href='/artery'><BiFolder className='mr-2'/>Artery</a>
+            </li> 
+            <li>
+              <HiOutlineDocumentText className='mr-2'/>Start Learning
             </li>
           </ul>
         </div>
       </div>
+      
       <Swiper className='rounded-lg container max-w-full sm:h-[56vh] h-[36vh]'
       modules={[EffectFade, Autoplay, Scrollbar, A11y]}
       spaceBetween={0}

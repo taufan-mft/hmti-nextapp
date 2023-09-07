@@ -15,7 +15,7 @@ export const Photopack = ({ pictures }:any) => {
             Capture the moment and make it unforgettable
             </p>
             </div>
-        <div className='mx-4 mt-8 lg:h-[70vh] h-[40vh] mb-16 lg:flex hidden'>
+        <div className='mx-4 mt-8 lg:h-[70vh] h-[40vh] mb-16 sm:flex hidden'>
         <Swiper
         effect={'coverflow'}
         modules={[Autoplay, Pagination, A11y, EffectCoverflow]}
@@ -52,7 +52,7 @@ export const Photopack = ({ pictures }:any) => {
         </Swiper>
         </div>
 
-        <div className='mx-4 mt-8 lg:h-[70vh] h-[50vh] mb-16 flex lg:hidden'>
+        <div className='mx-4 mt-8 lg:h-[70vh] h-[50vh] mb-16 flex sm:hidden'>
         <Swiper
         effect={'coverflow'}
         modules={[Autoplay, Pagination, A11y, EffectCoverflow]}

@@ -56,7 +56,7 @@ export default function Navbar() {
             <li>
               <a>Corner</a>
               <ul className="p-2">
-                <li><a href="/article">Update</a></li>
+                <li><a href="/update">Update</a></li>
                 <li><a>Memories</a></li>
               </ul>
             </li>
@@ -104,7 +104,7 @@ export default function Navbar() {
             <details>
               <summary>Corner</summary>
                 <ul className="p-2">
-                  <li className="transition-transform duration-300 hover:scale-110 scale-100"><a href="/article">Update</a></li>
+                  <li className="transition-transform duration-300 hover:scale-110 scale-100"><a href="/update">Update</a></li>
                   <li className="transition-transform duration-300 hover:scale-110 scale-100"><a>Memories</a></li>
                 </ul>
             </details>
@@ -119,19 +119,19 @@ export default function Navbar() {
           </label>
             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 h-72 overflow-auto rounded-box overflow-y h-18 w-52">
               <li>
-                {themeValues.map((value) => (
-                  <div className="grid scale-95 mt-1 transition-transform duration-300 hover:scale-100 cursor-pointer bg-base-100 w-44 rounded-md"  data-theme={value}>
-                    <button className="text-left w-20" data-set-theme={value} data-act-class="ACTIVECLASS">
-                    {value.charAt(0).toUpperCase() + value.slice(1)}
+              {themeValues.map((theme) => (
+                  <div key={theme}  className="grid scale-95 mt-1 transition-transform duration-300 hover:scale-100 cursor-pointer bg-base-100 w-44 rounded-md"  data-theme={theme}>
+                    <button className="text-left w-20" data-set-theme={theme} data-act-class="ACTIVECLASS">
+                    {theme.charAt(0).toUpperCase() + theme.slice(1)}
                     </button>
-                    <div className="flex flex-row bg-opacity-0" data-set-theme={value} data-act-class="ACTIVECLASS" data-theme={value}>
+                    <div className="flex flex-row bg-opacity-0" data-set-theme={theme} data-act-class="ACTIVECLASS" data-theme={theme}>
                     <BiSolidChevronRight className="text-primary" size={30}/>
                     <BiSolidChevronRight className="text-secondary -ml-5"size={30}/>
                     <BiSolidChevronRight className="text-accent -ml-5" size={30}/>
                     <BiSolidChevronRight className="text-neutral -ml-5" size={30}/>
                     </div>
                   </div>
-              ))}
+                ))}
               </li>
             </ul>
           </div>

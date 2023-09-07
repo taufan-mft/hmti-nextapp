@@ -1,6 +1,6 @@
 import { BiSolidQuoteLeft, BiSolidQuoteRight } from 'react-icons/bi';
-import Image from 'next/image';
-import hmtilogo from '@/public/hmtilogo-transparent.png'
+import Image from 'next/image';;
+import hmtilogo from '@/public/hmtilogo-transparent.png';
 
 export default function AboutSection () {
   return (
@@ -34,5 +34,5 @@ export default function AboutSection () {
       </div>
     </div>
     </div>
-  )
+  );
 };
