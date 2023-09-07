@@ -19,15 +19,26 @@ import 'swiper/css/navigation';
 import { PiDotsThreeOutline, PiDownloadSimpleBold, PiHeartBold, PiHeartFill, PiShareFatFill } from 'react-icons/pi'
 
 export default function ArterySection () {
-  const SlideContent = ({number, title, subtitle, imageSrc, caption, slugUnsplash, slugDrive}: {
-    number : string;
-    title : string;
-    subtitle : string;
-    imageSrc : StaticImageData;
-    caption : string;
-    slugUnsplash : string;
-    slugDrive : string;
-  }) => (
+    interface SlideProps {
+    number: string;
+    title: string;
+    subtitle: string;
+    imageSrc: StaticImageData;
+    caption: string;
+    slugUnsplash: string;
+    slugDrive: string;
+  }
+  
+  const SlideContent: React.FC<SlideProps> = ({
+    number,
+    title,
+    subtitle,
+    imageSrc,
+    caption,
+    slugDrive,
+    slugUnsplash
+  }: SlideProps) => {
+    return(
     <div>
     <a href={slugDrive}>
           <div className='w-64 rounded-lg shadow-md bg-base-100 transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
@@ -69,43 +80,44 @@ export default function ArterySection () {
           </div> 
           </a>
       </div>
-  )
-
-  const SlideContentSm = ({number, title, subtitle, imageSrc, caption, slugDrive}: {
-    number : string;
-    title : string;
-    subtitle : string;
-    imageSrc : StaticImageData;
-    caption : string;
-    slugUnsplash : string;
-    slugDrive : string;
-  }) => (
-    <div className='mt-4'>
-      <a href={slugDrive}>
-        <div className='justify-center rounded-lg shadow-md bg-base-100 transition-transform duration-500 hover:scale-110 hover:shadow-lg scale-100 cursor-pointer'>
-          <div className='flex flex-row py-4 px-4'>
-            <h2 className='mb-2 text-6xl font-bold tracking-tight hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
-              {number}
-            </h2>
-            <hr className="ml-4 mt-3 border-4 border-primary h-6"/>             
-            <div className='flex flex-col w-4/5 font-bold text-2xl m-1 ml-4 tracking-tight'>
-              <h3 className='hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
-                {title}
-              </h3>
-              <p className='font-semibold text-sm ml-1 opacity-75'>{subtitle}</p>
-            </div>
-          <div className='w-full h-24 pl-8'>
-            <div className="relative shadow-lg group hover:bg-black relative rounded-lg h-full w-full cursor-pointer object-cover overflow-hidden">
-              <Image className="h-full w-full object-cover transition-transform duration-500 group-hover:opacity-50 group-hover:scale-125"
-              src={imageSrc}
-              alt={caption} />
+    );
+  };
+  
+  const SlideContentSm: React.FC<SlideProps> = ({
+    number,
+    title,
+    subtitle,
+    imageSrc,
+    caption,
+    slugDrive,
+  }: SlideProps) => {
+    return (
+      <div className='mt-4'>
+        <a href={slugDrive}>
+          <div className='justify-center rounded-lg shadow-md bg-base-100 transition-transform duration-500 hover:scale-110 hover:shadow-lg scale-100 cursor-pointer'>
+            <div className='flex flex-row py-4 px-4'>
+              <h2 className='mb-2 text-6xl font-bold tracking-tight hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
+                {number}
+              </h2>
+              <hr className="ml-4 mt-3 border-4 border-primary h-6"/>             
+              <div className='flex flex-col w-4/5 font-bold text-2xl m-1 ml-4 tracking-tight'>
+                <h3 className='hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
+                  {title}
+                </h3>
+                <p className='font-semibold text-sm ml-1 opacity-75'>{subtitle}</p>
+              </div>
+              <div className='w-full h-24 pl-8'>
+                <Image className="h-full w-full object-cover transition-transform duration-500 group-hover:opacity-50 group-hover:scale-125"
+                  src={imageSrc}
+                  alt={caption} />
+              </div>
             </div>
           </div>
-          </div>
-        </div> 
         </a>
-    </div>
-  )
+      </div>
+    );
+  };
+  
 
   const slidesData = [
     { number: '01', title: 'Semester 1', subtitle: 'Beginning', imageSrc: artery1, caption:'Pict 1 by Micheile Henderson', slugUnsplash:'https://unsplash.com/@micheile', slugDrive: '/'},
@@ -128,16 +140,16 @@ export default function ArterySection () {
           pagination={{ el: '.swiper-pagination', clickable: true }}
           modules={[Pagination, Navigation]}
         >
-          {slidesData.map((slide, index) => (
-          <SwiperSlide key={index}>
+          {slidesData.map((slide) => (
+          <SwiperSlide key={slide.number}>
             <SlideContent {...slide} />
           </SwiperSlide>
           ))}
         </Swiper>
       </div>
       <div className='lg:hidden mx-4'>
-        {slidesData.map((slide, index) => (
-          <div key={index}>
+        {slidesData.map((slide) => (
+          <div key={slide.number}>
             <SlideContentSm {...slide} />
           </div>
           ))}

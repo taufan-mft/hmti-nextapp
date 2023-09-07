@@ -11,7 +11,7 @@ import Contact from "@/components/contact";
 import pictures from "@/pic.json";
 import  Billboard  from "@/components/billboard";
 import AboutSection from "@/components/about";
-import hmtilogo from "@/public/hmtilogo-transparent.png"
+
 const Home: NextPage = () => {
   return (
     <>

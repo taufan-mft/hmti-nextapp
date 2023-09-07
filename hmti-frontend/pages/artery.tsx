@@ -1,13 +1,13 @@
 import { NextPage } from "next";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import Navbar from "../components/navbar";
+import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { HeroArtery } from "@/components/arteryhero";
-import slides from "../mockup.json";
-import HeadArtery from "@/components/arteryhead";
+import { HeroArtery } from "@/components/arteryComponents/arteryhero";
+import slides from "@/mockup.json";
+import HeadArtery from "@/components/arteryComponents/arteryhead";
 
-const ArterySection = dynamic (() => import('@/components/artery'), {ssr: false})
+const ArterySection = dynamic (() => import('@/components/arteryComponents/arterycontent'), {ssr: false})
 const Artery: NextPage = () => {
   return (
     <>
