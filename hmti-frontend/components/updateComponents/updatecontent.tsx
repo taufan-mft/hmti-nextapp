@@ -2,6 +2,7 @@ import Image, {StaticImageData} from "next/image";
 import placeholder from "@/public/ads.png";
 import logoKabinet from "@/public/logoKabinet.png"
 import { BsInstagram, BsLinkedin, BsYoutube } from "react-icons/bs";
+import Link from "next/link";
 
 export default function ContentUpdate () {
   interface KabinetProps {
@@ -23,14 +24,14 @@ export default function ContentUpdate () {
   }: KabinetProps) => {
     return(
       <div className="flex flex-row gap-10 mx-4">
-      <div className="w-3/4 border">
+      <div className="w-3/4 border"><Link href="#">
         <div className="relative">
           <div className="absolute text-xl w-full text-center z-[2] top-1/2 transform -translate-y-1/2">
               Tempat buat masang iklan stradust
           </div>
           <Image className="h-full" src={ads} alt="Ads Placeholder"/>
         </div>
-      </div>
+      </Link></div>
 
       <div className="w-1/4">
         <div className="flex items-center gap-1 grow">

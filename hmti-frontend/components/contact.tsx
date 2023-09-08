@@ -63,8 +63,9 @@ export default function Contact () {
                     </div> 
                     <div>
                     <button className="btn w-full mt-4 btn-primary border-0 mt-3 font-bold bg-gradient-to-r from-secondary to-primary hover:from-primary hover:to-warning">
-                        Submit</button>
-                        </div>               
+                        Submit
+                    </button>
+                    </div>               
                 </form>
             </div>
         </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/public/hmtilogo.jpg";
 import { BsFillBagFill, BsInstagram, BsLine, BsLinkedin, BsTiktok, BsYoutube } from "react-icons/bs";
@@ -11,16 +12,16 @@ export default function Footer () {
         <div className="absolute p-4 sm:p-6 w-full bg-neutral bg-opacity-25">
         <div className="mx-auto max-w-screen-xl">
             <div className="md:flex md:justify-between">
-            <div className="btn btn-ghost cursor-pointer lg:flex hidden"><a href="/">
-                <Image src={Logo} alt="Logo HMTI" className="h-8 w-8 rounded-md"/></a>
-                <text className="text-xl font-raleway"><a href="/">
+            <div className="btn btn-ghost cursor-pointer lg:flex hidden"><Link href="/">
+                <Image src={Logo} alt="Logo HMTI" className="h-8 w-8 rounded-md"/></Link>
+                <text className="text-xl font-raleway"><Link href="/">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-warning">
                         HMTI
                     </span>
                     <span>
                         UNSOED
                     </span>
-                </a></text>
+                </Link></text>
             </div>
                 <div className="grid grid-cols-2 gap-10 sm:gap-20 sm:mx-4 mx-auto sm:grid-cols-3 z-2">
                     <div>
@@ -29,10 +30,10 @@ export default function Footer () {
                         </h2>
                         <ul>
                             <li className="mb-4">
-                                <a href="#" className="hover:underline">History</a>
+                                <Link href="#" className="hover:underline">History</Link>
                             </li>
                             <li>
-                                <a href="#" className="hover:underline">Organization</a>
+                                <Link href="#" className="hover:underline">Organization</Link>
                             </li>
                         </ul>
                     </div>
@@ -42,10 +43,10 @@ export default function Footer () {
                         </h2>
                         <ul >
                             <li className="mb-4">
-                                <a href="/artery" className="hover:underline ">Artery</a>
+                                <Link href="/artery" className="hover:underline ">Artery</Link>
                             </li>
                             <li>
-                                <a href="#" className="hover:underline">Curiculum</a>
+                                <Link href="#" className="hover:underline">Curiculum</Link>
                             </li>
                         </ul>
                     </div>
@@ -55,10 +56,10 @@ export default function Footer () {
                         </h2>
                         <ul>
                             <li className="mb-4">
-                                <a href="#" className="hover:underline">Hall of Fame</a>
+                                <Link href="#" className="hover:underline">Hall of Fame</Link>
                             </li>
                             <li>
-                                <a href="#" className="hover:underline">Memories</a>
+                                <Link href="#" className="hover:underline">Memories</Link>
                             </li>
                         </ul>
                     </div>
@@ -82,24 +83,24 @@ export default function Footer () {
                 <AiOutlineHeart className="hidden sm:flex text-secondary" size={20}/>
                 </div>
                 <div className="flex mt-4 space-x-6 sm:justify-center justify-center sm:mt-0">
-                    <a href="https://www.instagram.com/hmti.unsoed/">
+                    <Link href="https://www.instagram.com/hmti.unsoed/">
                         <BsInstagram className="hover:text-primary"/>
-                    </a>
-                    <a href="https://www.linkedin.com/company/himpunan-mahasiswa-teknik-industri-unsoed-hmti-unsoed/">
+                    </Link>
+                    <Link href="https://www.linkedin.com/company/himpunan-mahasiswa-teknik-industri-unsoed-hmti-unsoed/">
                         <BsLinkedin className="hover:text-primary"/>
-                    </a>
-                    <a href="https://www.youtube.com/@hmti_unsoed">
+                    </Link>
+                    <Link href="https://www.youtube.com/@hmti_unsoed">
                         <BsYoutube className="hover:text-primary"/>
-                    </a>
-                    <a href="https://www.tiktok.com/@hmti.unsoed">
+                    </Link>
+                    <Link href="https://www.tiktok.com/@hmti.unsoed">
                         <BsTiktok className="hover:text-primary"/>
-                    </a>
-                    <a href="https://line.me/R/ti/p/@ybt3365p">
+                    </Link>
+                    <Link href="https://line.me/R/ti/p/@ybt3365p">
                         <BsLine className="hover:text-primary"/>
-                    </a>
-                    <a href="https://www.instagram.com/hmti.stardust/">
+                    </Link>
+                    <Link href="https://www.instagram.com/hmti.stardust/">
                         <BsFillBagFill className="hover:text-primary"/>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

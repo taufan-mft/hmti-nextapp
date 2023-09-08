@@ -1,6 +1,7 @@
 import { BiSolidQuoteLeft, BiSolidQuoteRight } from 'react-icons/bi';
 import Image from 'next/image';;
 import hmtilogo from '@/public/hmtilogo-transparent.png';
+import Link from 'next/link';
 
 export default function AboutSection () {
   return (
@@ -30,7 +31,7 @@ export default function AboutSection () {
       </div>
       <div className='text-center lg:text-lg mt-6 text-sm mx-4 font-bold'>
         <hr className="order-1 border-secondary mx-15 lg:mx-60" />
-        <a href='https://www.iise.org/' className='hover:text-secondary tracking-wide'>Institute of Industrial & System Engineering</a>
+        <Link href='https://www.iise.org/' className='hover:text-secondary tracking-wide'>Institute of Industrial & System Engineering</Link>
       </div>
     </div>
     </div>

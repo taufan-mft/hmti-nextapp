@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Autoplay, Pagination, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { HiOutlineNewspaper } from 'react-icons/hi';
@@ -43,15 +44,15 @@ export const NewsCard = ({ cards }:any) => {
                                 </div>
                                 <span className='text-sm opacity-50'>14 days ago</span>
                             </div>
-                            <h2 className='mb-2 text-lg font-bold line-clamp-2 hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'><a href='#'>
+                            <h2 className='mb-2 text-lg font-bold line-clamp-2 hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'><Link href='#'>
                                 {card.title}
-                            </a></h2>
+                            </Link></h2>
                             <p className='mb-1 font-normal text-sm line-clamp-4'>{card.description}</p>             
                             <div className='flex mt-3 items-center'>
-                                <a href='#' className='btn border-0 mb-4 text-base-100 btn-xs font-semibold btn-primary transition ease-in-out hover:scale-105 duration-300 inline-flex items-center'>
+                                <Link href='#' className='btn border-0 mb-4 text-base-100 btn-xs font-semibold btn-primary transition ease-in-out hover:scale-105 duration-300 inline-flex items-center'>
                                     Read More
                                     <BiRightArrowAlt size={20}/>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </article> 
@@ -87,15 +88,15 @@ export const NewsCard = ({ cards }:any) => {
                                 </div>
                                 <span className='text-sm opacity-50'>14 days ago</span>
                             </div>
-                            <h2 className='mb-2 text-xl font-bold line-clamp-2 hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'><a href='#'>
+                            <h2 className='mb-2 text-xl font-bold line-clamp-2 hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'><Link href='#'>
                                 {card.title}
-                            </a></h2>
+                            </Link></h2>
                             <p className='mb-1 font-normal text-base line-clamp-4'>{card.description}</p>             
                             <div className='flex mt-3 items-center'>
-                                <a href='#' className='btn border-0 mb-4 text-base-100 btn-sm font-semibold btn-primary transition ease-in-out hover:scale-105 duration-300 inline-flex items-center'>
+                                <Link href='#' className='btn border-0 mb-4 text-base-100 btn-sm font-semibold btn-primary transition ease-in-out hover:scale-105 duration-300 inline-flex items-center'>
                                     Read More
                                     <BiRightArrowAlt size={20}/>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </article> 

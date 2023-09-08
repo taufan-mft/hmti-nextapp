@@ -7,6 +7,7 @@ import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 import { BiFolder, BiSolidHome } from 'react-icons/bi';
 import { HiOutlineDocumentText } from 'react-icons/hi';
+import Link from 'next/link';
 
 export const HeroArtery = ({ slides }:any) => {
   return (
@@ -18,10 +19,10 @@ export const HeroArtery = ({ slides }:any) => {
         <div className="flex justify-center lg:text-lg text-sm text-white breadcrumbs">
           <ul>
             <li>
-              <a href='/'><BiSolidHome className='mr-2'/>Home</a>
+              <Link href='/'><BiSolidHome className='mr-2'/>Home</Link>
             </li> 
             <li>
-              <a href='/artery'><BiFolder className='mr-2'/>Artery</a>
+              <Link href='/artery'><BiFolder className='mr-2'/>Artery</Link>
             </li> 
             <li>
               <HiOutlineDocumentText className='mr-2'/>Start Learning

@@ -17,6 +17,7 @@ import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
 
 import { PiDotsThreeOutline, PiDownloadSimpleBold, PiHeartBold, PiHeartFill, PiShareFatFill } from 'react-icons/pi'
+import Link from 'next/link';
 
 export default function ArterySection () {
     interface SlideProps {
@@ -39,8 +40,8 @@ export default function ArterySection () {
     slugUnsplash
   }: SlideProps) => {
     return(
-    <div>
-    <a href={slugDrive}>
+      <div>
+        <Link href={slugDrive}>
           <div className='w-auto rounded-lg shadow-md bg-base-100 transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
             <div className='flex flex-col pt-6 px-4'>
               <h2 className='mb-2 text-6xl font-bold tracking-tight hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
@@ -78,7 +79,7 @@ export default function ArterySection () {
               <PiDotsThreeOutline size={20}/>
               </div>
           </div> 
-          </a>
+        </Link>
       </div>
     );
   };
@@ -93,7 +94,7 @@ export default function ArterySection () {
   }: SlideProps) => {
     return (
       <div className='mt-4'>
-        <a href={slugDrive}>
+        <Link href={slugDrive}>
           <div className='justify-center rounded-lg shadow-md bg-base-100 transition-transform duration-500 hover:scale-110 hover:shadow-lg scale-100 cursor-pointer'>
             <div className='flex flex-row py-4 px-4'>
               <h2 className='mb-2 text-6xl font-bold tracking-tight hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
@@ -113,7 +114,7 @@ export default function ArterySection () {
               </div>
             </div>
           </div>
-        </a>
+        </Link>
       </div>
     );
   };

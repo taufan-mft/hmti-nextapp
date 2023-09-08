@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Logo from "@/public/hmtilogo.jpg";
 import { BiMapAlt, BiSolidChevronRight } from 'react-icons/bi';
 import { TbColorSwatch } from "react-icons/tb";
@@ -44,34 +45,34 @@ export default function Navbar() {
             <BiMapAlt size={30}/>
           </label>
           <ul tabIndex={0} className="menu menu-sm dropdown-content ml-2 mt-3 z-[20] p-2 shadow bg-base-100 rounded-box w-52 cursor-pointer">
-            <li><a href="/">Home</a></li>
+            <li><Link href="/">Home</Link></li>
             <li>
-              <a>About</a>
+              <Link href="#">About</Link>
               <ul className="p-2">
-                <li><a>History</a></li>
-                <li><a>Organization</a></li>
+                <li><Link href="#">History</Link></li>
+                <li><Link href="#">Organization</Link></li>
               </ul>
             </li>
-            <li><a href="/artery">Artery</a></li>
+            <li><Link href="/artery">Artery</Link></li>
             <li>
-              <a>Corner</a>
+              Corner
               <ul className="p-2">
-                <li><a href="/update">Update</a></li>
-                <li><a>Memories</a></li>
+                <li><Link href="/update">Update</Link></li>
+                <li><Link href="#">Memories</Link></li>
               </ul>
             </li>
           </ul>
         </div>
-        <div className="btn btn-ghost cursor-pointer lg:flex hidden"><a href="/">
-          <Image src={Logo} alt="Logo HMTI" className="h-8 w-8 rounded-md"/></a>
-          <text className="text-xl font-raleway"><a href="/">
+        <div className="btn btn-ghost cursor-pointer lg:flex hidden"><Link href="/">
+          <Image src={Logo} alt="Logo HMTI" className="h-8 w-8 rounded-md"/></Link>
+          <text className="text-xl font-raleway"><Link href="/">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-warning">
             HMTI
             </span>
             <span>
               UNSOED
             </span>
-          </a></text>
+          </Link></text>
         </div>
       </div>
 
@@ -89,23 +90,33 @@ export default function Navbar() {
       
       <div className="navbar-center font-semibold hidden lg:flex">
         <ul className="menu menu-horizontal px-1 cursor-pointer">
-          <li className="transition-transform duration-300 hover:scale-110 scale-100 hover:text-primary"><a href="/">Home</a></li>
+          <li className="transition-transform duration-300 hover:scale-110 scale-100 hover:text-primary"><Link href="/">Home</Link></li>
           <li tabIndex={0} className="z-[2] transition-transform duration-300 hover:scale-110 scale-100 hover:text-primary">
             <details>
               <summary>About</summary>
                 <ul className="p-2">
-                  <li className="transition-transform duration-300 hover:scale-110 scale-100"><a>History</a></li>
-                  <li className="transition-transform duration-300 hover:scale-110 scale-100"><a>Oranization</a></li>
+                  <li className="transition-transform duration-300 hover:scale-110 scale-100">
+                    <Link href="#">History</Link>
+                  </li>
+                  <li className="transition-transform duration-300 hover:scale-110 scale-100">
+                    <Link href="">Oranization</Link>
+                  </li>
                 </ul>
             </details>
           </li>
-          <li className="transition-transform duration-300 hover:scale-110 scale-100 hover:text-primary"><a href="/artery">Artery</a></li>
+          <li className="transition-transform duration-300 hover:scale-110 scale-100 hover:text-primary">
+            <Link href="/artery">Artery</Link>
+          </li>
           <li tabIndex={0} className="z-[2] transition-transform duration-300 hover:scale-110 scale-100 hover:text-primary">
             <details>
               <summary>Corner</summary>
                 <ul className="p-2">
-                  <li className="transition-transform duration-300 hover:scale-110 scale-100"><a href="/update">Update</a></li>
-                  <li className="transition-transform duration-300 hover:scale-110 scale-100"><a>Memories</a></li>
+                  <li className="transition-transform duration-300 hover:scale-110 scale-100">
+                    <Link href="/update">Update</Link>
+                  </li>
+                  <li className="transition-transform duration-300 hover:scale-110 scale-100">
+                    <Link href="#">Memories</Link>
+                  </li>
                 </ul>
             </details>
           </li>
@@ -120,7 +131,7 @@ export default function Navbar() {
             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 h-72 overflow-auto rounded-box overflow-y h-18 w-52">
               <li>
               {themeValues.map((theme) => (
-                  <div key={theme}  className="grid scale-95 mt-1 transition-transform duration-300 hover:scale-100 cursor-pointer bg-base-100 w-44 rounded-md"  data-theme={theme}>
+                  <div key={theme}  className="grid scale-95 mt-1 transition-transform duration-300 hover:scale-100 cursor-pointer bg-base-100 w-44 rounded-md" data-theme={theme}>
                     <button className="text-left w-20" data-set-theme={theme} data-act-class="ACTIVECLASS">
                     {theme.charAt(0).toUpperCase() + theme.slice(1)}
                     </button>

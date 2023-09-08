@@ -45,7 +45,7 @@ export const Photopack = ({ pictures }:any) => {
                             </p>
                             <button className="rounded-full bg-neutral px-3.5 py-2 text-sm text-white shadow shadow-black/60">Like</button>
                         </div>
-                </div>
+                    </div>
                 </article> 
             </SwiperSlide>
         ))}
@@ -82,7 +82,7 @@ export const Photopack = ({ pictures }:any) => {
                             </p>
                             <button className="rounded-full bg-neutral px-3.5 py-2 font-com text-sm capitalize text-white shadow shadow-black/60">See More</button>
                         </div>
-                </div>
+                    </div>
                 </article> 
             </SwiperSlide>
         ))}

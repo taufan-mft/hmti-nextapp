@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
+import Link from 'next/link';
 
 export const HeroSection = ({ slides }:any) => {
   return (
@@ -18,12 +19,12 @@ export const HeroSection = ({ slides }:any) => {
           Since 2015, we've been supporting prabu on their journey to realize their extraordinary dreams with a burning enthusiasm.
         </p>
         <div className='flex justify-center'>
-          <button className='btn border-0 btn-active btn-primary mt-3 font-bold bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-warning'>
+          <Link href="/about"><button className='btn border-0 btn-active btn-primary mt-3 font-bold bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-warning'>
           Learn More
-          </button>
-          <button className='btn btn-square ml-2 mt-3'>
+          </button></Link>
+          <Link href="https://www.youtube.com/@hmti_unsoed"><button className='btn btn-square ml-2 mt-3'>
             <BsPlay className='relative' size={30}/>
-          </button>
+          </button></Link>
         </div>
       </div>
       <Swiper className='rounded-lg container max-w-full h-[85vh]'
