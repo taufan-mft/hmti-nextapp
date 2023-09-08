@@ -55,11 +55,11 @@ export default function Contact () {
                     </div>
                     <div className="form-control w-full">
                             <label className="label">Subject</label>
-                            <input type="text" placeholder="Enter your name" className="input input-bordered w-full"/>
+                            <input type="text" placeholder="Enter your subject" className="input input-bordered w-full"/>
                     </div>
                     <div className="form-control">
                         <label className="label">Message</label>
-                        <textarea className="textarea textarea-bordered h-28" placeholder="Enter your massage"></textarea>
+                        <textarea className="textarea textarea-bordered h-28" placeholder="What's on your mind?"></textarea>
                     </div> 
                     <div>
                     <button className="btn w-full mt-4 btn-primary border-0 mt-3 font-bold bg-gradient-to-r from-secondary to-primary hover:from-primary hover:to-warning">

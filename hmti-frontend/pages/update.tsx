@@ -1,4 +1,5 @@
 import { HeroUpdate } from "@/components/updateComponents/updatehero";
+import ContentUpdate from "@/components/updateComponents/updatecontent";
 import { NextPage } from "next";
 import Head from "next/head";
 import slides from "@/mockup.json";
@@ -20,6 +21,7 @@ const Update: NextPage = () => {
           <HeroUpdate slides={slides}/>
         </section>
         <section className="py-20"> 
+        <ContentUpdate/>
          </section>
         <section className="">
           <Footer/>

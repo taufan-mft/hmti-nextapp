@@ -4,9 +4,7 @@ export function middleware(request: Request) {
 
     const regex = new RegExp('/artery')
 
-    if (regex.test(request.url)) {
-
-    }
+    if (regex.test(request.url))
 
     console.log('Middleware!')
 

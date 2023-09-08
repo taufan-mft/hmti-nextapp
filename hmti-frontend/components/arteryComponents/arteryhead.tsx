@@ -18,7 +18,7 @@ export default function HeadArtery () {
         setcurrentMonth(`${month}`);
     }, [])
     return (
-        <div className='flex justify-between mx-4 lg:text-4xl text-3xl'>
+        <div className='flex justify-between mx-5 lg:text-4xl text-3xl'>
         <div className="font-raleway">
             LIST OF SEMESTERS
         </div>

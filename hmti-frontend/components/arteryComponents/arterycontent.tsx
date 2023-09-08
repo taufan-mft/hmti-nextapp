@@ -41,7 +41,7 @@ export default function ArterySection () {
     return(
     <div>
     <a href={slugDrive}>
-          <div className='w-64 rounded-lg shadow-md bg-base-100 transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
+          <div className='w-auto rounded-lg shadow-md bg-base-100 transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
             <div className='flex flex-col pt-6 px-4'>
               <h2 className='mb-2 text-6xl font-bold tracking-tight hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
                 {number}
@@ -101,10 +101,10 @@ export default function ArterySection () {
               </h2>
               <hr className="ml-4 mt-3 border-4 border-primary h-6"/>             
               <div className='flex flex-col w-4/5 font-bold text-2xl m-1 ml-4 tracking-tight'>
-                <h3 className='hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
+                <h3 className='hover:text-transparent line-clamp-1 hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
                   {title}
                 </h3>
-                <p className='font-semibold text-sm ml-1 opacity-75'>{subtitle}</p>
+                <p className='font-beautiful font-light text-base ml-1 opacity-75'>{subtitle}</p>
               </div>
               <div className='w-full h-24 pl-8'>
                 <Image className="h-full w-full object-cover transition-transform duration-500 group-hover:opacity-50 group-hover:scale-125"
@@ -134,7 +134,7 @@ export default function ArterySection () {
       <div className="w-full hidden lg:flex">
         <Swiper
           grabCursor={true}
-          spaceBetween={0}
+          spaceBetween={10}
           centeredSlides={true}
           slidesPerView={4}
           pagination={{ el: '.swiper-pagination', clickable: true }}

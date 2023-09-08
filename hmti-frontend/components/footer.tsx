@@ -58,7 +58,7 @@ export default function Footer () {
                                 <a href="#" className="hover:underline">Hall of Fame</a>
                             </li>
                             <li>
-                                <a href="#" className="hover:underline">Galery</a>
+                                <a href="#" className="hover:underline">Memories</a>
                             </li>
                         </ul>
                     </div>
@@ -74,12 +74,12 @@ export default function Footer () {
             </div>
             <hr className="my-6 border-1 border-primary sm:mx-auto lg:my-6" />
             <div className="sm:flex sm:items-center sm:justify-between">
-                <div className="flex flex-row justify-center">
+                <div className="flex flex-row sm:items-center justify-center">
                 <span className="flex text-sm sm:text-center">
                     © 2023 HMTI UNSOED&nbsp;
                     <p className="hidden sm:flex">| Designed and Maintained with&nbsp;</p>
                 </span>
-                <AiOutlineHeart className="hidden sm:flex" size={18}/>
+                <AiOutlineHeart className="hidden sm:flex text-secondary" size={20}/>
                 </div>
                 <div className="flex mt-4 space-x-6 sm:justify-center justify-center sm:mt-0">
                     <a href="https://www.instagram.com/hmti.unsoed/">
