@@ -9,7 +9,7 @@ import { BiRightArrowAlt } from 'react-icons/bi';
 
 export const NewsCard = ({ cards }:any) => {
     return (
-        <div className='mb-36'>
+        <div className='mb-36 xl:mx-36'>
             <div className='block lg:text-4xl text-3xl cursor-pointer font-raleway text-center'>
                 HMTI UPDATE
                 <p className='lg:text-xl text-lg font-beautiful'>

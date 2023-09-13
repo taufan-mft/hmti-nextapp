@@ -1,91 +1,162 @@
 import Image, {StaticImageData} from "next/image";
-import placeholder from "@/public/ads.png";
-import logoKabinet from "@/public/logoKabinet.png"
-import { BsInstagram, BsLinkedin, BsYoutube } from "react-icons/bs";
+import placeholder from "@/public/ruangkonten.png";
+import logoKabinet from "@/public/logoKabinet.jpg"
+import { BsInstagram, BsLinkedin, BsPersonFill, BsYoutube } from "react-icons/bs";
 import Link from "next/link";
+import newsData from "@/news.json"
+import { BiRightArrowAlt } from "react-icons/bi";
+import moment from "moment";
 
 export default function ContentUpdate () {
   interface KabinetProps {
     kabinet: string;
     logo: StaticImageData;
     customText: string;
-    ads: StaticImageData;
+  }
+
+  interface NewsProps {
+    author: string;
+    title: string;
+    description: string;
+    url: string;
+    urlToImage: string;
+    publishedAt: string;
+    content: string;
   }
   
   const hmtiNow = [
-    { kabinet: `Andromeda`, logo: logoKabinet, customText: `Since 2015, we've been supporting prabu on their journey to realize their extraordinary dreams with a burning enthusiasm.`, ads: placeholder},
+    { kabinet: `Reparasi`, logo: logoKabinet, customText: `Since 2015, we've been supporting prabu on their journey to realize their extraordinary dreams with a burning enthusiasm.`, ads: placeholder},
     ];
-
+    
   const AboutHeader: React.FC<KabinetProps> = ({
     kabinet,
     logo,
     customText,
-    ads
   }: KabinetProps) => {
+    
     return(
-      <div className="flex flex-row gap-10 mx-4">
-      <div className="w-3/4 border"><Link href="#">
-        <div className="relative">
-          <div className="absolute text-xl w-full text-center z-[2] top-1/2 transform -translate-y-1/2">
-              Tempat buat masang iklan stradust
-          </div>
-          <Image className="h-full" src={ads} alt="Ads Placeholder"/>
-        </div>
-      </Link></div>
-
-      <div className="w-1/4">
+      <div>
         <div className="flex items-center gap-1 grow">
           <div className="line-clamp-1 text-xs font-raleway uppercase">
-            {kabinet}
+            Kabinet {kabinet}
           </div>
           <hr className="border-b-2 -mt-0.5 border-base-content grow"/>
         </div>
         <div className="flex flex-col items-center">
-          <Image className="rounded-full m-4 w-2/3" src={logo} alt="Logo Kabinet Placeholder"/>
-          <div className="text-center text-sm m-4">
+          <Image className="rounded-full m-4 w-52 h-52" src={logo} alt="Logo Kabinet Placeholder"/>
+          <div className="text-center text-sm mx-4 my-2">
           {customText}
           </div>
         </div>
-        <div className="flex items-center gap-1 grow">
-          <div className="line-clamp-1 text-xs font-raleway uppercase">
-            Follow Us
-          </div>
-          <hr className="border-b-2 -mt-0.5 border-base-content grow "/>
-        </div>
-        <div className="flex flex-col mt-4 w-full bg-base-100 rounded-lg">
-          <button className="flex justify-between items-center px-4 py-3">
-            <div className="flex items-center gap-4 uppercase text-xs font-bold">
-              <BsInstagram className="hover:text-primary" size={15}/>
-              INSTAGRAM
-            </div>
-            <div className="text-xs font-bold opacity-50">FOLLOW</div>
-          </button>
-          <button className="flex justify-between items-center px-4 py-3">
-            <div className="flex items-center gap-4 uppercase text-xs font-bold">
-              <BsLinkedin className="hover:text-primary" size={15}/>
-              LINKEDIN
-            </div>
-            <div className="text-xs font-bold opacity-50">CONNECT</div>
-          </button>
-          <button className="flex justify-between items-center px-4 py-3">
-            <div className="flex items-center gap-4 uppercase text-xs font-bold">
-              <BsYoutube className="hover:text-primary" size={15}/>
-              YOUTUBE
-            </div>
-            <div className="text-xs font-bold opacity-50">SUBSCRIBE</div>
-          </button>
-        </div>
-      </div>
       </div>
     )
   }
-  return (
-    <div>
-    {hmtiNow.map((prop) => (
-      <div key={prop.kabinet}>
-        <AboutHeader {...prop} />
+
+  const UpdateContent: React.FC<NewsProps> = ({
+    author,
+    title,
+    description,
+    url,
+    urlToImage,
+    publishedAt,
+  }: NewsProps) => {
+    return (
+      <div className='mt-4 bg-base-100 rounded-lg transition-transform duration-500 scale-95 hover:scale-100' key={url}>
+        <Link href='#'>
+          <div className="flex flex-row">
+            <div className="w-56 h-56 basis-1/3">
+              <img className="h-full w-full rounded-l-lg object-cover" 
+              src={urlToImage} alt={title}
+              />
+            </div>
+            <div className="flex flex-col ml-4 basis-2/3 pt-3 pr-4 tracking-wider">
+              <div className="text-sm opacity-50 flex items-center gap-2">
+              <BsPersonFill/> {author}
+              </div>
+              <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r bg-base-content hover:from-secondary hover:to-primary">
+                {title}
+              </div>
+              <div className="mt-1 line-clamp-3 tracking-wide">
+                {description}
+              </div>
+              <div className="text-sm mt-1 opacity-20">
+                {publishedAt}
+              </div>
+              <div className='flex mt-3 items-center'>
+                <div className='btn border-0 mb-4 text-base-100 btn-sm font-semibold btn-primary transition ease-in-out hover:scale-105 duration-300 inline-flex items-center'>
+                  Read More
+                  <BiRightArrowAlt size={20}/>
+                </div>
+            </div>
+          </div>
+          </div>
+        </Link>
       </div>
-    ))}
-    </div>
-  );
-};
+    );
+  };
+  return (
+    <div className="flex flex-row gap-10 mx-2 xl:mx-36">
+        <div className="w-full">
+          <div className="flex-col">
+            <div className="flex items-center gap-1 mx-5 grow">
+              <div className="line-clamp-1 text-xs font-raleway uppercase">
+              latest news
+              </div>
+              <hr className="border-b-2 -mt-0.5 border-base-content grow "/>
+            </div>
+            {newsData.map((news) => (
+              <div key={news.url}>
+                  <UpdateContent {...news}/>
+              </div>
+            ))}
+            
+          </div>
+        </div>
+
+
+        <div className="hidden lg:flex flex-col w-1/3 mr-3">
+          <div>
+          <div className="flex items-center gap-1 grow">
+          {hmtiNow.map((prop) => (
+            <div key={prop.kabinet}>
+              <AboutHeader {...prop} />
+            </div>
+          ))}
+          </div>
+          <div className="flex items-center gap-1 grow">
+            <div className="line-clamp-1 text-xs font-raleway uppercase">
+              Follow Us
+            </div>
+            <hr className="border-b-2 -mt-0.5 border-base-content grow"/>
+          </div>
+          
+          <div className="flex flex-col mt-4 w-full bg-base-100 rounded-lg">
+            <Link className="flex justify-between items-center px-4 py-3" href="https://www.instagram.com/hmti.unsoed/">
+              <div className="flex items-center gap-3 uppercase text-xs font-bold hover:text-primary">
+                <BsInstagram size={15}/>
+                INSTAGRAM
+              </div>
+              <div className="text-xs font-bold opacity-50 tracking-widest hover:opacity-75">FOLLOW</div>
+            </Link>
+            <hr className="border-1 mx-3"/>
+            <Link className="flex justify-between items-center px-4 py-3" href="https://www.linkedin.com/company/himpunan-mahasiswa-teknik-industri-unsoed-hmti-unsoed/">
+              <div className="flex items-center gap-3 uppercase text-xs font-bold hover:text-secondary">
+                <BsLinkedin size={15}/>
+                LINKEDIN
+              </div>
+              <div className="text-xs font-bold opacity-50 hover:opacity-75">CONNECT</div>
+            </Link>
+            <hr className="border-1 mx-3"/>
+            <Link className="flex justify-between items-center px-4 py-3" href="https://www.youtube.com/@hmti_unsoed">
+              <div className="flex items-center gap-3 uppercase text-xs font-bold hover:text-accent">
+                <BsYoutube size={15}/>
+                YOUTUBE
+              </div>
+              <div className="text-xs font-bold opacity-50 tracking-tighter hover:opacity-75">SUBSCRIBE</div>
+            </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };

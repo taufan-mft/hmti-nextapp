@@ -59,7 +59,11 @@ export default function ArterySection () {
               <div className="relative shadow-lg group hover:bg-black relative rounded-lg h-full w-full cursor-pointer object-cover overflow-hidden">
                 <Image className="h-full w-full object-cover transition-transform duration-500 group-hover:opacity-50 group-hover:scale-125"
                 src={imageSrc}
-                alt={caption}/>
+                alt={caption}
+                quality={50}
+                loading = 'lazy'
+                placeholder = 'blur'
+                />
               </div>
             </div>
             <div className='px-4 pb-4 flex flex-row gap-4'>
@@ -73,8 +77,8 @@ export default function ArterySection () {
                 <PiHeartBold className="swap-off" size={20}/>
               </label>
             </div>
-            <div className="tooltip" data-tip="Source">
-              <a href={slugUnsplash}><PiShareFatFill size={20}/></a>
+            <div className="tooltip" data-tip="Share">
+              <PiShareFatFill size={20}/>
             </div>
               <PiDotsThreeOutline size={20}/>
               </div>
@@ -110,7 +114,10 @@ export default function ArterySection () {
               <div className='w-full h-24 pl-8'>
                 <Image className="h-full w-full object-cover transition-transform duration-500 group-hover:opacity-50 group-hover:scale-125"
                   src={imageSrc}
-                  alt={caption} />
+                  alt={caption}
+                  quality={50}
+                  loading = 'lazy'
+                  placeholder = 'blur'/>
               </div>
             </div>
           </div>

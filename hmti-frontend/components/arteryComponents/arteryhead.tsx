@@ -1,21 +1,15 @@
 
 import React, { useState, useEffect } from "react";
-
-const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-const monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+import moment from "moment";
 
 export default function HeadArtery () {
     const [currentDay, setcurrentDay] = useState("")
     const [currentDate, setcurrentDate] = useState("")
     const [currentMonth, setcurrentMonth] = useState("")
     useEffect(() => {
-        const now = new Date();
-        const dayOfWeek = daysOfWeek[now.getDay()];
-        const dayOfMonth = now.getDate();
-        const month = monthsOfYear[now.getMonth()];
-        setcurrentDay(`${dayOfWeek}`);
-        setcurrentDate(`${dayOfMonth}`);
-        setcurrentMonth(`${month}`);
+        setcurrentDay(moment().format('dddd'));
+        setcurrentDate(moment().format('DD'));
+        setcurrentMonth(moment().format('MMMM'));
     }, [])
     return (
         <div className='flex justify-between mx-5 lg:text-4xl text-3xl'>

@@ -1,8 +1,7 @@
-import { HeroUpdate } from "@/components/updateComponents/updatehero";
+import  HeroUpdate  from "@/components/updateComponents/updatehero";
 import ContentUpdate from "@/components/updateComponents/updatecontent";
 import { NextPage } from "next";
 import Head from "next/head";
-import slides from "@/mockup.json";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
@@ -18,9 +17,9 @@ const Update: NextPage = () => {
           <Navbar/>
         </section>
         <section className="m-4">
-          <HeroUpdate slides={slides}/>
+          <HeroUpdate/>
         </section>
-        <section className="py-20"> 
+        <section className="py-10"> 
         <ContentUpdate/>
          </section>
         <section className="">

@@ -46,7 +46,7 @@ export default function Footer () {
                                 <Link href="/artery" className="hover:underline ">Artery</Link>
                             </li>
                             <li>
-                                <Link href="#" className="hover:underline">Curiculum</Link>
+                                <Link href="#" className="hover:underline">Seminar</Link>
                             </li>
                         </ul>
                     </div>
@@ -56,7 +56,7 @@ export default function Footer () {
                         </h2>
                         <ul>
                             <li className="mb-4">
-                                <Link href="#" className="hover:underline">Hall of Fame</Link>
+                                <Link href="/update" className="hover:underline">Update</Link>
                             </li>
                             <li>
                                 <Link href="#" className="hover:underline">Memories</Link>

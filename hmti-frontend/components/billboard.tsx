@@ -11,7 +11,12 @@ export default function Billboard () {
           #SALAMUNITY
           </span>
         </div>
-          <Image className='object-cover rounded-lg h-full w-full' src={placeholder} alt="Jargon HMTI"/>
+          <Image className='object-cover rounded-lg h-full w-full' 
+            loading = 'lazy'
+            src={placeholder}
+            placeholder = 'blur'
+            alt="Jargon HMTI"
+            onLoadingComplete={(img) => console.log(img.naturalWidth)}/>
       </div>
     </Link></div>
 );

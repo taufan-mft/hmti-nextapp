@@ -2,9 +2,8 @@ import { NextPage } from "next";
 import Head from "next/head";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { HeroSection } from "@/components/hero";
+import  HeroSection  from "@/components/hero";
 import { Photopack } from "@/components/photopack";
-import slides from "@/mockup.json";
 import cards from "@/news.json";
 import { NewsCard } from "@/components/newscard";
 import Contact from "@/components/contact";
@@ -26,7 +25,7 @@ const Home: NextPage = () => {
       </section>
       
       <section className="m-4">  
-        <HeroSection slides={slides}/>
+        <HeroSection/>
       </section>
 
       <section className="m-4">  

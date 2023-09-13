@@ -1,6 +1,11 @@
 import { EffectFade, Autoplay, Scrollbar, A11y } from 'swiper/modules';
 import { BsPlay } from 'react-icons/bs';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Image, {StaticImageData} from "next/image";
+import heroImage1 from '@/public/heroImage1.jpg';
+import heroImage2 from '@/public/heroImage2.jpg'
+import heroImage3 from '@/public/heroImage3.jpg'
+import heroImage4 from '@/public/heroImage4.jpg'
 
 import 'swiper/css';
 import 'swiper/css/scrollbar';
@@ -8,7 +13,39 @@ import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 import Link from 'next/link';
 
-export const HeroSection = ({ slides }:any) => {
+
+export default function HeroSection () {
+    interface HeroProps {
+      id: string;
+      image: StaticImageData;
+      alt: string;
+    }
+  
+    const heroImg = [
+      { id:'1', image: heroImage1, alt: 'heroimage 1 - wisudaan'},
+      { id:'2', image: heroImage2, alt: 'heroimage 2 - industrial visibility'},
+      { id:'3', image: heroImage3, alt: 'heroimage 3 - logo hmti bordir'},
+      { id:'4', image: heroImage4, alt: 'heroimage 4 - diesnat'},
+      ];
+  
+      const ImageData: React.FC<HeroProps> = ({
+        id,
+        image,
+        alt,
+      }: HeroProps) => {
+        return(
+          <div className='bg-black h-full' key={id}>
+            <Image 
+            className='object-cover h-full w-full opacity-50'
+            src={image} 
+            alt={alt}
+            placeholder='blur'
+            
+            />
+          </div>
+          )
+        }
+
   return (
     <div className='relative'>
       <div className='absolute z-[2] w-3/5 text-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>
@@ -28,24 +65,24 @@ export const HeroSection = ({ slides }:any) => {
         </div>
       </div>
       <Swiper className='rounded-lg container max-w-full h-[85vh]'
-      modules={[EffectFade, Autoplay, Scrollbar, A11y]}
-      spaceBetween={0}
-      effect={'fade'}
-      slidesPerView={1}
-      autoplay={{
-        delay: 3500,
-        disableOnInteraction: false,
-      }}
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
-      >
-      {slides.map((slide : any) => (
-        <SwiperSlide key={slide.image}>
-          <img className='object-cover h-full w-full' src={slide.image} alt={slide.title}/>
-        </SwiperSlide>
-        ))}
-      </Swiper>
+          modules={[EffectFade, Autoplay, Scrollbar, A11y]}
+          spaceBetween={0}
+          effect={'fade'}
+          slidesPerView={1}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+          >
+          {heroImg.map((prop) => (
+            <SwiperSlide key={prop.id}>
+              <ImageData {...prop}/>
+            </SwiperSlide>
+          ))}
+          </Swiper>
     </div>
-);
-};
+  )
+}
