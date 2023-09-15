@@ -17,7 +17,7 @@ export default function InsiderHead () {
                         The Insider
                     </h3>
                     <h1 className="font-bold line-clamp-2 lg:text-6xl text-5xl hover:opacity-100 uppercase w-82">
-                        People Behind Website HMTI 
+                        Behind of Website HMTI 
                     </h1>
                 </div>
             </div>

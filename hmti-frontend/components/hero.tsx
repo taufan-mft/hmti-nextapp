@@ -1,17 +1,22 @@
-import { EffectFade, Autoplay, Scrollbar, A11y } from 'swiper/modules';
-import { BsPlay } from 'react-icons/bs';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Link from 'next/link';
 import Image, {StaticImageData} from "next/image";
+import { Reveal } from './utils/reveal';
+
 import heroImage1 from '@/public/heroImage1.jpg';
 import heroImage2 from '@/public/heroImage2.jpg'
 import heroImage3 from '@/public/heroImage3.jpg'
 import heroImage4 from '@/public/heroImage4.jpg'
 
+
+import { EffectFade, Autoplay, Scrollbar, A11y } from 'swiper/modules';
+import { BsPlay } from 'react-icons/bs';
+
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
-import Link from 'next/link';
+
 
 
 export default function HeroSection () {
@@ -19,7 +24,7 @@ export default function HeroSection () {
       id: string;
       image: StaticImageData;
       alt: string;
-    }
+    };
   
     const heroImg = [
       { id:'1', image: heroImage1, alt: 'heroimage 1 - wisudaan'},
@@ -44,45 +49,63 @@ export default function HeroSection () {
             />
           </div>
           )
-        }
-
+        };
   return (
     <div className='relative'>
       <div className='absolute z-[2] w-3/5 text-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-        <span className='block lg:text-7xl text-5xl cursor-pointer font-raleway text-white'>
-        HMTI UNSOED
-        </span>
-        <p className='lg:text-xl text-lg font-beautiful text-white'>
-          Since 2015, we've been supporting prabu on their journey to realize their extraordinary dreams with a burning enthusiasm.
-        </p>
+        
+        {/** Typography section */}
         <div className='flex justify-center'>
-          <Link href="/about"><button className='btn border-0 btn-active btn-primary mt-3 font-bold bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-warning'>
-          Learn More
-          </button></Link>
-          <Link href="https://www.youtube.com/@hmti_unsoed"><button className='btn btn-square ml-2 mt-3'>
-            <BsPlay className='relative' size={30}/>
-          </button></Link>
+          <Reveal>
+            <span className='block lg:text-7xl text-5xl cursor-pointer font-raleway text-white'>
+              HMTI UNSOED
+            </span>
+          </Reveal>
+        </div>
+        <Reveal>
+          <p className='lg:text-xl text-lg font-beautiful text-white'>
+            Since 2015, we've been supporting prabu on their journey to realize their extraordinary dreams with a burning enthusiasm.
+          </p>
+        </Reveal>
+
+        {/** Button Section */}
+        <div  className='flex justify-center mt-4'>
+          <Reveal><div className='flex items-center'>
+            <Link href="/about">
+              <button className='btn border-0 btn-active btn-primary font-bold bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-warning'>
+                Learn More
+              </button>
+            </Link>
+            <Link href="https://www.youtube.com/@hmti_unsoed">
+              <button className='btn btn-square ml-2'>
+                <BsPlay className='relative' size={30}/>
+              </button>
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </div>
+
+      {/** Image Section */}
       <Swiper className='rounded-lg container max-w-full h-[85vh]'
-          modules={[EffectFade, Autoplay, Scrollbar, A11y]}
-          spaceBetween={0}
-          effect={'fade'}
-          slidesPerView={1}
-          autoplay={{
-            delay: 3500,
-            disableOnInteraction: false,
-          }}
-          scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log('slide change')}
-          >
-          {heroImg.map((prop) => (
-            <SwiperSlide key={prop.id}>
-              <ImageData {...prop}/>
-            </SwiperSlide>
-          ))}
-          </Swiper>
+        modules={[EffectFade, Autoplay, Scrollbar, A11y]}
+        spaceBetween={0}
+        effect={'fade'}
+        slidesPerView={1}
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
+        scrollbar={{ draggable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log('slide change')}
+        >
+        {heroImg.map((prop) => (
+          <SwiperSlide key={prop.id}>
+            <ImageData {...prop}/>
+          </SwiperSlide>
+        ))};
+      </Swiper>
     </div>
-  )
-}
+  );
+};
