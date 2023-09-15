@@ -2,9 +2,9 @@ import { NextPage } from "next";
 import Head from "next/head";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import HeroArtery  from "@/components/arteryComponents/arteryhero";
-import HeadArtery from "@/components/arteryComponents/arteryhead";
-import ArterySection from "@/components/arteryComponents/arterycontent";
+import HeroArtery  from "@/components/artery/arteryhero";
+import HeadArtery from "@/components/artery/arteryhead";
+import ArterySection from "@/components/artery/arterycontent";
 
 const Artery: NextPage = () => {
   return (

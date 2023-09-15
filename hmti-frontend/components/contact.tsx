@@ -14,7 +14,7 @@ export default function Contact () {
             <div className="flex justify-center p-2 sm:flex-row flex-col">
                 <div className="sm:w-1/2 w-full sm:mx-5 mx-auto p-5">
                     <div className="flex-col">
-                        <h3 className="font-bold text-2xl sm:text-base-content text-base-100">Get in touch</h3>
+                        <h3 className="font-bold text-2xl sm:text-base-content text-base-100 mb-4 mt-1">Get in touch</h3>
                         <p className="text-sm text-justify">
                             Use our contact form for all information requests or contact us directly using the contact information below.
                         </p>

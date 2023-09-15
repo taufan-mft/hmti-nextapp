@@ -8,7 +8,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 export default function Footer () {
     return (
         <footer className="relative">
-            <Image className="absolute object-cover w-full sm:h-56 h-[60vh] opacity-5" src={topography} alt="Topography"/>
+            <Image className="absolute object-cover w-full sm:h-56 h-96 opacity-5" src={topography} alt="Topography"/>
         <div className="absolute p-4 sm:p-6 w-full bg-neutral bg-opacity-25">
         <div className="mx-auto max-w-screen-xl">
             <div className="md:flex md:justify-between">
@@ -23,7 +23,7 @@ export default function Footer () {
                     </span>
                 </Link></text>
             </div>
-                <div className="grid grid-cols-2 gap-10 sm:gap-20 sm:mx-4 mx-auto sm:grid-cols-3 z-2">
+                <div className="grid grid-cols-2 gap-10 sm:gap-10 sm:mx-4 mx-auto sm:grid-cols-4 z-2">
                     <div>
                         <h2 className="mb-6 text-sm font-bold uppercase">
                             About
@@ -63,13 +63,18 @@ export default function Footer () {
                             </li>
                         </ul>
                     </div>
-                    <div className="sm:hidden">
+                    <div className="">
                         <h2 className="mb-6 text-sm font-bold uppercase">
-                            Sekertariat HMTI UNSOED
+                            Website
                         </h2>
-                        <p className="text-xs">
-                        Fakultas Teknik Unsoed, Jl. Raya Mayjen Sungkono KM 5, Dusun 2, Blater, Kec. Kalimanah, Kabupaten Purbalingga, Jawa Tengah 53371
-                        </p>
+                        <ul>
+                            <li className="mb-4">
+                                <Link href="/insider" className="hover:underline">Insider</Link>
+                            </li>
+                            <li>
+                                <Link href="#" className="hover:underline">Tech Stack</Link>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

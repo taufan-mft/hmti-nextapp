@@ -1,6 +1,6 @@
 import Image from "next/image";
-import placeholder from "../public/ads.png";
 import Link from "next/link";
+import placeholder from "@/public/backdrop.png";
 
 export default function Billboard () {
   return (

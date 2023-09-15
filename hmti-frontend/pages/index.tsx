@@ -37,6 +37,12 @@ const Home: NextPage = () => {
       </section>
 
       <section>
+        <div className='block lg:text-4xl text-3xl cursor-pointer font-raleway text-center'>
+          HMTI UPDATE
+          <p className='lg:text-xl text-lg font-beautiful'>
+          Check out the latest news from us!
+          </p>
+        </div>
         <NewsCard cards={cards}/>
       </section>
       

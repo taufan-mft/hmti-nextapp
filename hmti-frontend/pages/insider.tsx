@@ -1,27 +1,31 @@
-import  HeroUpdate  from "@/components/update/updatehero";
-import UpdateList from "@/components/update/updatelist";
 import { NextPage } from "next";
 import Head from "next/head";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import InsiderHead from "@/components/insider/insiderhead";
+import InsiderContent from "@/components/insider/insidercontent";
+import InsiderStack from "@/components/insider/insiderstack";
 
-const Update: NextPage = () => {
+const Insider: NextPage = () => {
   return (
     <>
       <Head>
-        <title>HMTI Update</title>
+        <title>Behind of Web HMTI</title>
         <meta name="description" content="Bersama prabu meraih impian sejak 2015" />
       </Head>
-       <div className="bg-primary bg-opacity-5">
+       <div>
         <section className="sticky top-0 w-full z-[100]">
           <Navbar/>
         </section>
-        <section className="m-4">
-          <HeroUpdate/>
+        <section>
+          <InsiderHead/>
         </section>
-        <section className="py-10"> 
-        <UpdateList/>
-         </section>
+        <section className="my-16">
+          <InsiderContent/>
+        </section>
+        <section>
+          <InsiderStack/>
+        </section>
         <section className="">
           <Footer/>
         </section>
@@ -30,5 +34,4 @@ const Update: NextPage = () => {
   );
 };
 
-export default Update;
-
+export default Insider;

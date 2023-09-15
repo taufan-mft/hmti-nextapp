@@ -5,9 +5,8 @@ import { BsInstagram, BsLinkedin, BsPersonFill, BsYoutube } from "react-icons/bs
 import Link from "next/link";
 import newsData from "@/news.json"
 import { BiRightArrowAlt } from "react-icons/bi";
-import moment from "moment";
 
-export default function ContentUpdate () {
+export default function UpdateList () {
   interface KabinetProps {
     kabinet: string;
     logo: StaticImageData;
@@ -40,7 +39,7 @@ export default function ContentUpdate () {
           <div className="line-clamp-1 text-xs font-raleway uppercase">
             Kabinet {kabinet}
           </div>
-          <hr className="border-b-2 -mt-0.5 border-base-content grow"/>
+          <hr className="border-b-2 -mt-0.5 border-base-content grow opacity-50"/>
         </div>
         <div className="flex flex-col items-center">
           <Image className="rounded-full m-4 w-52 h-52" src={logo} alt="Logo Kabinet Placeholder"/>
@@ -52,7 +51,7 @@ export default function ContentUpdate () {
     )
   }
 
-  const UpdateContent: React.FC<NewsProps> = ({
+  const UpdateList: React.FC<NewsProps> = ({
     author,
     title,
     description,
@@ -69,21 +68,21 @@ export default function ContentUpdate () {
               src={urlToImage} alt={title}
               />
             </div>
-            <div className="flex flex-col ml-4 basis-2/3 pt-3 pr-4 tracking-wider">
+            <div className="flex flex-col ml-4 basis-2/3 pt-3 pr-10 tracking-normal sm:tracking-wider">
               <div className="text-sm opacity-50 flex items-center gap-2">
-              <BsPersonFill/> {author}
+              <BsPersonFill className="mt-0.5"/> {author}
               </div>
-              <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r bg-base-content hover:from-secondary hover:to-primary">
+              <div className="sm:text-2xl text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r bg-base-content hover:from-secondary hover:to-primary">
                 {title}
               </div>
-              <div className="mt-1 line-clamp-3 tracking-wide">
+              <div className="mt-1 sm:line-clamp-3 line-clamp-2 sm:tracking-wide text-justify">
                 {description}
               </div>
-              <div className="text-sm mt-1 opacity-20">
+              <div className="sm:text-sm text-xs mt-1 opacity-20">
                 {publishedAt}
               </div>
               <div className='flex mt-3 items-center'>
-                <div className='btn border-0 mb-4 text-base-100 btn-sm font-semibold btn-primary transition ease-in-out hover:scale-105 duration-300 inline-flex items-center'>
+                <div className='btn border-0 mb-4 text-base-100 btn-sm font-bold btn-primary transition ease-in-out hover:scale-105 duration-300 inline-flex items-center'>
                   Read More
                   <BiRightArrowAlt size={20}/>
                 </div>
@@ -102,11 +101,11 @@ export default function ContentUpdate () {
               <div className="line-clamp-1 text-xs font-raleway uppercase">
               latest news
               </div>
-              <hr className="border-b-2 -mt-0.5 border-base-content grow "/>
+              <hr className="border-b-2 -mt-0.5 border-base-content grow opacity-50"/>
             </div>
             {newsData.map((news) => (
               <div key={news.url}>
-                  <UpdateContent {...news}/>
+                  <UpdateList {...news}/>
               </div>
             ))}
             
@@ -127,7 +126,7 @@ export default function ContentUpdate () {
             <div className="line-clamp-1 text-xs font-raleway uppercase">
               Follow Us
             </div>
-            <hr className="border-b-2 -mt-0.5 border-base-content grow"/>
+            <hr className="border-b-2 -mt-0.5 border-base-content grow opacity-50"/>
           </div>
           
           <div className="flex flex-col mt-4 w-full bg-base-100 rounded-lg">
@@ -136,7 +135,7 @@ export default function ContentUpdate () {
                 <BsInstagram size={15}/>
                 INSTAGRAM
               </div>
-              <div className="text-xs font-bold opacity-50 tracking-widest hover:opacity-75">FOLLOW</div>
+              <div className="text-xs font-bold opacity-50 tracking-wide hover:opacity-75">FOLLOW</div>
             </Link>
             <hr className="border-1 mx-3"/>
             <Link className="flex justify-between items-center px-4 py-3" href="https://www.linkedin.com/company/himpunan-mahasiswa-teknik-industri-unsoed-hmti-unsoed/">
@@ -152,7 +151,7 @@ export default function ContentUpdate () {
                 <BsYoutube size={15}/>
                 YOUTUBE
               </div>
-              <div className="text-xs font-bold opacity-50 tracking-tighter hover:opacity-75">SUBSCRIBE</div>
+              <div className="text-xs font-bold opacity-50 tracking-wide hover:opacity-75">SUBSCRIBE</div>
             </Link>
             </div>
           </div>
