@@ -55,7 +55,8 @@ export default function HeroSection () {
       <div className='absolute z-[2] w-3/5 text-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>
         
         {/** Typography section */}
-        <div className='flex justify-center'>
+        <div className='flex flex-col items-center'>
+          <div>
           <Reveal>
             <span className='block lg:text-7xl text-5xl cursor-pointer font-raleway text-white'>
               HMTI UNSOED
@@ -67,6 +68,7 @@ export default function HeroSection () {
             Since 2015, we've been supporting prabu on their journey to realize their extraordinary dreams with a burning enthusiasm.
           </p>
         </Reveal>
+        </div>
 
         {/** Button Section */}
         <div  className='flex justify-center mt-4'>
