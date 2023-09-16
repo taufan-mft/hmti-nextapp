@@ -1,20 +1,24 @@
-import { EffectFade, Autoplay, Scrollbar, A11y } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+
 import Image, {StaticImageData} from "next/image";
+import Link from 'next/link';
 import { Reveal } from '../utils/reveal';
+
 import heroImage1 from '@/public/heroImage1.jpg';
 import heroImage2 from '@/public/heroImage2.jpg'
 import heroImage3 from '@/public/heroImage3.jpg'
 import heroImage4 from '@/public/heroImage4.jpg'
+
+import { EffectFade, Autoplay, Scrollbar, A11y } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
+
 import { BiFolder, BiSolidHome } from 'react-icons/bi';
 import { HiOutlineDocumentText } from 'react-icons/hi';
-import Link from 'next/link';
 
-export default function HeroUpdate () {
+export default function HeroAbout () {
   interface HeroProps {
     id: string;
     image: StaticImageData;
@@ -47,25 +51,20 @@ export default function HeroUpdate () {
       <div className='absolute z-[2] w-4/5 flex flex-col items-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>
         <Reveal>
           <span className='block lg:text-7xl text-5xl cursor-pointer font-raleway text-white'>
-            UPDATES
+            TENTANG HMTI
           </span>
         </Reveal>
         <Reveal>
           <div className="flex justify-center lg:text-lg text-sm text-white breadcrumbs">
             <ul>
-              <li>
-                <Link href='/'><BiSolidHome className='mr-2'/>Home</Link>
-              </li> 
-              <li>
-                <Link href='/updates'><BiFolder className='mr-2'/>Updates</Link>
-              </li> 
-              <li>
-                <HiOutlineDocumentText className='mr-2'/>Start Reading
-              </li>
+              <li><Link href='/'><BiSolidHome className='mr-2'/>Home</Link></li> 
+              <li><Link href='/organization'><BiFolder className='mr-2'/>About</Link></li> 
+              <li><HiOutlineDocumentText className='mr-2'/>Know More</li>
             </ul>
           </div>
         </Reveal>
       </div>
+      {/** Image Section */}
       <Swiper className='rounded-lg container max-w-full sm:h-[56vh] h-[36vh]'
       modules={[EffectFade, Autoplay, Scrollbar, A11y]}
       spaceBetween={0}
@@ -74,7 +73,7 @@ export default function HeroUpdate () {
       autoplay={{
         delay: 3500,
         disableOnInteraction: false,
-      }}
+        }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
@@ -83,7 +82,7 @@ export default function HeroUpdate () {
         <SwiperSlide key={prop.id}>
           <ImageData {...prop}/>
         </SwiperSlide>
-      ))}
+        ))}
       </Swiper>
     </div>
   );

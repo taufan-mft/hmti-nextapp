@@ -2,16 +2,24 @@ import { DiNginx } from "react-icons/di";
 import { FaNodeJs, FaUbuntu } from "react-icons/fa";
 import { FiFramer } from "react-icons/fi";
 import { SiDaisyui, SiDjango, SiGunicorn, SiNextdotjs, SiReact, SiSwiper, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { Reveal } from "../utils/reveal";
+
 export default function InsiderStack () {
     return (
         <div>
-            <div className='block lg:text-4xl text-3xl cursor-pointer font-raleway text-center'>
-                HMTI TECH
-            <p className='lg:text-xl text-lg font-beautiful'>
-                This web is proudly built on this technology.
-            </p>
+            <div className='flex flex-col items-center cursor-pointer'>
+                <Reveal>
+                    <h1 className="lg:text-4xl text-3xl font-raleway">
+                        HMTI TECH
+                    </h1>
+                </Reveal>
+                <Reveal>
+                    <p className='lg:text-xl text-lg font-beautiful'>
+                        This web is proudly built on this technology.
+                    </p>
+                </Reveal>
             </div>
-            <div className="lg:grid flex flex-col justify-items-center mx-10 my-10 mb-20">
+            <div className="lg:grid flex flex-col justify-items-center mx-10 sm:my-10 my-0 mb-20">
                 <div className="flex sm:gap-4 lg:gap-5 xl:gap-10 gap-2">
                 <DiNginx size={150} className="hover:text-green-700 cursor-pointer"/>
                 <SiNextdotjs size={150} className="hover:text-slate-950 cursor-pointer"/>

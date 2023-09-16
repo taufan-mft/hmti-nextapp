@@ -49,8 +49,8 @@ export default function Navbar() {
             <li>
               <Link href="#">About</Link>
               <ul className="p-2">
-                <li><Link href="#">History</Link></li>
-                <li><Link href="#">Organization</Link></li>
+                <li><Link href="/organization">Organization</Link></li>
+                <li><Link href="#">Hall of Fame</Link></li>
               </ul>
             </li>
             <li><Link href="/artery">Artery</Link></li>
@@ -96,10 +96,10 @@ export default function Navbar() {
               <summary>About</summary>
                 <ul className="p-2">
                   <li className="transition-transform duration-300 hover:scale-110 scale-100">
-                    <Link href="#">History</Link>
+                    <Link href="/organization">Organization</Link>
                   </li>
                   <li className="transition-transform duration-300 hover:scale-110 scale-100">
-                    <Link href="">Oranization</Link>
+                    <Link href="">Hall of Fame</Link>
                   </li>
                 </ul>
             </details>

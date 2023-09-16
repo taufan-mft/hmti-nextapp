@@ -65,22 +65,22 @@ export default function Contact () {
 
                 {/** Right Side */}
                 <form action="#" className="flex flex-col sm:w-1/2 w-full sm:mr-4 mx-auto">
-                    <div className="flex flex-row">
-                        <div className="form-control w-full max-w-xs mt-4">
-                            <Reveal><label className="label">Email</label></Reveal>
+                    <div className="flex flex-row mt-4">
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">Email</label>
                             <input type="text" placeholder="Enter your email" className="input input-bordered w-full max-w-xs"/>
                         </div>
-                        <div className="form-control w-full ml-2 max-w-xs mt-4">
-                            <Reveal><label className="label">Name</label></Reveal>
+                        <div className="form-control w-full ml-2 max-w-xs">
+                            <label className="label">Name</label>
                             <input type="text" placeholder="Enter your name" className="input input-bordered w-full max-w-xs"/>
                         </div>                    
                     </div>
                     <div className="form-control w-full">
-                        <Reveal><label className="label">Subject</label></Reveal>
+                        <label className="label">Subject</label>
                         <input type="text" placeholder="Enter your subject" className="input input-bordered w-full"/>
                     </div>
                     <div className="form-control">
-                        <Reveal><label className="label">Message</label></Reveal>
+                        <label className="label">Message</label>
                         <textarea className="textarea textarea-bordered h-28" placeholder="What's on your mind?"></textarea>
                     </div> 
                     <div>

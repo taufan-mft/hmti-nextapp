@@ -9,7 +9,8 @@ import { NewsCard } from "@/components/newscard";
 import Contact from "@/components/contact";
 import pictures from "@/pic.json";
 import  Billboard  from "@/components/billboard";
-import AboutSection from "@/components/about";
+import TextSection from "@/components/text";
+import { Reveal } from "@/components/utils/reveal";
 
 const Home: NextPage = () => {
   return (
@@ -29,7 +30,7 @@ const Home: NextPage = () => {
       </section>
 
       <section className="m-4">  
-        <AboutSection/>
+        <TextSection/>
       </section>
 
       <section>
@@ -37,12 +38,18 @@ const Home: NextPage = () => {
       </section>
 
       <section>
-        <div className='block lg:text-4xl text-3xl cursor-pointer font-raleway text-center'>
-          HMTI UPDATE
-          <p className='lg:text-xl text-lg font-beautiful'>
-          Check out the latest news from us!
-          </p>
-        </div>
+      <div className='flex flex-col items-center cursor-pointer mb-4'>
+        <Reveal>
+          <h1 className=' lg:text-4xl text-3xl font-raleway'>
+            HMTI UPDATE
+          </h1>
+        </Reveal>
+        <Reveal>
+          <h2 className='lg:text-xl text-lg font-beautiful'>
+            Check out the latest news from us!
+          </h2>
+        </Reveal>
+      </div>
         <NewsCard cards={cards}/>
       </section>
       

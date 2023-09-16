@@ -5,6 +5,7 @@ import { BsInstagram, BsLinkedin, BsPersonFill, BsYoutube } from "react-icons/bs
 import Link from "next/link";
 import newsData from "@/news.json"
 import { BiRightArrowAlt } from "react-icons/bi";
+import { Reveal } from "../utils/reveal";
 
 export default function UpdateList () {
   interface KabinetProps {
@@ -69,25 +70,35 @@ export default function UpdateList () {
               />
             </div>
             <div className="flex flex-col ml-4 basis-2/3 pt-3 pr-10 tracking-normal sm:tracking-wider">
-              <div className="text-sm opacity-50 flex items-center gap-2">
-              <BsPersonFill className="mt-0.5"/> {author}
-              </div>
-              <div className="sm:text-2xl text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r bg-base-content hover:from-secondary hover:to-primary">
-                {title}
-              </div>
-              <div className="mt-1 sm:line-clamp-3 line-clamp-2 sm:tracking-wide text-justify">
-                {description}
-              </div>
-              <div className="sm:text-sm text-xs mt-1 opacity-20">
-                {publishedAt}
-              </div>
-              <div className='flex mt-3 items-center'>
-                <div className='btn border-0 mb-4 text-base-100 btn-sm font-bold btn-primary transition ease-in-out hover:scale-105 duration-300 inline-flex items-center'>
-                  Read More
-                  <BiRightArrowAlt size={20}/>
+              <Reveal>
+                <div className="text-sm opacity-50 flex items-center gap-2">
+                  <BsPersonFill className="mt-0.5"/> {author}
                 </div>
+              </Reveal>
+              <Reveal>
+                <div className="sm:text-2xl text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r bg-base-content hover:from-secondary hover:to-primary">
+                  {title}
+                </div>
+              </Reveal>
+              <Reveal>
+                <div className="mt-1 sm:line-clamp-3 line-clamp-2 sm:tracking-wide text-justify">
+                  {description}
+                </div>
+              </Reveal>
+              <Reveal>
+                <div className="sm:text-sm text-xs mt-1 opacity-20">
+                  {publishedAt}
+                </div>
+              </Reveal>
+              <div className='flex my-3 items-center'>
+                <Reveal>
+                  <div className='btn border-0 text-base-100 btn-sm font-bold btn-primary transition ease-in-out hover:scale-105 duration-300 inline-flex items-center'>
+                    Read More
+                    <BiRightArrowAlt size={20}/>
+                  </div>
+                </Reveal>
+              </div>
             </div>
-          </div>
           </div>
         </Link>
       </div>

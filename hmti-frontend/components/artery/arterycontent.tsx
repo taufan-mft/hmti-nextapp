@@ -1,7 +1,10 @@
 import { Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
+import { PiDotsThreeOutline, PiDownloadSimpleBold, PiHeartBold, PiHeartFill, PiShareFatFill } from 'react-icons/pi'
+
 import artery1 from '@/public/artery  (1).jpg'
 import artery2 from '@/public/artery  (2).jpg'
 import artery3 from '@/public/artery  (3).jpg'
@@ -15,9 +18,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
+import { Reveal } from '../utils/reveal';
 
-import { PiDotsThreeOutline, PiDownloadSimpleBold, PiHeartBold, PiHeartFill, PiShareFatFill } from 'react-icons/pi'
-import Link from 'next/link';
+
 
 export default function ArterySection () {
     interface SlideProps {
@@ -37,23 +40,28 @@ export default function ArterySection () {
     imageSrc,
     caption,
     slugDrive,
-    slugUnsplash
   }: SlideProps) => {
     return(
       <div>
         <Link href={slugDrive}>
-          <div className='w-auto rounded-lg shadow-md bg-base-100 transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
+          <div className='w-auto rounded-lg pb-3 shadow-md bg-base-100 transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
             <div className='flex flex-col pt-6 px-4'>
-              <h2 className='mb-2 text-6xl font-bold tracking-tight hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
-                {number}
-              </h2>
-              <hr className="ml-0.5 mt-2 border-4 border-primary w-8"/>             
-              <p className='mt-16 font-bold text-2xl ml-1 tracking-tight hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
-                {title}
-              </p>
-              <p className='ml-1 opacity-50 font-beautiful hover:opacity-100'>
-                {subtitle}  
-              </p>
+              <Reveal>
+                <h2 className='mb-2 text-6xl font-bold tracking-tight hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
+                  {number}
+                </h2>
+              </Reveal>
+              <hr className="ml-0.5 mb-16 mt-2 border-4 border-primary w-8"/>             
+              <Reveal>
+                <p className='font-bold text-2xl ml-1 tracking-tight hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
+                  {title}
+                </p>
+              </Reveal>
+              <Reveal>
+                <p className='ml-1 opacity-50 font-beautiful hover:opacity-100'>
+                  {subtitle}  
+                </p>
+              </Reveal>
             </div>
             <div className='w-full h-56 px-4 py-4'>
               <div className="relative shadow-lg group hover:bg-black relative rounded-lg h-full w-full cursor-pointer object-cover overflow-hidden">
@@ -66,22 +74,24 @@ export default function ArterySection () {
                 />
               </div>
             </div>
-            <div className='px-4 pb-4 flex flex-row gap-4'>
-            <div className="tooltip" data-tip="Download">
-              <PiDownloadSimpleBold size={20}/>
-            </div>
-            <div className="tooltip" data-tip="Like">
-              <label className="swap">
-                <input type="checkbox" />
-                <PiHeartFill className="swap-on" size={20}/>
-                <PiHeartBold className="swap-off" size={20}/>
-              </label>
-            </div>
-            <div className="tooltip" data-tip="Share">
-              <PiShareFatFill size={20}/>
-            </div>
-              <PiDotsThreeOutline size={20}/>
+            <Reveal>
+              <div className='px-4 flex flex-row gap-4'>
+                <div className="tooltip" data-tip="Download">
+                  <PiDownloadSimpleBold size={20}/>
+                </div>
+                <div className="tooltip" data-tip="Like">
+                  <label className="swap">
+                    <input type="checkbox" />
+                    <PiHeartFill className="swap-on" size={20}/>
+                    <PiHeartBold className="swap-off" size={20}/>
+                  </label>
+                </div>
+                <div className="tooltip" data-tip="Share">
+                  <PiShareFatFill size={20}/>
+                </div>
+                <PiDotsThreeOutline size={20}/>
               </div>
+            </Reveal>
           </div> 
         </Link>
       </div>
@@ -101,15 +111,25 @@ export default function ArterySection () {
         <Link href={slugDrive}>
           <div className='justify-center rounded-lg shadow-md bg-base-100 transition-transform duration-500 hover:scale-110 hover:shadow-lg scale-100 cursor-pointer'>
             <div className='flex flex-row py-4 px-4'>
-              <h2 className='mb-2 text-6xl font-bold tracking-tight hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
-                {number}
-              </h2>
-              <hr className="ml-4 mt-3 border-4 border-primary h-6"/>             
+              <div className='w-14'>
+                <Reveal>
+                  <h2 className='text-6xl font-bold tracking-tight hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
+                    {number}
+                  </h2>
+                </Reveal>
+              </div>
+              <hr className="ml-4 mt-3 border-4 border-primary h-8"/>             
               <div className='flex flex-col w-4/5 font-bold text-2xl m-1 ml-4 tracking-tight'>
-                <h3 className='hover:text-transparent line-clamp-1 hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
-                  {title}
-                </h3>
-                <p className='font-beautiful font-light text-base ml-1 opacity-75'>{subtitle}</p>
+                <Reveal>
+                  <h3 className='hover:text-transparent line-clamp-1 hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
+                    {title}
+                  </h3>
+                </Reveal>
+                <Reveal>
+                  <p className='font-beautiful font-light text-base ml-1 opacity-75'>
+                    {subtitle}
+                  </p>
+                </Reveal>
               </div>
               <div className='w-full h-24 pl-8'>
                 <Image className="h-full w-full object-cover transition-transform duration-500 group-hover:opacity-50 group-hover:scale-125"

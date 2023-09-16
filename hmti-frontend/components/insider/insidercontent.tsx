@@ -1,8 +1,9 @@
 import Image from "next/image";
-import placeholder from "@/public/spiderman-unchsoed.jpg";
+import developer1 from "@/public/iron-man.jpg";
+import developer2 from "@/public/spiderman-unchsoed.jpg";
 import Link from "next/link";
 import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
-
+import { Reveal } from "../utils/reveal";
 export default function InsiderContent () {
   return (
     <div className="flex flex-col">
@@ -14,7 +15,7 @@ export default function InsiderContent () {
                         <div className="lg:h-full lg:w-full h-4/5 w-4/5 rounded-lg ml-10 lg:ml-0 group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
                         <Image className='h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-110' 
                         loading = 'lazy'
-                        src={placeholder}
+                        src={developer1}
                         placeholder = 'blur'
                         alt="Developer1"
                         />
@@ -58,7 +59,7 @@ export default function InsiderContent () {
                         <div className="lg:h-full lg:w-full h-4/5 w-4/5  rounded-lg group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
                         <Image className='h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-110' 
                         loading = 'lazy'
-                        src={placeholder}
+                        src={developer2}
                         placeholder = 'blur'
                         alt="Developer2"
                         />
@@ -82,29 +83,33 @@ export default function InsiderContent () {
                 </div>
             </div>
             <div className="w-3/5 bg-primary bg-opacity-25 rounded-l-lg h-[92vh] lg:h-auto lg:flex flex-col hidden">
-            <div className="ml-10 p-24 pb-32 xl:pr-56">
-                    <h1 className="font-black text-4xl tracking-wide hover:text-secondary-focus">
-                        Love Letter
-                    </h1>
-                    <h1 className="font-beautiful ml-20 -mt-4 text-base-100 text-2xl">
-                        From Developer
-                    </h1>
-                    <div className="mt-5 text-justify tracking-wide">
-                        <p>
+                <div className="ml-10 p-24 pb-32 xl:pr-56">
+                    <Reveal>
+                        <div>
+                            <h1 className="font-black text-4xl tracking-wide hover:text-secondary-focus">
+                                Love Letter
+                            </h1>
+                            <h1 className="font-beautiful ml-20 -mt-4 text-base-100 text-2xl">
+                                From Developer
+                            </h1>
+                        </div>
+                    </Reveal>
+                    <div className="flex flex-col mt-5 gap-2 text-justify tracking-wide">
+                        <Reveal><p>
                         HMTI UNSOED it's not just website, we believe in creating websites <b className="hover:text-primary-focus">with heart</b>. 
                         We don't just write code; we design digital experiences that we genuinely enjoy.
-                        </p>
-                        <p className="mt-3">
+                        </p></Reveal>
+                        <Reveal><p>
                         We have loved every detail of this website since the beginning. 
                         We want HMTI website to <b className="hover:text-primary-focus">not only function flawlessly</b>, but also to look great 
                         and be simple to use. We understand that HMTI website is frequently the first thing people see,
                         so we want it to <b className="hover:text-primary-focus">make a good first impression</b>.
-                        </p>
-                        <p className="mt-3">
+                        </p></Reveal>
+                        <Reveal><p>
                         Our affection does not end when we launch this website. We're committed to keeping it current and relevant. 
                         We keep up with the latest trends and technology to ensure that HMTI website is always at its best. 
                         We're here to make sure HMTI website stands out online, <b className="hover:text-primary-focus">and we do it with passion</b>.
-                        </p>
+                        </p></Reveal>
                     </div>
                 </div>
             </div>

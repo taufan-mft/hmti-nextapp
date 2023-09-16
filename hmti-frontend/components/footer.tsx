@@ -39,10 +39,10 @@ export default function Footer () {
                             </h2>
                             <ul>
                                 <li className="mb-4">
-                                    <Link href="#" className="hover:underline">History</Link>
+                                    <Link href="#" className="hover:underline">Organization</Link>
                                 </li>
                                 <li>
-                                    <Link href="#" className="hover:underline">Organization</Link>
+                                    <Link href="#" className="hover:underline">Hall of Fame</Link>
                                 </li>
                             </ul>
                         </div>
