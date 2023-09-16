@@ -29,7 +29,6 @@ export default function ArterySection () {
     subtitle: string;
     imageSrc: StaticImageData;
     caption: string;
-    slugUnsplash: string;
     slugDrive: string;
   }
   
@@ -148,14 +147,14 @@ export default function ArterySection () {
   
 
   const slidesData = [
-    { number: '01', title: 'Semester 1', subtitle: 'Beginning', imageSrc: artery1, caption:'Pict 1 by Micheile Henderson', slugUnsplash:'https://unsplash.com/@micheile', slugDrive: '/'},
-    { number: '02', title: 'Semester 2', subtitle: 'Adaptation', imageSrc: artery2, caption:'Pict 2 by Jason Rost', slugUnsplash:'https://unsplash.com/@inertkrypton', slugDrive: '/'},
-    { number: '03', title: 'Semester 3', subtitle: 'Discovery', imageSrc: artery3, caption:'Pict 3 by Aron Yigin', slugUnsplash:'https://unsplash.com/@aronyigin', slugDrive: '/'},
-    { number: '04', title: 'Semester 4', subtitle: 'Progression', imageSrc: artery4, caption:'Pict 4 by Simone Hutsch', slugUnsplash:'https://unsplash.com/@heysupersimi', slugDrive: '/'},
-    { number: '05', title: 'Semester 5', subtitle: 'Focus', imageSrc: artery5, caption:'Pict 5 by Simone Hutsch', slugUnsplash:'https://unsplash.com/@heysupersimi', slugDrive: '/'},
-    { number: '06', title: 'Semester 6', subtitle: 'Intensity', imageSrc: artery6, caption:'Pict 6 by Kyrillos Samaan', slugUnsplash:'https://unsplash.com/@kyrillossamaan', slugDrive: '/'},
-    { number: '07', title: 'Semester 7', subtitle: 'Reflection', imageSrc: artery7, caption:'Pict 7 by Simone Hutsch', slugUnsplash:'https://unsplash.com/@heysupersimi', slugDrive: '/'},
-    { number: '08', title: 'Report Example', subtitle: 'Culmination', imageSrc: artery8, caption:'Pict 8 by Pierre Châtel-Innocenti', slugUnsplash:'https://unsplash.com/@chatelp', slugDrive: '/'},
+    { number: '01', title: 'Semester 1', subtitle: 'Beginning', imageSrc: artery1, caption:'Pict 1 by Micheile Henderson', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVcjVreVkwYzFFVTg?resourcekey=0-iH93aE2njdiRMMpAlWgIpg'},
+    { number: '02', title: 'Semester 2', subtitle: 'Adaptation', imageSrc: artery2, caption:'Pict 2 by Jason Rost', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVbVRPZlVpS2Z5SHc?resourcekey=0-48tSwtH9R0neOZJV-FH3BQ'},
+    { number: '03', title: 'Semester 3', subtitle: 'Discovery', imageSrc: artery3, caption:'Pict 3 by Aron Yigin', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVd09ycFVRR3ZIQW8?resourcekey=0-_k4LZ3BdDNMIkcotf-PSPw'},
+    { number: '04', title: 'Semester 4', subtitle: 'Progression', imageSrc: artery4, caption:'Pict 4 by Simone Hutsch', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVUkhBTHFJbDFfX0E?resourcekey=0-dNY88QE0junu81m0NjOR8Q'},
+    { number: '05', title: 'Semester 5', subtitle: 'Focus', imageSrc: artery5, caption:'Pict 5 by Simone Hutsch', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVWnNiREZsNDBSTE0?resourcekey=0-fuduwOdTSpsX74QwdJdOEw'},
+    { number: '06', title: 'Semester 6', subtitle: 'Intensity', imageSrc: artery6, caption:'Pict 6 by Kyrillos Samaan', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVdkpzeDhYYWZVSm8?resourcekey=0-zozPl7Oy9uFbjpOefjblgA'},
+    { number: '07', title: 'Semester 7', subtitle: 'Reflection', imageSrc: artery7, caption:'Pict 7 by Simone Hutsch', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVMDU4MDF4Mmk0b0U?resourcekey=0--7Hpsunmn8-iCruhewzv1w'},
+    { number: '08', title: 'Report Example', subtitle: 'Culmination', imageSrc: artery8, caption:'Pict 8 by Pierre Châtel-Innocenti', slugDrive: 'https://drive.google.com/drive/u/0/folders/13gJXRu86YngD6bSGdGnt4qmun2H9Lg_a'},
   ];
     return (
     <div className='pb-10'>
