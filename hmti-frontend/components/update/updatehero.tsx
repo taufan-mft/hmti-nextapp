@@ -37,7 +37,8 @@ export default function HeroUpdate () {
           className='object-cover h-full w-full opacity-50'
           src={image} 
           alt={alt}
-          placeholder='blur'    
+          placeholder='blur'
+          loading = 'lazy'    
           />
         </div>
       )};
@@ -54,10 +55,10 @@ export default function HeroUpdate () {
           <div className="flex justify-center lg:text-lg text-sm text-white breadcrumbs">
             <ul>
               <li>
-                <Link href='/'><BiSolidHome className='mr-2'/>Home</Link>
+                <Link rel="preload" href='/'><BiSolidHome className='mr-2'/>Home</Link>
               </li> 
               <li>
-                <Link href='/updates'><BiFolder className='mr-2'/>Updates</Link>
+                <Link rel="preload" href='/updates'><BiFolder className='mr-2'/>Updates</Link>
               </li> 
               <li>
                 <HiOutlineDocumentText className='mr-2'/>Start Reading

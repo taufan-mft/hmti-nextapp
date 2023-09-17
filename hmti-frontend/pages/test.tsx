@@ -12,6 +12,7 @@ const Test: NextPage = () => {
       <Head>
         <title>HMTI Update - Judul Berita</title>
         <meta name="description" content="Bersama prabu meraih impian sejak 2015" />
+        <link rel="shortcut icon" href="/favicon.ico"/>
       </Head>
        <div>
         <section className="sticky top-0 w-full z-[100]">

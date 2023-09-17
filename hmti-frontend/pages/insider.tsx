@@ -11,7 +11,8 @@ const Insider: NextPage = () => {
     <>
       <Head>
         <title>Behind of Web HMTI</title>
-        <meta name="description" content="Bersama prabu meraih impian sejak 2015" />
+        <meta name="description" content="Temukan siapa yang ada di balik pengembangan website HMTI dan teknologi yang digunakan, seperti Nginx, Next.js, Django, Ubuntu, Gunicorn, Node.js, TypeScript, React, Tailwind CSS, DaisyUI, Swiper, dan Framer."/>
+        <link rel="shortcut icon" href="/favicon.ico"/>
       </Head>
        <div>
         <section className="sticky top-0 w-full z-[100]">

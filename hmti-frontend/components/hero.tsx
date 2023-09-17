@@ -45,14 +45,14 @@ export default function HeroSection () {
             src={image} 
             alt={alt}
             placeholder='blur'
-            
+            loading = 'lazy'
             />
           </div>
           )
         };
   return (
     <div className='relative'>
-      <div className='absolute z-[2] w-3/5 text-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+      <div className='absolute z-10 w-4/5 text-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>
         
         {/** Typography section */}
         <div className='flex flex-col items-center'>
@@ -72,14 +72,14 @@ export default function HeroSection () {
 
         {/** Button Section */}
         <div  className='flex justify-center mt-4'>
-          <Reveal><div className='flex items-center'>
-            <Link href="/about">
+          <Reveal><div className='flex items-center gap-2'>
+            <Link rel="preload" href="/organization">
               <button className='btn border-0 btn-active btn-primary font-bold bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-warning'>
                 Learn More
               </button>
             </Link>
-            <Link href="https://www.youtube.com/@hmti_unsoed">
-              <button className='btn btn-square ml-2'>
+            <Link rel="preload" href="https://www.youtube.com/@hmti_unsoed">
+              <button className='btn btn-square'>
                 <BsPlay className='relative' size={30}/>
               </button>
               </Link>
@@ -89,7 +89,7 @@ export default function HeroSection () {
       </div>
 
       {/** Image Section */}
-      <Swiper className='rounded-lg container max-w-full h-[85vh]'
+      <Swiper className='rounded-lg container max-w-full sm:h-[85vh] h-[80vh]'
         modules={[EffectFade, Autoplay, Scrollbar, A11y]}
         spaceBetween={0}
         effect={'fade'}

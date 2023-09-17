@@ -45,27 +45,27 @@ export default function Navbar() {
             <BiMapAlt size={30}/>
           </label>
           <ul tabIndex={0} className="menu menu-sm dropdown-content ml-2 mt-3 z-[20] p-2 shadow bg-base-100 rounded-box w-52 cursor-pointer">
-            <li><Link href="/">Home</Link></li>
+            <li><Link rel="preload" href="/">Home</Link></li>
             <li>
-              <Link href="#">About</Link>
+              <Link rel="preload" href="#">About</Link>
               <ul className="p-2">
-                <li><Link href="/organization">Organization</Link></li>
-                <li><Link href="#">Hall of Fame</Link></li>
+                <li><Link rel="preload" href="/organization">Organization</Link></li>
+                <li><Link rel="preload" href="#">Hall of Fame</Link></li>
               </ul>
             </li>
             <li><Link href="/artery">Artery</Link></li>
             <li>
               Corner
               <ul className="p-2">
-                <li><Link href="/update">Update</Link></li>
-                <li><Link href="#">Memories</Link></li>
+                <li><Link rel="preload" href="/update">Update</Link></li>
+                <li><Link rel="preload" href="#">Memories</Link></li>
               </ul>
             </li>
           </ul>
         </div>
-        <div className="btn btn-ghost cursor-pointer lg:flex hidden"><Link href="/">
+        <div className="btn btn-ghost cursor-pointer lg:flex hidden"><Link rel="preload" href="/">
           <Image src={Logo} alt="Logo HMTI" className="h-8 w-8 rounded-md"/></Link>
-          <text className="text-xl font-raleway"><Link href="/">
+          <text className="text-xl font-raleway"><Link rel="preload" href="/">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-warning">
             HMTI
             </span>
@@ -96,26 +96,26 @@ export default function Navbar() {
               <summary>About</summary>
                 <ul className="p-2">
                   <li className="transition-transform duration-300 hover:scale-110 scale-100">
-                    <Link href="/organization">Organization</Link>
+                    <Link rel="preload" href="/organization">Organization</Link>
                   </li>
                   <li className="transition-transform duration-300 hover:scale-110 scale-100">
-                    <Link href="">Hall of Fame</Link>
+                    <Link rel="preload" href="">Hall of Fame</Link>
                   </li>
                 </ul>
             </details>
           </li>
           <li className="transition-transform duration-300 hover:scale-110 scale-100 hover:text-primary">
-            <Link href="/artery">Artery</Link>
+            <Link rel="preload" href="/artery">Artery</Link>
           </li>
           <li tabIndex={0} className="z-[2] transition-transform duration-300 hover:scale-110 scale-100 hover:text-primary">
             <details>
               <summary>Corner</summary>
                 <ul className="p-2">
                   <li className="transition-transform duration-300 hover:scale-110 scale-100">
-                    <Link href="/update">Update</Link>
+                    <Link rel="preload" href="/update">Update</Link>
                   </li>
                   <li className="transition-transform duration-300 hover:scale-110 scale-100">
-                    <Link href="#">Memories</Link>
+                    <Link rel="preload" href="#">Memories</Link>
                   </li>
                 </ul>
             </details>
@@ -145,7 +145,6 @@ export default function Navbar() {
                 ))}
               </li>
             </ul>
-            
           </div>
         </div>
       </div>

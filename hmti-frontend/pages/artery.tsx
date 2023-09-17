@@ -11,12 +11,13 @@ const Artery: NextPage = () => {
     <>
       <Head>
         <title>Artery of HMTI</title>
+        <link rel="shortcut icon" href="/favicon.ico"/>
       </Head>
       <div className="bg-primary bg-opacity-5">
         <section className="sticky top-0 w-full z-[100]">
           <Navbar/>
         </section>
-        <section className="m-4">
+        <section className="sm:m-4 m-2">
           <HeroArtery/>
         </section>
         <section className="py-20">

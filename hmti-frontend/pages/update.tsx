@@ -10,7 +10,8 @@ const Update: NextPage = () => {
     <>
       <Head>
         <title>HMTI Update</title>
-        <meta name="description" content="Bersama prabu meraih impian sejak 2015" />
+        <meta name="description" content="Dapatkan informasi terbaru yang berguna bagi mahasiswa Teknik Industri di halaman HMTI Update. Temukan berita terkini, acara-acara Himpunan, dan berbagai informasi penting yang relevan untuk perkembangan Anda sebagai mahasiswa Teknik Industri."/>
+        <link rel="shortcut icon" href="/favicon.ico"/>
       </Head>
        <div className="bg-primary bg-opacity-5">
         <section className="sticky top-0 w-full z-[100]">

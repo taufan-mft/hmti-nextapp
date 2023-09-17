@@ -9,10 +9,10 @@ export default function InsiderContent () {
     <div className="flex flex-col">
         <div className="flex flex-row h-full my-10">
             <div className="flex lg:justify-end justify-center items-center lg:w-2/5 w-full z-10">
-                <div className="lg:-mt-20 mb-20 lg:mb-0 lg:-mr-20">
+                <div className="lg:-mt-20 lg:mb-10 lg:-mr-20 mb-20">
                 <div className="grid grid-cols-2">
-                    <div className='h-72 w-56'>
-                        <div className="lg:h-full lg:w-full h-4/5 w-4/5 rounded-lg ml-10 lg:ml-0 group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+                    <div className='sm:h-72 sm:w-56 h-56 w-44'>
+                        <div className="h-full w-full rounded-lg lg:ml-0 group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
                         <Image className='h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-110' 
                         loading = 'lazy'
                         src={developer1}
@@ -22,21 +22,21 @@ export default function InsiderContent () {
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60 group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
                             <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
                                 <div className="mb-3 text-lg text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                                <Link href="https://instagram.com/taufan_mft">
+                                <Link rel="preload" href="https://instagram.com/taufan_mft">
                                     <BsInstagram className="m-7 hover:text-primary" size={30}/>
                                 </Link>
-                                <Link href="https://www.linkedin.com/in/taufanmft/">
+                                <Link rel="preload" href="https://www.linkedin.com/in/taufanmft/">
                                     <BsLinkedin className="m-7 hover:text-primary" size={30}/>
                                 </Link>
-                                    <Link href="https://github.com/taufan-mft">
+                                    <Link rel="preload" href="https://github.com/taufan-mft">
                                 <BsGithub className="m-7 hover:text-primary" size={30}/>
                                 </Link>
                                 </div>
                             </div>
                         </div>
-                        <div className="my-10 text-right ml-16 -mr-10">
+                        <div className="my-10 text-right ml-5 sm:-mr-0 -mr-8">
                         <div className="flex flex-row items-start gap-2">
-                            <div>
+                            <div className="z-10">
                                 <h1 className="font-bold tracking-wide opacity-95">Wellyaz Syd</h1>
                                 <h2 className="tracking-widest opacity-50 text-sm">Frontend Developer</h2>
                             </div>
@@ -46,8 +46,8 @@ export default function InsiderContent () {
                     </div> 
                 </div>
                 <div>
-                    <div className='h-72 w-56 -mt-72 ml-60'>
-                    <div className="my-10 -ml-10 mr-16">
+                    <div className='sm:h-72 sm:w-56 h-56 w-44 sm:-mt-72 -mt-60 lg:ml-60 ml-48'>
+                    <div className="my-10 lg:-ml-10 lg:mr-12 sm:-ml-0 -ml-8 mr-5 text-left">
                     <div className="flex flex-row items-start gap-2">
                         <hr className="border-b-2 mt-3 border-primary grow opacity-50 z-[10]"/>
                             <div>
@@ -56,7 +56,7 @@ export default function InsiderContent () {
                             </div>
                         </div>
                     </div>
-                        <div className="lg:h-full lg:w-full h-4/5 w-4/5  rounded-lg group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+                        <div className="h-full w-full rounded-lg group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
                         <Image className='h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-110' 
                         loading = 'lazy'
                         src={developer2}
@@ -66,13 +66,13 @@ export default function InsiderContent () {
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60 group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
                             <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
                                 <div className="mb-3 text-lg text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                                <Link href="https://www.instagram.com/wellyazzsa/">
+                                <Link rel="preload" href="https://www.instagram.com/wellyazzsa/">
                                     <BsInstagram className="m-7 hover:text-primary" size={30}/>
                                 </Link>
-                                <Link href="https://www.linkedin.com/in/wellyazzsa/">
+                                <Link rel="preload" href="https://www.linkedin.com/in/wellyazzsa/">
                                     <BsLinkedin className="m-7 hover:text-primary" size={30}/>
                                 </Link>
-                                    <Link href="https://github.com/wellyazzsa">
+                                    <Link rel="preload" href="https://github.com/wellyazzsa">
                                 <BsGithub className="m-7 hover:text-primary" size={30}/>
                                 </Link>
                                 </div>

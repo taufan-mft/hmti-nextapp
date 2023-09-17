@@ -1,5 +1,6 @@
 import { Autoplay, Pagination, A11y, EffectCoverflow } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Link from 'next/link';
 import { Reveal } from './utils/reveal';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -12,19 +13,19 @@ export const Photopack = ({ pictures }:any) => {
             {/** Memories Header */}
             <div className='flex flex-col items-center cursor-pointer'>
                 <Reveal>
-                    <h1 className=' lg:text-4xl text-3xl font-raleway'>
+                    <h1 className='text-center lg:text-4xl text-3xl font-raleway'>
                     HMTI MEMORIES
                     </h1>
                 </Reveal>
                 <Reveal>
-                    <h2 className='lg:text-xl text-lg font-beautiful'>
+                    <h2 className='lg:text-xl text-lg font-beautiful text-center'>
                     Capture the moment and make it unforgettable
                     </h2>
                 </Reveal>
             </div>
             
             {/** Memories Preview Big Screen*/}
-            <div className='mx-4 mt-8 lg:h-[70vh] h-[40vh] mb-16 sm:flex hidden'>
+            <div className='mx-4 mt-10 lg:h-[70vh] h-[40vh] mb-16 sm:flex hidden'>
             <Swiper
             effect={'coverflow'}
             modules={[Autoplay, Pagination, A11y, EffectCoverflow]}
@@ -62,7 +63,7 @@ export const Photopack = ({ pictures }:any) => {
         </div>
 
         {/** Memories Preview Small Screen*/}
-        <div className='mt-8 h-[40vh] mb-16 flex sm:hidden'>
+        <div className='mt-8 h-56 mb-16 flex sm:hidden'>
             <Swiper
             effect={'coverflow'}
             modules={[Autoplay, Pagination, A11y, EffectCoverflow]}
@@ -90,7 +91,7 @@ export const Photopack = ({ pictures }:any) => {
                             <p className="mb-3 text-xs italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                                 {picture.title}
                             </p>
-                            <button className="rounded-lg bg-neutral px-2 py-1 font-com text-xs capitalize text-white shadow shadow-black/60">See More</button>
+                            <button className="rounded-lg bg-neutral px-2 py-1 font-com text-xs capitalize text-white shadow shadow-black/60"><Link href="#" rel="preload">See More</Link></button>
                         </div>
                     </div>
                 </article> 

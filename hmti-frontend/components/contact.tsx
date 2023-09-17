@@ -4,23 +4,23 @@ import { Reveal } from "./utils/reveal";
 
 export default function Contact () {
     return (
-        <div className=" px-4 my-36 mx-auto max-w-screen-lg">
+        <div className="sm:px-4 my-36 mx-auto max-w-screen-lg">
             {/** Memories Header */}
             <div className='flex flex-col items-center cursor-pointer'>
                 <Reveal>
-                    <h1 className='lg:text-4xl text-3xl font-raleway'>
+                    <h1 className='lg:text-4xl text-3xl font-raleway text-center'>
                     HMTI CENTER
                     </h1>
                 </Reveal>
                 <Reveal>
-                    <h2 className='lg:text-xl text-lg font-beautiful'>
+                    <h2 className='lg:text-xl text-lg font-beautiful text-center'>
                     Want to send any feedback? Let us know.
                     </h2>
                 </Reveal>
             </div>
             <div className="flex justify-center p-2 sm:flex-row flex-col">
                 {/** Left Side */}
-                <div className="sm:w-1/2 w-full sm:mx-5 mx-auto p-5">
+                <div className="sm:w-1/2 w-full sm:mx-5 mx-auto lg:p-5 sm:p-4 p-4">
                     <div className="flex-col">
                         <Reveal>
                             <h3 className="font-bold text-2xl sm:text-base-content text-base-100 mb-4 mt-1">
@@ -33,7 +33,7 @@ export default function Contact () {
                             </p>
                         </Reveal>
                         <Reveal>
-                            <p className="text-sm mt-3">
+                            <p className="text-sm mt-2">
                                 Feel free to get in touch with us via email or our social media
                             </p>
                         </Reveal>
@@ -64,7 +64,7 @@ export default function Contact () {
                 </div>
 
                 {/** Right Side */}
-                <form action="#" className="flex flex-col sm:w-1/2 w-full sm:mr-4 mx-auto">
+                <form action="#" className="flex flex-col sm:w-1/2 w-full sm:mr-4 px-4">
                     <div className="flex flex-row mt-4">
                         <div className="form-control w-full max-w-xs">
                             <label className="label">Email</label>

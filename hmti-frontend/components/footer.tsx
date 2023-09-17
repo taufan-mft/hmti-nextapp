@@ -18,14 +18,14 @@ export default function Footer () {
             <div className="mx-auto max-w-screen-xl">
                 <div className="md:flex md:justify-between">
                     <div className="btn btn-ghost cursor-pointer lg:flex hidden">
-                        <Link href="/">
+                        <Link rel="preload" href="/">
                             <Image 
                             src={Logo} 
                             alt="Logo HMTI" 
                             className="h-8 w-8 rounded-md"/>
                         </Link>
                         <h2 className="text-xl font-raleway">
-                            <Link href="/">
+                            <Link rel="preload" href="/">
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-warning">HMTI</span>
                                 <span>UNSOED</span>
                             </Link>
@@ -39,10 +39,10 @@ export default function Footer () {
                             </h2>
                             <ul>
                                 <li className="mb-4">
-                                    <Link href="#" className="hover:underline">Organization</Link>
+                                    <Link rel="preload" href="/organization" className="hover:underline">Organization</Link>
                                 </li>
                                 <li>
-                                    <Link href="#" className="hover:underline">Hall of Fame</Link>
+                                    <Link rel="preload" href="#" className="hover:underline">Hall of Fame</Link>
                                 </li>
                             </ul>
                         </div>
@@ -52,10 +52,10 @@ export default function Footer () {
                             </h2>
                             <ul >
                                 <li className="mb-4">
-                                    <Link href="/artery" className="hover:underline ">Artery</Link>
+                                    <Link rel="preload" href="/artery" className="hover:underline ">Artery</Link>
                                 </li>
                                 <li>
-                                    <Link href="#" className="hover:underline">Seminar</Link>
+                                    <Link rel="preload" href="#" className="hover:underline">Seminar</Link>
                                 </li>
                             </ul>
                         </div>
@@ -65,10 +65,10 @@ export default function Footer () {
                             </h2>
                             <ul>
                                 <li className="mb-4">
-                                    <Link href="/update" className="hover:underline">Update</Link>
+                                    <Link rel="preload" href="/update" className="hover:underline">Update</Link>
                                 </li>
                                 <li>
-                                    <Link href="#" className="hover:underline">Memories</Link>
+                                    <Link rel="preload" href="#" className="hover:underline">Memories</Link>
                                 </li>
                             </ul>
                         </div>
@@ -78,10 +78,10 @@ export default function Footer () {
                             </h2>
                             <ul>
                                 <li className="mb-4">
-                                    <Link href="/insider" className="hover:underline">Insider</Link>
+                                    <Link rel="preload" href="/insider" className="hover:underline">Insider</Link>
                                 </li>
                                 <li>
-                                    <Link href="#" className="hover:underline">Tech Stack</Link>
+                                    <Link rel="preload" href="/insider" className="hover:underline">Tech Stack</Link>
                                 </li>
                             </ul>
                         </div>
@@ -101,22 +101,22 @@ export default function Footer () {
                     </div>
                     {/** Link Tree Area */}
                     <div className="flex mt-4 space-x-6 sm:justify-center justify-center sm:mt-0">
-                        <Link href="https://www.instagram.com/hmti.unsoed/">
+                        <Link rel="preload" href="https://www.instagram.com/hmti.unsoed/">
                             <BsInstagram className="hover:text-primary"/>
                         </Link>
-                        <Link href="https://www.linkedin.com/company/himpunan-mahasiswa-teknik-industri-unsoed-hmti-unsoed/">
+                        <Link rel="preload" href="https://www.linkedin.com/company/himpunan-mahasiswa-teknik-industri-unsoed-hmti-unsoed/">
                             <BsLinkedin className="hover:text-primary"/>
                         </Link>
-                        <Link href="https://www.youtube.com/@hmti_unsoed">
+                        <Link rel="preload" href="https://www.youtube.com/@hmti_unsoed">
                             <BsYoutube className="hover:text-primary"/>
                         </Link>
-                        <Link href="https://www.tiktok.com/@hmti.unsoed">
+                        <Link rel="preload" href="https://www.tiktok.com/@hmti.unsoed">
                             <BsTiktok className="hover:text-primary"/>
                         </Link>
-                        <Link href="https://line.me/R/ti/p/@ybt3365p">
+                        <Link rel="preload" href="https://line.me/R/ti/p/@ybt3365p">
                             <BsLine className="hover:text-primary"/>
                         </Link>
-                        <Link href="https://www.instagram.com/hmti.stardust/">
+                        <Link rel="preload" href="https://www.instagram.com/hmti.stardust/">
                             <BsFillBagFill className="hover:text-primary"/>
                         </Link>
                     </div>

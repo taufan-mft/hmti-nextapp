@@ -41,7 +41,8 @@ export default function HeroAbout () {
           className='object-cover h-full w-full opacity-50'
           src={image} 
           alt={alt}
-          placeholder='blur'    
+          placeholder='blur'
+          loading = 'lazy'    
           />
         </div>
       )};
@@ -50,15 +51,15 @@ export default function HeroAbout () {
       {/** Text Section */}
       <div className='absolute z-[2] w-4/5 flex flex-col items-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>
         <Reveal>
-          <span className='block lg:text-7xl text-5xl cursor-pointer font-raleway text-white'>
-            TENTANG HMTI
+          <span className='flex flex-row gap-2 lg:text-7xl text-6xl cursor-pointer font-raleway text-white'>
+            ABOUT <span className="sm:flex hidden">HMTI</span>
           </span>
         </Reveal>
         <Reveal>
           <div className="flex justify-center lg:text-lg text-sm text-white breadcrumbs">
             <ul>
-              <li><Link href='/'><BiSolidHome className='mr-2'/>Home</Link></li> 
-              <li><Link href='/organization'><BiFolder className='mr-2'/>About</Link></li> 
+              <li><Link rel="preload" href='/'><BiSolidHome className='mr-2'/>Home</Link></li> 
+              <li><Link rel="preload" href='/organization'><BiFolder className='mr-2'/>About</Link></li> 
               <li><HiOutlineDocumentText className='mr-2'/>Know More</li>
             </ul>
           </div>

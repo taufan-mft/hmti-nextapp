@@ -13,7 +13,7 @@ export const NewsCard = ({ cards }:any) => {
     return (
         <div className='mb-36 xl:mx-36'> 
             {/** News Preview Big Screen */}
-            <div className='hidden mx-16 lg:flex'>
+            <div className='hidden lg:mx-16 lg:flex'>
                 <Swiper
                 modules={[Autoplay, Pagination, A11y]}
                 slidesPerView={4}
@@ -34,22 +34,26 @@ export const NewsCard = ({ cards }:any) => {
                             </div>
                         </div>
                         <div className='flex flex-col mt-2 px-4'>
-                            <div className='flex justify-between justify-items-center mb-3'>
+                            <div className='flex justify-between justify-center mb-3'>
                                 <Reveal>
-                                    <div className='btn btn-xs text-primary text-xs font-medium inline-flex items-center hover:text-secondary'>
-                                        <HiOutlineNewspaper/>
-                                        press release
+                                    <div className='btn btn-xs text-primary text-xs hover:text-secondary'>
+                                        <div className='flex flex-row items-center gap-1'>
+                                            <HiOutlineNewspaper/>
+                                            <h3 className='line-clamp-1 text-left'>press release</h3>
+                                         </div>
                                     </div>
                                 </Reveal>
+                                <div className='hidden lg:flex'>
                                 <Reveal>
-                                    <span className='text-sm opacity-50'>
+                                    <span className='text-sm opacity-50 line-clamp-1'>
                                     14 days ago
                                     </span>
                                 </Reveal>
+                                </div>
                             </div>
                             <h2 className='mb-2 text-lg font-bold line-clamp-2 hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
                                 <Reveal>
-                                    <Link href='#'>
+                                    <Link rel="preload" href='#'>
                                     {card.title}
                                     </Link>
                                 </Reveal>
@@ -61,7 +65,7 @@ export const NewsCard = ({ cards }:any) => {
                             </Reveal>         
                             <div className='flex mt-3 items-center'>
                                 <Reveal>
-                                    <Link href='#' className='btn border-0 mb-4 text-base-100 btn-xs font-semibold btn-primary transition ease-in-out hover:scale-105 duration-300 inline-flex items-center'>
+                                    <Link rel="preload" href='#' className='btn border-0 mb-4 text-base-100 btn-xs font-semibold btn-primary transition ease-in-out hover:scale-105 duration-300 inline-flex items-center'>
                                         Read More
                                         <BiRightArrowAlt size={20}/>
                                     </Link>
@@ -75,7 +79,7 @@ export const NewsCard = ({ cards }:any) => {
             </div>
 
             {/** News Preview Small Screen */}
-            <div className='flex mx-14 lg:hidden'>
+            <div className='flex sm:mx-10 lg:mx-14 mx-2 lg:hidden'>
                 <Swiper
                 modules={[Autoplay, Pagination, A11y]}
                 slidesPerView={1}
@@ -96,22 +100,24 @@ export const NewsCard = ({ cards }:any) => {
                             </div>
                         </div>
                         <div className='flex flex-col mt-2 px-4'>
-                            <div className='flex justify-between items-center mb-3'>
+                            <div className='flex justify-between justify-center mb-3'>
                                 <Reveal>
-                                    <div className='btn btn-xs text-primary text-xs font-medium inline-flex items-center hover:text-secondary'>
-                                        <HiOutlineNewspaper/>
-                                        press release
+                                <div className='btn btn-xs text-primary text-xs hover:text-secondary'>
+                                        <div className='flex flex-row items-center gap-1'>
+                                            <HiOutlineNewspaper/>
+                                            <h3 className='line-clamp-1 text-left'>press release</h3>
+                                         </div>
                                     </div>
                                 </Reveal>
                                 <Reveal>
-                                    <span className='text-sm opacity-50'>
+                                    <span className='line-clamp-1 text-sm opacity-50'>
                                     14 days ago
                                     </span>
                                 </Reveal>                           
                             </div>
                             <Reveal>
                                 <h2 className='mb-2 text-xl font-bold line-clamp-2 hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
-                                    <Link href='#'>
+                                    <Link rel="preload" href='#'>
                                     {card.title}
                                     </Link>
                                 </h2>
@@ -123,7 +129,7 @@ export const NewsCard = ({ cards }:any) => {
                             </Reveal>
                             <div className='flex mt-3 items-center'>
                                 <Reveal>
-                                    <Link href='#' className='rounded-lg px-2 pb-0.5 border-0 mb-4 text-base-100 font-semibold btn-primary transition ease-in-out hover:scale-105 duration-300 inline-flex items-center'>
+                                    <Link rel="preload" href='#' className='rounded-lg px-2 pb-0.5 border-0 mb-4 text-base-100 font-semibold btn-primary transition ease-in-out hover:scale-105 duration-300 inline-flex items-center'>
                                         Read More
                                         <BiRightArrowAlt className='mt-0.5' size={20}/>
                                     </Link>

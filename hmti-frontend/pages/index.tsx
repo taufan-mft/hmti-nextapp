@@ -17,7 +17,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>HMTI UNSOED</title>
-        <meta name="description" content="Bersama prabu meraih impian sejak 2015" />
+        <meta name="description" content="Selamat datang di situs web HMTI UNSOED ( Himpunan Mahasiswa Teknik Industri Unsoed ). Kami adalah organisasi mahasiswa yang berkomitmen untuk meraih impian bersama sejak 2015. Temukan berita terbaru, acara kami, foto-foto, dan informasi kontak di sini. Bergabunglah dengan kami untuk pengalaman belajar dan berkembang yang luar biasa." />
         <link rel="shortcut icon" href="/favicon.ico"/>
       </Head>
       
@@ -25,11 +25,11 @@ const Home: NextPage = () => {
         <Navbar/>
       </section>
       
-      <section className="m-4">  
+      <section className="sm:m-4 m-2">  
         <HeroSection/>
       </section>
 
-      <section className="m-4">  
+      <section className="sm:m-4">  
         <TextSection/>
       </section>
 
@@ -53,7 +53,7 @@ const Home: NextPage = () => {
         <NewsCard cards={cards}/>
       </section>
       
-      <section className="m-4 mt-10">  
+      <section className="sm:m-4 mt-10">  
         <Billboard/>
       </section>
 

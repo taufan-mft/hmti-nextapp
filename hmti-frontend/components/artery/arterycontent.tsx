@@ -107,31 +107,31 @@ export default function ArterySection () {
   }: SlideProps) => {
     return (
       <div className='mt-4'>
-        <Link href="https://hmti-unsoed.org/artery">
+        <Link rel="preload" href="https://hmti-unsoed.org/artery">
           <div className='justify-center rounded-lg shadow-md bg-base-100 transition-transform duration-500 hover:scale-110 hover:shadow-lg scale-100 cursor-pointer'>
-            <div className='flex flex-row py-4 px-4'>
+            <div className='flex flex-row justify-start py-3 px-3'>
               <div className='w-14'>
                 <Reveal>
-                  <h2 className='text-6xl font-bold tracking-tight hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
+                  <h2 className='text-5xl font-bold tracking-tight hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
                     {number}
                   </h2>
                 </Reveal>
               </div>
-              <hr className="ml-4 mt-3 border-4 border-primary h-8"/>             
-              <div className='flex flex-col w-4/5 font-bold text-2xl m-1 ml-4 tracking-tight'>
+              <hr className="ml-2 mt-2 border-4 border-primary h-8"/>             
+              <div className='flex flex-col w-4/5 font-bold m-1 ml-2 tracking-tight'>
                 <Reveal>
                   <h3 className='hover:text-transparent line-clamp-1 hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
                     {title}
                   </h3>
                 </Reveal>
                 <Reveal>
-                  <p className='font-beautiful font-light text-base ml-1 opacity-75'>
+                  <p className='font-beautiful font-light text-sm ml-1 opacity-75'>
                     {subtitle}
                   </p>
                 </Reveal>
               </div>
               <div className='w-full h-24 pl-8'>
-                <Image className="h-full w-full object-cover transition-transform duration-500 group-hover:opacity-50 group-hover:scale-125"
+                <Image className="h-full w-full rounded-lg object-cover transition-transform duration-500 group-hover:opacity-50 group-hover:scale-125"
                   src={imageSrc}
                   alt={caption}
                   quality={50}
@@ -174,7 +174,7 @@ export default function ArterySection () {
           ))}
         </Swiper>
       </div>
-      <div className='lg:hidden mx-4'>
+      <div className='lg:hidden mx-2'>
         {slidesData.map((slide) => (
           <div key={slide.number}>
             <SlideContentSm {...slide} />
