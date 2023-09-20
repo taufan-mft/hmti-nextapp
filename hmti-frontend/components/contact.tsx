@@ -66,11 +66,11 @@ export default function Contact () {
                 {/** Right Side */}
                 <form action="#" className="flex flex-col sm:w-1/2 w-full sm:mr-4 px-4">
                     <div className="flex flex-row mt-4">
-                        <div className="form-control w-full max-w-xs">
+                        <div className="form-control basis-1/2 max-w-xs">
                             <label className="label">Email</label>
                             <input type="text" placeholder="Enter your email" className="input input-bordered w-full max-w-xs"/>
                         </div>
-                        <div className="form-control w-full ml-2 max-w-xs">
+                        <div className="form-control basis-1/2 ml-2 max-w-xs">
                             <label className="label">Name</label>
                             <input type="text" placeholder="Enter your name" className="input input-bordered w-full max-w-xs"/>
                         </div>                    
@@ -87,9 +87,9 @@ export default function Contact () {
                     <button className="btn w-full mt-4 btn-primary border-0 mt-3 font-bold bg-gradient-to-r from-secondary to-primary hover:from-primary hover:to-warning">
                         Submit
                     </button>
-                    </div>               
-                </form>
+                    </div>              
+                </form> 
             </div>
-        </div>
+        </div> 
     )
 }
