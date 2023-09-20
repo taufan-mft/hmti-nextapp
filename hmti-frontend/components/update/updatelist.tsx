@@ -68,7 +68,7 @@ export default function UpdateList () {
       <div className='mt-4 bg-base-100 rounded-lg transition-transform duration-500 scale-95 hover:scale-100' key={url}>
         <Link rel="preload" href='#'>
           <div className="flex flex-row">
-            <div className="w-56 h-56 basis-1/3">
+            <div className="w-56 h-auto basis-1/3">
               <img className="h-full w-full rounded-l-lg object-cover" 
               src={urlToImage} alt={title}
               />
@@ -85,7 +85,7 @@ export default function UpdateList () {
                 </div>
               </Reveal>
               <Reveal>
-                <div className="mt-1 sm:line-clamp-3 sm:text-lg text-sm line-clamp-2 sm:tracking-wide text-justify">
+                <div className="mt-1 sm:text-lg text-sm line-clamp-2 sm:tracking-wide text-justify">
                   {description}
                 </div>
               </Reveal>

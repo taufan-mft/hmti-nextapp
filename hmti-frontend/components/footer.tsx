@@ -68,7 +68,7 @@ export default function Footer () {
                                     <Link rel="preload" href="/update" className="hover:underline">Update</Link>
                                 </li>
                                 <li>
-                                    <Link rel="preload" href="#" className="hover:underline">Memories</Link>
+                                    <Link rel="preload" href="/memories" className="hover:underline">Memories</Link>
                                 </li>
                             </ul>
                         </div>

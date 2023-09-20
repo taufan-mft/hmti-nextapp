@@ -3,7 +3,7 @@ import Head from "next/head";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import  HeroSection  from "@/components/hero";
-import { Photopack } from "@/components/photopack";
+import { Memories } from "@/components/memories";
 import cards from "@/news.json";
 import { NewsCard } from "@/components/newscard";
 import Contact from "@/components/contact";
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
       </section>
 
       <section>
-        <Photopack pictures={pictures}/>
+        <Memories pictures={pictures}/>
       </section>
 
       <section>

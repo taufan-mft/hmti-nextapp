@@ -18,7 +18,6 @@ import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 
 
-
 export default function HeroSection () {
     interface HeroProps {
       id: string;

@@ -58,7 +58,7 @@ export default function Navbar() {
               Corner
               <ul className="p-2">
                 <li><Link rel="preload" href="/update">Update</Link></li>
-                <li><Link rel="preload" href="#">Memories</Link></li>
+                <li><Link rel="preload" href="/memories">Memories</Link></li>
               </ul>
             </li>
           </ul>
@@ -99,7 +99,7 @@ export default function Navbar() {
                     <Link rel="preload" href="/organization">Organization</Link>
                   </li>
                   <li className="transition-transform duration-300 hover:scale-110 scale-100">
-                    <Link rel="preload" href="">Hall of Fame</Link>
+                    <Link rel="preload" href="#">Hall of Fame</Link>
                   </li>
                 </ul>
             </details>
@@ -115,7 +115,7 @@ export default function Navbar() {
                     <Link rel="preload" href="/update">Update</Link>
                   </li>
                   <li className="transition-transform duration-300 hover:scale-110 scale-100">
-                    <Link rel="preload" href="#">Memories</Link>
+                    <Link rel="preload" href="/memories">Memories</Link>
                   </li>
                 </ul>
             </details>
