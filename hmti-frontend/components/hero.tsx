@@ -51,7 +51,7 @@ export default function HeroSection () {
         };
   return (
     <div className='relative'>
-      <div className='absolute z-10 w-4/5 text-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+      <div className='absolute z-10 lg:w-3/5 w-4/5 text-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>
         
         {/** Typography section */}
         <div className='flex flex-col items-center'>

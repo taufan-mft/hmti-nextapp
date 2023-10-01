@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/hmtilogo.jpg";
-import { BiMapAlt, BiSolidChevronRight } from 'react-icons/bi';
+import { BiSolidChevronRight } from 'react-icons/bi';
 import { TbColorSwatch } from "react-icons/tb";
+import { HiOutlineMenu } from "react-icons/hi";
+import { IoMdClose } from "react-icons/io";
 
 export default function Navbar() {
   const themeValues = [
@@ -41,10 +43,12 @@ export default function Navbar() {
     <div className="navbar bg-base-100 shadow-lg">
       <div className="navbar-start font-semibold">
         <div className="dropdown dropdown-hover">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
-            <BiMapAlt size={30}/>
+          <label className="btn btn-circle btn-ghost swap swap-rotate lg:hidden cursor-pointer">
+            <input type="checkbox" />
+            <HiOutlineMenu className="swap-off fill-current" size={30}/>
+            <IoMdClose className="swap-on fill-current" size={30}/>
           </label>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content ml-2 mt-3 z-[20] p-2 shadow bg-base-100 rounded-box w-52 cursor-pointer">
+          <ul tabIndex={0} className="menu menu-lg dropdown-content ml-2 mt-3 z-[20] p-2 shadow bg-base-100 rounded-box w-52 cursor-pointer">
             <li><Link rel="preload" href="/">Home</Link></li>
             <li>
               <Link rel="preload" href="#">About</Link>
@@ -55,7 +59,7 @@ export default function Navbar() {
             </li>
             <li><Link href="/artery">Artery</Link></li>
             <li>
-              Corner
+            <Link rel="preload" href="#">Corner</Link>
               <ul className="p-2">
                 <li><Link rel="preload" href="/update">Update</Link></li>
                 <li><Link rel="preload" href="/memories">Memories</Link></li>

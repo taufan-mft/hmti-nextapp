@@ -84,7 +84,7 @@ export default function Contact () {
                         <textarea className="textarea textarea-bordered h-28" placeholder="What's on your mind?"></textarea>
                     </div> 
                     <div>
-                    <button className="btn w-full mt-4 btn-primary border-0 mt-3 font-bold bg-gradient-to-r from-secondary to-primary hover:from-primary hover:to-warning">
+                    <button className="btn w-full btn-primary border-0 mt-3 font-bold bg-gradient-to-r from-secondary to-primary hover:from-primary hover:to-warning">
                         Submit
                     </button>
                     </div>              
