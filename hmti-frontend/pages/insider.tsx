@@ -56,16 +56,16 @@ const Insider: NextPage = () => {
 
   return (
     <>
+    <Script
+      src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.9.3/tsparticles.confetti.bundle.min.js"
+      onLoad={onConfettiLoad}
+    />
       <Head>
         <title>Behind of Web HMTI</title>
         <meta name="description" content="Temukan siapa yang ada di balik pengembangan website HMTI dan teknologi yang digunakan, seperti Nginx, Next.js, Django, Ubuntu, Gunicorn, Node.js, TypeScript, React, Tailwind CSS, DaisyUI, Swiper, dan Framer."/>
         <link rel="shortcut icon" href="/favicon.ico"/>
       </Head>
        <div>
-       <Script
-          src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.9.3/tsparticles.confetti.bundle.min.js"
-          onLoad={onConfettiLoad}
-        />
         <section className="sticky top-0 w-full z-[100]">
           <Navbar/>
         </section>

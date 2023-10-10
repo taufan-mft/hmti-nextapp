@@ -1,9 +1,5 @@
-import { Pagination, Navigation } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
 import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
-import { PiDotsThreeOutline, PiDownloadSimpleBold, PiHeartBold, PiHeartFill, PiShareFatFill } from 'react-icons/pi'
 
 import artery1 from '@/public/artery  (1).jpg'
 import artery2 from '@/public/artery  (2).jpg'
@@ -22,7 +18,7 @@ import { Reveal } from '../utils/reveal';
 
 
 
-export default function ArterySection () {
+export default function SeminarSection () {
     interface SlideProps {
     number: string;
     title: string;
@@ -38,77 +34,11 @@ export default function ArterySection () {
     subtitle,
     imageSrc,
     caption,
-    slugDrive,
-  }: SlideProps) => {
-    return(
-      <div>
-        <a href="https://hmti-unsoed.org/artery">
-          <div className='w-auto rounded-lg pb-3 shadow-md bg-base-100 transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
-            <div className='flex flex-col pt-6 px-4'>
-              <Reveal>
-                <h2 className='mb-2 text-6xl font-bold tracking-tight hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
-                  {number}
-                </h2>
-              </Reveal>
-              <hr className="ml-0.5 mb-16 mt-2 border-4 border-primary w-8"/>             
-              <Reveal>
-                <p className='font-bold text-2xl ml-1 tracking-tight hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
-                  {title}
-                </p>
-              </Reveal>
-              <Reveal>
-                <p className='ml-1 opacity-50 font-beautiful hover:opacity-100'>
-                  {subtitle}  
-                </p>
-              </Reveal>
-            </div>
-            <div className='w-full h-56 px-4 py-4'>
-              <div className="shadow-lg group hover:bg-black relative rounded-lg h-full w-full cursor-pointer object-cover overflow-hidden">
-                <Image className="h-full w-full object-cover transition-transform duration-500 group-hover:opacity-50 group-hover:scale-125"
-                src={imageSrc}
-                alt={caption}
-                quality={50}
-                loading = 'lazy'
-                placeholder = 'blur'
-                />
-              </div>
-            </div>
-            <Reveal>
-              <div className='px-4 flex flex-row gap-4'>
-                <div className="tooltip" data-tip="Download">
-                  <PiDownloadSimpleBold size={20}/>
-                </div>
-                <div className="tooltip" data-tip="Like">
-                  <label className="swap">
-                    <input type="checkbox" />
-                    <PiHeartFill className="swap-on" size={20}/>
-                    <PiHeartBold className="swap-off" size={20}/>
-                  </label>
-                </div>
-                <div className="tooltip" data-tip="Share">
-                  <PiShareFatFill size={20}/>
-                </div>
-                <PiDotsThreeOutline size={20}/>
-              </div>
-            </Reveal>
-          </div> 
-        </a>
-      </div>
-    );
-  };
-  
-  const SlideContentSm: React.FC<SlideProps> = ({
-    number,
-    title,
-    subtitle,
-    imageSrc,
-    caption,
-    slugDrive,
   }: SlideProps) => {
     return (
       <div className='mt-4'>
         <Link rel="preload" href="https://hmti-unsoed.org/artery">
-          <div className='justify-center rounded-lg shadow-md bg-base-100 transition-transform duration-500 hover:scale-110 hover:shadow-lg scale-100 cursor-pointer'>
+          <div className='justify-center rounded-lg shadow-md bg-base-100 transition-transform duration-500 hover:scale-105 hover:shadow-lg scale-100 cursor-pointer'>
             <div className='flex flex-row justify-start py-3 px-3'>
               <div className='w-14'>
                 <Reveal>
@@ -157,31 +87,14 @@ export default function ArterySection () {
     { number: '08', title: 'Report Example', subtitle: 'Culmination', imageSrc: artery8, caption:'Pict 8 by Pierre Châtel-Innocenti', slugDrive: 'https://drive.google.com/drive/u/0/folders/13gJXRu86YngD6bSGdGnt4qmun2H9Lg_a'},
   ];
     return (
-    <div className='pb-10'>
-      <div className="w-full hidden lg:flex">
-        <Swiper
-          grabCursor={true}
-          spaceBetween={10}
-          centeredSlides={true}
-          slidesPerView={4}
-          pagination={{ el: '.swiper-pagination', clickable: true }}
-          modules={[Pagination, Navigation]}
-        >
-          {slidesData.map((slide) => (
-          <SwiperSlide key={slide.number}>
-            <SlideContent {...slide} />
-          </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-      <div className='lg:hidden mx-2'>
+    <div className='pb-10 lg:mx-56 sm:mx-36 mx-2'>
+      <div className=''>
         {slidesData.map((slide) => (
           <div key={slide.number}>
-            <SlideContentSm {...slide} />
+            <SlideContent {...slide} />
           </div>
           ))}
       </div>
     </div>
-    
   )
 }

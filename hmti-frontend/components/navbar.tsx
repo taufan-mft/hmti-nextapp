@@ -54,7 +54,7 @@ export default function Navbar() {
               <Link rel="preload" href="#">About</Link>
               <ul className="p-2">
                 <li><Link rel="preload" href="/organization">Organization</Link></li>
-                <li><Link rel="preload" href="#">Hall of Fame</Link></li>
+                <li><Link rel="preload" href="https://hmti-unsoed.org/halloffame/">Hall of Fame</Link></li>
               </ul>
             </li>
             <li><Link href="/artery">Artery</Link></li>
@@ -65,6 +65,7 @@ export default function Navbar() {
                 <li><Link rel="preload" href="/memories">Memories</Link></li>
               </ul>
             </li>
+            <li><Link href="/seminar">Seminar</Link></li>
           </ul>
         </div>
         <div className="btn btn-ghost cursor-pointer lg:flex hidden"><Link rel="preload" href="/">
@@ -103,7 +104,7 @@ export default function Navbar() {
                     <Link rel="preload" href="/organization">Organization</Link>
                   </li>
                   <li className="transition-transform duration-300 hover:scale-110 scale-100">
-                    <Link rel="preload" href="#">Hall of Fame</Link>
+                    <Link rel="preload" href="https://hmti-unsoed.org/halloffame/">Hall of Fame</Link>
                   </li>
                 </ul>
             </details>
@@ -123,6 +124,9 @@ export default function Navbar() {
                   </li>
                 </ul>
             </details>
+          </li>
+          <li className="transition-transform duration-300 hover:scale-110 scale-100 hover:text-primary">
+            <Link rel="preload" href="/seminar">Seminar</Link>
           </li>
         </ul>
       </div>

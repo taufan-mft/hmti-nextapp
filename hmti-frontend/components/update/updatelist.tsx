@@ -109,7 +109,7 @@ export default function UpdateList () {
     );
   };
   return (
-    <div className="flex flex-row gap-10 mx-2 xl:mx-36">
+    <div className="flex flex-row gap-4 mx-2 xl:mx-36">
         <div className="w-full">
           <div className="flex-col">
             <div className="flex items-center gap-1 mx-5 grow">
