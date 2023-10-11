@@ -103,7 +103,6 @@ export default function ArterySection () {
     subtitle,
     imageSrc,
     caption,
-    slugDrive,
   }: SlideProps) => {
     return (
       <div className='mt-4'>

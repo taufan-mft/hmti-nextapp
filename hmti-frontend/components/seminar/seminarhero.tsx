@@ -51,7 +51,7 @@ export default function SeminarHero () {
       {/** Text Section */}
       <div className='absolute z-[2] w-4/5 flex flex-col items-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>
         <Reveal>
-          <span className='block lg:text-7xl text-5xl cursor-pointer font-raleway text-white'>
+          <span className='block text-center lg:text-7xl text-5xl cursor-pointer font-raleway text-white'>
             SEMINAR MAHASISWA
           </span>
         </Reveal>

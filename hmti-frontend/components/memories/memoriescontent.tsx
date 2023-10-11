@@ -11,7 +11,6 @@ export default function MemoriesContent () {
     };
 
     const MemoriesData: React.FC<ImageProps> = ({
-        albumId,
         id,
         title,
         url,

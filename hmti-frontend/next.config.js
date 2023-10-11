@@ -4,7 +4,7 @@ const { hostname } = require('os');
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    
+    SEMINAR_API: process.env.SEMINAR_API,
   },
   images: {
     remotePatterns: [
