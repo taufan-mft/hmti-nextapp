@@ -32,7 +32,7 @@ function Seminar(props: Iprops) {
         <section className="sm:m-4 m-2">
           <SeminarHero />
         </section>
-        <section className="py-20">
+        <section className="pt-16 pb-20">
           <SeminarSection dataSeminar={dataSeminar} />
         </section>
         <section className="">
