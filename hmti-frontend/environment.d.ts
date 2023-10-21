@@ -5,6 +5,7 @@ declare global {
         interface ProcessEnv {
             NODE_ENV: "development" | "production";
             SEMINAR_API: string;
+            SEMINAR_API_ADD: string;
         }
     }
 }

@@ -6,6 +6,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { BsFillCalendarCheckFill } from "react-icons/bs";
 
 export default function Calendar() {
+
 	const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 	const currentDate = dayjs();
 	const [today, setToday] = useState(currentDate);
@@ -47,7 +48,7 @@ export default function Calendar() {
 
 				<div className=" grid grid-cols-7 ">
 					{generateDate(today.month(), today.year()).map(
-						({ date, currentMonth, today }, index) => {
+						({ date, currentMonth, today, tanggal }, index) => {
 							return (
 								<div
 									key={index}

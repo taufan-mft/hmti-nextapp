@@ -3,18 +3,20 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import SeminarHero from "@/components/seminar/seminarhero";
 import SeminarSection from "@/components/seminar/seminarcontent";
+import moment from 'moment';
 
 interface Iprops {
   dataSeminar: Iseminar[]
 }
 
 interface Iseminar {
-  Tanggal: string,
-  Ruangan: string,
-  Waktu: string,
   Nama: string,
   NIM: string,
-  Kategori: string
+  Kategori: string,
+  Topik: string
+  Tanggal: string,
+  Waktu: string,
+  Ruangan: string,
 }
 
 function Seminar(props: Iprops) {
@@ -48,7 +50,24 @@ export default Seminar;
 export async function getServerSideProps() {
   const res = await fetch(process.env.SEMINAR_API);
   const sheet = await res.json();
-  const dataSeminar = sheet.data
+  const data = sheet.data
+  const dataSeminar = data.filter(function (seminar: any) {
+    let tanggalSekarang = new Date(moment().subtract(1, 'days').format());
+    let tanggalSeminar = new Date(seminar.Tanggal);
+    return tanggalSeminar >= tanggalSekarang;
+  });
+
+  dataSeminar.sort(function (a: any, b: any) {
+    let tanggalAwal = new Date(a.Tanggal),
+      tanggalAkhir = new Date(b.Tanggal)
+    if (tanggalAwal > tanggalAkhir) {
+      return
+    }
+    if (tanggalAkhir > tanggalAwal) {
+      return 
+    }
+  })
+  console.log(dataSeminar)
   return {
     props: {
       dataSeminar
