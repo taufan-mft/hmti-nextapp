@@ -14,7 +14,16 @@ function generateSiteMap(posts) {
        <loc>https://hmti-unsoed.org/update</loc>
      </url>
      <url>
+       <loc>https://hmti-unsoed.org/memories</loc>
+     </url>
+     <url>
+     <loc>https://hmti-unsoed.org/artery</loc>
+     </url>
+     <url>
      <loc>https://hmti-unsoed.org/seminar</loc>
+     </url>
+     <url>
+     <loc>https://hmti-unsoed.org/seminar/add</loc>
      </url>
      <url>
        <loc>https://hmti-unsoed.org/insider</loc>

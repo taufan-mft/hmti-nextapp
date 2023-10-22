@@ -42,7 +42,7 @@ export default function Footer () {
                                     <Link rel="preload" href="/organization" className="hover:underline">Organization</Link>
                                 </li>
                                 <li>
-                                    <Link rel="preload" href="#" className="hover:underline">Hall of Fame</Link>
+                                    <Link rel="preload" href="https://hmti-unsoed.org/halloffame/" className="hover:underline">Hall of Fame</Link>
                                 </li>
                             </ul>
                         </div>
@@ -55,7 +55,7 @@ export default function Footer () {
                                     <Link rel="preload" href="/artery" className="hover:underline ">Artery</Link>
                                 </li>
                                 <li>
-                                    <Link rel="preload" href="#" className="hover:underline">Seminar</Link>
+                                    <Link rel="preload" href="/seminar" className="hover:underline">Seminar</Link>
                                 </li>
                             </ul>
                         </div>
