@@ -51,7 +51,7 @@ export default function SeminarForm() {
                     placeholder='blur'
                     alt="news"
                 />
-                <div className="absolute brightness-100 text-base-100 mt-4 left-1/2 transform -translate-x-1/2 w-4/5 sm:w-2/3 flex flex-row justify-between">
+                <div className="absolute brightness-100 text-white mt-4 left-1/2 transform -translate-x-1/2 w-4/5 sm:w-2/3 flex flex-row justify-between">
                     <div className="lg:w-2/3 mt-7 w-full">
                         <Reveal>
                             <div className="font-beautiful tracking-wider">Add Seminar Event</div>
