@@ -1,13 +1,24 @@
 import { Autoplay, Pagination, A11y, EffectCoverflow } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Reveal } from './utils/reveal';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
+import React from 'react';
 
-export const Memories = ({ pictures }:any) => {
+interface Iprops {
+    dataGambar: Igambar[]
+}
+
+interface Igambar {
+    img_id: string,
+    name: string,
+}
+
+const Memories: React.FC<Iprops> = ({ dataGambar }) => {
     return (
         <div className='my-32'>
             {/** Memories Header */}
@@ -43,17 +54,23 @@ export const Memories = ({ pictures }:any) => {
                 modifier: 2.5,
             }}
             >
-            {pictures.map((picture : any) => (
-            <SwiperSlide key={picture.image}>
+            {dataGambar.map((gambar : Igambar) => (
+            <SwiperSlide key={gambar.img_id}>
                 <div className='h-full w-full transition-transform duration-500 hover:shadow-lg cursor-pointer'>
                     <div className="h-full w-full rounded-lg group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
-                        <img className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src={picture.url} alt={picture.title}/>
+                        <Image 
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                        src={`https://drive.google.com/uc?export=view&id=${gambar.img_id}`} 
+                        alt={gambar.name}
+                        width={500}
+                        height={500}
+                        />
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"/>
                         <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
                             <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                            {picture.title}
+                            {gambar.name}
                             </p>
-                            <button className="rounded-full bg-neutral px-3.5 py-2 text-sm text-white shadow shadow-black/60">Like</button>
+                            <Link href="/memories" className="rounded-full bg-neutral px-3.5 py-2 text-sm text-white shadow shadow-black/60">See More</Link>
                         </div>
                     </div>
                 </div> 
@@ -81,17 +98,22 @@ export const Memories = ({ pictures }:any) => {
                 modifier: 2.5,
             }}
             >
-            {pictures.map((picture : any) => (
-            <SwiperSlide key={picture.image}>
+            {dataGambar.map((gambar : Igambar) => (
+            <SwiperSlide key={gambar.img_id}>
                 <div className='h-full w-full transition-transform duration-500 cursor-pointer'>
                     <div className="h-full w-full rounded-lg group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow">
-                        <img className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src={picture.url} alt={picture.title}/>
+                        <Image 
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                        src={`https://drive.google.com/uc?export=view&id=${gambar.img_id}`}
+                        alt={gambar.name}
+                        width={500}
+                        height={500}/>
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"/>
                         <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
                             <p className="mb-3 text-xs italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                                {picture.title}
+                                {gambar.name}
                             </p>
-                            <button className="rounded-lg bg-neutral px-2 py-1 font-com text-xs capitalize text-white shadow shadow-black/60"><Link href="#" rel="preload">See More</Link></button>
+                            <button className="rounded-lg bg-neutral px-2 py-1 font-com text-xs capitalize text-white shadow shadow-black/60"><Link href="/memories" rel="preload">See More</Link></button>
                         </div>
                     </div>
                 </div> 
@@ -102,3 +124,5 @@ export const Memories = ({ pictures }:any) => {
     </div>
     );
 };
+
+export default Memories;

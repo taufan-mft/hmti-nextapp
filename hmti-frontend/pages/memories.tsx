@@ -1,12 +1,20 @@
-import { NextPage } from "next";
 import Head from "next/head";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import MemoriesContent from "@/components/memories/memoriescontent";
 import MemoriesHead from "@/components/memories/memorieshead";
 
+interface Iprops {
+  dataGambar:Igambar[]
+}
 
-const Memories: NextPage = () => {
+interface Igambar {
+  img_id: string,
+  name: string,
+}
+
+function Memories(props: Iprops) {
+  const { dataGambar } = props;
   return (
     <>
       <Head>
@@ -22,7 +30,7 @@ const Memories: NextPage = () => {
           <MemoriesHead/>
         </section>
         <section>
-          <MemoriesContent/>
+          <MemoriesContent dataGambar={dataGambar}/>
         </section>
         <section>
           <Footer/>
@@ -34,3 +42,15 @@ const Memories: NextPage = () => {
 
 export default Memories;
 
+export async function getServerSideProps() {
+  const res = await fetch(process.env.DRIVEIMAGE_API);
+  const data = await res.json();
+  const dataGambar = data.data
+  console.log(dataGambar)
+
+  return {
+    props: {
+      dataGambar
+    }
+  }
+}

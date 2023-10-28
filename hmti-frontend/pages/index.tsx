@@ -1,18 +1,26 @@
-import { NextPage } from "next";
 import Head from "next/head";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import  HeroSection  from "@/components/hero";
-import { Memories } from "@/components/memories";
+import HeroSection from "@/components/hero";
+import Memories from "@/components/memories";
 import cards from "@/news.json";
 import { NewsCard } from "@/components/newscard";
 import Contact from "@/components/contact";
-import pictures from "@/pic.json";
 import  Billboard  from "@/components/billboard";
 import TextSection from "@/components/text";
 import { Reveal } from "@/components/utils/reveal";
 
-const Home: NextPage = () => {
+interface Iprops {
+  dataGambar:Igambar[]
+}
+
+interface Igambar {
+  img_id: string,
+  name: string,
+}
+
+function Home (props: Iprops) {
+  const { dataGambar } = props;
   return (
     <>
       <Head>
@@ -34,7 +42,7 @@ const Home: NextPage = () => {
       </section>
 
       <section>
-        <Memories pictures={pictures}/>
+        <Memories dataGambar={dataGambar}/>
       </section>
 
       <section>
@@ -69,3 +77,16 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export async function getServerSideProps() {
+  const res = await fetch(process.env.DRIVEIMAGE_API);
+  const data = await res.json();
+  const dataGambar = data.data
+  console.log(dataGambar)
+
+  return {
+    props: {
+      dataGambar
+    }
+  }
+}

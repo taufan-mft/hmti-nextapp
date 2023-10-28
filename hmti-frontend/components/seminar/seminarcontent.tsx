@@ -64,9 +64,9 @@ const SeminarSection: React.FC<Iprops> = ({ dataSeminar }) => {
 
   return (
     <>
-      <div className='flex flex-row xl:mx-36 lg:mx-28 sm:mx-2 mx-2 gap-2 lg:gap-5'>
-        <div className='w-full mx-3'>
-          <div tabIndex={0} className="scale-95 mb-5 w-auto cursor-pointer collapse collapse-arrow border border-base-100 bg-base-100">
+      <div className='flex flex-row xl:mx-36 lg:mx-28 sm:mx-2 gap-2 lg:gap-5'>
+        <div className='w-full ml-2 sm:mx-3'>
+          <div tabIndex={0} className="sm:scale-95 mb-5 w-auto cursor-pointer collapse collapse-arrow border border-base-100 bg-base-100">
             <div className="flex flex-row items-center gap-2 collapse-title text-lg font-medium">
               <MdInfoOutline /> Information
             </div>
@@ -75,7 +75,7 @@ const SeminarSection: React.FC<Iprops> = ({ dataSeminar }) => {
             </div>
           </div>
 
-          <div className='flex gap-3 scale-95'>
+          <div className='flex gap-3 sm:scale-95'>
             <Link
               href='/seminar/add'
               rel='preload'
@@ -116,7 +116,7 @@ const SeminarSection: React.FC<Iprops> = ({ dataSeminar }) => {
             }
             return (
               <div
-                className='mt-2 cursor-pointer transition-transform duration-500 scale-95 hover:scale-100'
+                className='mt-2 cursor-pointer transition-transform duration-500 sm:scale-95 hover:scale-100'
                 key={seminar.NIM}>
                 <div className="h-full w-full rounded-lg group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
                   <div className='flex flex-row w-full bg-base-100 rounded-xl'>
@@ -128,7 +128,7 @@ const SeminarSection: React.FC<Iprops> = ({ dataSeminar }) => {
                       width={100}
                       loading='lazy'
                     />
-                    <div className='flex flex-col justify-between m-4'>
+                    <div className='flex flex-col justify-between m-2 sm:m-4'>
                       <Reveal><h1 className='font-beautiful lg:-mt-1 text-sm lg:text-lg text-transparent bg-clip-text bg-gradient-to-r from-primary-focus to-secondary hover:from-secondary hover:to-warning'>
                         {seminar.Kategori}
                       </h1></Reveal>

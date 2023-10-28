@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   env: {
     SEMINAR_API: process.env.SEMINAR_API,
-    SEMINAR_API_ADD: process.env.SEMINAR_API_ADD,
+    DRIVEIMAGE_API: process.env.DRIVEIMAGE_API,
   },
   images: {
     remotePatterns: [

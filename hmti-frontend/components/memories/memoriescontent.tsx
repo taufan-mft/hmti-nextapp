@@ -1,52 +1,35 @@
 import Image from "next/image";
-import MemPicture from "@/pic.json"
 
-export default function MemoriesContent () {
-    interface ImageProps {
-        albumId: number
-        id: number
-        title: string
-        url: string
-        thumbnailUrl: string
-    };
+interface Iprops {
+    dataGambar: Igambar[]
+}
 
-    const MemoriesData: React.FC<ImageProps> = ({
-        id,
-        title,
-        url,
-        thumbnailUrl,
-        }: ImageProps) => {
-            return (
-                <div className='w-full h-auto py-1 rounded-lg' key={id}>
-                    <Image className='object-cover rounded-lg h-full w-full' 
-                        loading = 'lazy'
-                        src={url}
-                        placeholder= 'blur'
-                        blurDataURL = {thumbnailUrl}
-                        alt={title}
+interface Igambar {
+    img_id: string,
+    name: string,
+}
+
+const MemoriesContent: React.FC<Iprops> = ({ dataGambar }) => {
+    console.log(dataGambar)
+    return (
+        <>
+        <div className="grid grid-cols-2 sm:grid-cols-4 mx-4 sm:mx-36 mb-20">
+            {dataGambar.map((gambar: Igambar) => (
+                <div className='py-1 px-1 rounded-lg' key={gambar.img_id}>
+                    <Image
+                        className='object-cover rounded-lg h-full w-full'
+                        src={`https://drive.google.com/uc?export=view&id=${gambar.img_id}`}
+                        alt={gambar.name}
+                        priority={true}
+                        quality={70}
                         width={500}
                         height={500}
-                        onLoadingComplete={(img) => console.log(img.naturalWidth)}
                     />
                 </div>
-            )
-        }
-    return (
-        <div className="lg:columns-4 columns-2 m-2 lg:mx-36 gap-2 mb-36 sm:mt-10 mt-4">
-        {MemPicture.map((prop) => (
-        <div key={prop.id}>
-            <MemoriesData {...prop}/>
+            ))}
         </div>
-        ))}
-        </div>
-    );
-  };
+        </>
+    )
+}
 
-
-
-
-
-
-
-
-  
+export default MemoriesContent;
