@@ -1,6 +1,6 @@
 import { Reveal } from "../utils/reveal";
 
-export default function Disclaimer () {
+export default function Disclaimer() {
   return (
     <div className="flex justify-center text-center mx-2">
       <Reveal>
@@ -8,6 +8,6 @@ export default function Disclaimer () {
           to avoid any <b>misunderstandings</b>, some text will written in <b>bahasa</b>
         </span>
       </Reveal>
-    </div>    
+    </div>
   );
 };

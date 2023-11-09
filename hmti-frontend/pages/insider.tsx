@@ -56,30 +56,36 @@ const Insider: NextPage = () => {
 
   return (
     <>
-    <Script
-      src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.9.3/tsparticles.confetti.bundle.min.js"
-      onLoad={onConfettiLoad}
-    />
+      <Script
+        src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.9.3/tsparticles.confetti.bundle.min.js"
+        onLoad={onConfettiLoad}
+      />
       <Head>
-        <title>Behind of Web HMTI</title>
-        <meta name="description" content="Temukan siapa yang ada di balik pengembangan website HMTI dan teknologi yang digunakan, seperti Nginx, Next.js, Django, Ubuntu, Gunicorn, Node.js, TypeScript, React, Tailwind CSS, DaisyUI, Swiper, dan Framer."/>
-        <link rel="shortcut icon" href="/favicon.ico"/>
+        <title> Behind of Web HMTI </title>
+        <meta
+          name="description"
+          content="Temukan siapa yang ada di balik pengembangan website HMTI dan teknologi yang digunakan, seperti Nginx, Next.js, Django, Ubuntu, Gunicorn, Node.js, TypeScript, React, Tailwind CSS, DaisyUI, Swiper, dan Framer."
+        />
+        <link
+          rel="shortcut icon"
+          href="/favicon.ico"
+        />
       </Head>
-       <div>
+      <div>
         <section className="sticky top-0 w-full z-[100]">
-          <Navbar/>
+          <Navbar />
         </section>
         <section>
-          <InsiderHead/>
+          <InsiderHead />
         </section>
         <section className="my-16">
-          <InsiderContent/>
+          <InsiderContent />
         </section>
         <section>
-          <InsiderStack/>
+          <InsiderStack />
         </section>
-        <section className="">
-          <Footer/>
+        <section>
+          <Footer />
         </section>
       </div>
     </>

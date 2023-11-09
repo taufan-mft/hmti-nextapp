@@ -6,6 +6,9 @@ declare global {
             NODE_ENV: "development" | "production";
             SEMINAR_API: string;
             DRIVEIMAGE_API: string;
+            NEWS_API: string;
+            KABINET_API: string;
+            MAHASISWA_API: string;
         }
     }
 }

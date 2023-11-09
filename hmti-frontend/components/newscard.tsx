@@ -7,9 +7,25 @@ import { Reveal } from './utils/reveal';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
+import React from 'react';
+import Image from 'next/image';
 
+interface Iprops {
+    dataNews:Inews[]
+  }
+  
+  interface Inews {
+    cover: string,
+    judul: string,
+    kategori: string,
+    shortdesc: string,
+    tanggal: string,
+    content: string,
+    slug: string,
+    author: string,
+  }
 
-export const NewsCard = ({ cards }:any) => {
+const NewsCard: React.FC<Iprops> = ({ dataNews }) => {
     return (
         <div className='mb-36 xl:mx-36'> 
             {/** News Preview Big Screen */}
@@ -25,12 +41,18 @@ export const NewsCard = ({ cards }:any) => {
                     disableOnInteraction: true,
                 }}
                 >
-                {cards.map((card : any) => (
-                <SwiperSlide key={card.image}>
+                {dataNews.map((news : Inews) => (
+                <SwiperSlide key={news.slug}>
                     <article className='m-2 rounded-lg shadow-md transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
                         <div className='w-full h-36 px-4 pt-4 mb-2'>
                             <div className="relative group hover:bg-black rounded-lg h-full w-full cursor-pointer object-cover overflow-hidden">
-                                <img className="h-full w-full object-cover transition-transform duration-500 group-hover:opacity-50 group-hover:scale-125" src={card.urlToImage} alt={card.title} />
+                                <Image 
+                                className="h-full w-full object-cover transition-transform duration-500 group-hover:opacity-50 group-hover:scale-125" 
+                                src={news.cover} 
+                                alt={news.judul} 
+                                height={500}
+                                width={500}
+                                />
                             </div>
                         </div>
                         <div className='flex flex-col mt-2 px-4'>
@@ -54,13 +76,13 @@ export const NewsCard = ({ cards }:any) => {
                             <h2 className='mb-2 text-lg font-bold line-clamp-2 hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
                                 <Reveal>
                                     <Link rel="preload" href='#'>
-                                    {card.title}
+                                    {news.judul}
                                     </Link>
                                 </Reveal>
                             </h2>
                             <Reveal>
                                 <p className='mb-1 font-normal text-sm line-clamp-4 text-justify'>
-                                {card.description}
+                                {news.shortdesc}
                                 </p>    
                             </Reveal>         
                             <div className='flex mt-3 items-center'>
@@ -91,12 +113,18 @@ export const NewsCard = ({ cards }:any) => {
                     disableOnInteraction: true,
                 }}
                 >
-                {cards.map((card : any) => (
-                <SwiperSlide key={card.image}>
+                {dataNews.map((news : Inews) => (
+                <SwiperSlide key={news.slug}>
                     <article className='m-2 rounded-lg shadow-md transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
                         <div className='w-full h-48 px-4 pt-4 mb-2'>
                             <div className="group hover:bg-black relative rounded-lg h-full w-full cursor-pointer object-cover overflow-hidden">
-                                <img className="h-full w-full object-cover transition-transform duration-500 group-hover:opacity-50 group-hover:scale-125" src={card.urlToImage} alt={card.title} />
+                                <Image 
+                                className="h-full w-full object-cover transition-transform duration-500 group-hover:opacity-50 group-hover:scale-125" 
+                                src={news.cover} 
+                                alt={news.judul} 
+                                height={500}
+                                width={500}
+                                />
                             </div>
                         </div>
                         <div className='flex flex-col mt-2 px-4'>
@@ -118,13 +146,13 @@ export const NewsCard = ({ cards }:any) => {
                             <Reveal>
                                 <h2 className='mb-2 text-xl font-bold line-clamp-2 hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
                                     <Link rel="preload" href='#'>
-                                    {card.title}
+                                    {news.judul}
                                     </Link>
                                 </h2>
                             </Reveal>
                             <Reveal>
                                 <p className='mb-1 font-normal text-base line-clamp-4'>
-                                {card.description}
+                                {news.shortdesc}
                                 </p>             
                             </Reveal>
                             <div className='flex mt-3 items-center'>
@@ -144,3 +172,5 @@ export const NewsCard = ({ cards }:any) => {
         </div>
     );
 };
+
+export default NewsCard;

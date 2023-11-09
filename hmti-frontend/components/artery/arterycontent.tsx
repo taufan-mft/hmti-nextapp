@@ -22,8 +22,8 @@ import { Reveal } from '../utils/reveal';
 
 
 
-export default function ArterySection () {
-    interface SlideProps {
+export default function ArterySection() {
+  interface SlideProps {
     number: string;
     title: string;
     subtitle: string;
@@ -31,7 +31,7 @@ export default function ArterySection () {
     caption: string;
     slugDrive: string;
   }
-  
+
   const SlideContent: React.FC<SlideProps> = ({
     number,
     title,
@@ -40,7 +40,7 @@ export default function ArterySection () {
     caption,
     slugDrive,
   }: SlideProps) => {
-    return(
+    return (
       <div>
         <a href="https://hmti-unsoed.org/artery/">
           <div className='w-auto rounded-lg pb-3 shadow-md bg-base-100 transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
@@ -50,7 +50,7 @@ export default function ArterySection () {
                   {number}
                 </h2>
               </Reveal>
-              <hr className="ml-0.5 mb-16 mt-2 border-4 border-primary w-8"/>             
+              <hr className="ml-0.5 mb-16 mt-2 border-4 border-primary w-8" />
               <Reveal>
                 <p className='font-bold text-2xl ml-1 tracking-tight hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
                   {title}
@@ -58,45 +58,45 @@ export default function ArterySection () {
               </Reveal>
               <Reveal>
                 <p className='ml-1 opacity-50 font-beautiful hover:opacity-100'>
-                  {subtitle}  
+                  {subtitle}
                 </p>
               </Reveal>
             </div>
             <div className='w-full h-56 px-4 py-4'>
               <div className="shadow-lg group hover:bg-black relative rounded-lg h-full w-full cursor-pointer object-cover overflow-hidden">
                 <Image className="h-full w-full object-cover transition-transform duration-500 group-hover:opacity-50 group-hover:scale-125"
-                src={imageSrc}
-                alt={caption}
-                quality={50}
-                loading = 'lazy'
-                placeholder = 'blur'
+                  src={imageSrc}
+                  alt={caption}
+                  quality={50}
+                  loading='lazy'
+                  placeholder='blur'
                 />
               </div>
             </div>
             <Reveal>
               <div className='px-4 flex flex-row gap-4'>
                 <div className="tooltip" data-tip="Download">
-                  <PiDownloadSimpleBold size={20}/>
+                  <PiDownloadSimpleBold size={20} />
                 </div>
                 <div className="tooltip" data-tip="Like">
                   <label className="swap">
                     <input type="checkbox" />
-                    <PiHeartFill className="swap-on" size={20}/>
-                    <PiHeartBold className="swap-off" size={20}/>
+                    <PiHeartFill className="swap-on" size={20} />
+                    <PiHeartBold className="swap-off" size={20} />
                   </label>
                 </div>
                 <div className="tooltip" data-tip="Share">
-                  <PiShareFatFill size={20}/>
+                  <PiShareFatFill size={20} />
                 </div>
-                <PiDotsThreeOutline size={20}/>
+                <PiDotsThreeOutline size={20} />
               </div>
             </Reveal>
-          </div> 
+          </div>
         </a>
       </div>
     );
   };
-  
+
   const SlideContentSm: React.FC<SlideProps> = ({
     number,
     title,
@@ -116,7 +116,7 @@ export default function ArterySection () {
                   </h2>
                 </Reveal>
               </div>
-              <hr className="ml-2 mt-2 border-4 border-primary h-8"/>             
+              <hr className="ml-2 mt-2 border-4 border-primary h-8" />
               <div className='flex flex-col w-4/5 font-bold m-1 ml-2 tracking-tight'>
                 <Reveal>
                   <h3 className='hover:text-transparent line-clamp-1 hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
@@ -134,8 +134,8 @@ export default function ArterySection () {
                   src={imageSrc}
                   alt={caption}
                   quality={50}
-                  loading = 'lazy'
-                  placeholder = 'blur'/>
+                  loading='lazy'
+                  placeholder='blur' />
               </div>
             </div>
           </div>
@@ -143,19 +143,19 @@ export default function ArterySection () {
       </div>
     );
   };
-  
+
 
   const slidesData = [
-    { number: '01', title: 'Semester 1', subtitle: 'Beginning', imageSrc: artery1, caption:'Pict 1 by Micheile Henderson', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVcjVreVkwYzFFVTg?resourcekey=0-iH93aE2njdiRMMpAlWgIpg'},
-    { number: '02', title: 'Semester 2', subtitle: 'Adaptation', imageSrc: artery2, caption:'Pict 2 by Jason Rost', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVbVRPZlVpS2Z5SHc?resourcekey=0-48tSwtH9R0neOZJV-FH3BQ'},
-    { number: '03', title: 'Semester 3', subtitle: 'Discovery', imageSrc: artery3, caption:'Pict 3 by Aron Yigin', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVd09ycFVRR3ZIQW8?resourcekey=0-_k4LZ3BdDNMIkcotf-PSPw'},
-    { number: '04', title: 'Semester 4', subtitle: 'Progression', imageSrc: artery4, caption:'Pict 4 by Simone Hutsch', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVUkhBTHFJbDFfX0E?resourcekey=0-dNY88QE0junu81m0NjOR8Q'},
-    { number: '05', title: 'Semester 5', subtitle: 'Focus', imageSrc: artery5, caption:'Pict 5 by Simone Hutsch', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVWnNiREZsNDBSTE0?resourcekey=0-fuduwOdTSpsX74QwdJdOEw'},
-    { number: '06', title: 'Semester 6', subtitle: 'Intensity', imageSrc: artery6, caption:'Pict 6 by Kyrillos Samaan', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVdkpzeDhYYWZVSm8?resourcekey=0-zozPl7Oy9uFbjpOefjblgA'},
-    { number: '07', title: 'Semester 7', subtitle: 'Reflection', imageSrc: artery7, caption:'Pict 7 by Simone Hutsch', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVMDU4MDF4Mmk0b0U?resourcekey=0--7Hpsunmn8-iCruhewzv1w'},
-    { number: '08', title: 'Report Example', subtitle: 'Culmination', imageSrc: artery8, caption:'Pict 8 by Pierre Châtel-Innocenti', slugDrive: 'https://drive.google.com/drive/u/0/folders/13gJXRu86YngD6bSGdGnt4qmun2H9Lg_a'},
+    { number: '01', title: 'Semester 1', subtitle: 'Beginning', imageSrc: artery1, caption: 'Pict 1 by Micheile Henderson', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVcjVreVkwYzFFVTg?resourcekey=0-iH93aE2njdiRMMpAlWgIpg' },
+    { number: '02', title: 'Semester 2', subtitle: 'Adaptation', imageSrc: artery2, caption: 'Pict 2 by Jason Rost', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVbVRPZlVpS2Z5SHc?resourcekey=0-48tSwtH9R0neOZJV-FH3BQ' },
+    { number: '03', title: 'Semester 3', subtitle: 'Discovery', imageSrc: artery3, caption: 'Pict 3 by Aron Yigin', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVd09ycFVRR3ZIQW8?resourcekey=0-_k4LZ3BdDNMIkcotf-PSPw' },
+    { number: '04', title: 'Semester 4', subtitle: 'Progression', imageSrc: artery4, caption: 'Pict 4 by Simone Hutsch', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVUkhBTHFJbDFfX0E?resourcekey=0-dNY88QE0junu81m0NjOR8Q' },
+    { number: '05', title: 'Semester 5', subtitle: 'Focus', imageSrc: artery5, caption: 'Pict 5 by Simone Hutsch', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVWnNiREZsNDBSTE0?resourcekey=0-fuduwOdTSpsX74QwdJdOEw' },
+    { number: '06', title: 'Semester 6', subtitle: 'Intensity', imageSrc: artery6, caption: 'Pict 6 by Kyrillos Samaan', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVdkpzeDhYYWZVSm8?resourcekey=0-zozPl7Oy9uFbjpOefjblgA' },
+    { number: '07', title: 'Semester 7', subtitle: 'Reflection', imageSrc: artery7, caption: 'Pict 7 by Simone Hutsch', slugDrive: 'https://drive.google.com/drive/u/0/folders/0B95aLWQUqQNVMDU4MDF4Mmk0b0U?resourcekey=0--7Hpsunmn8-iCruhewzv1w' },
+    { number: '08', title: 'Report Example', subtitle: 'Culmination', imageSrc: artery8, caption: 'Pict 8 by Pierre Châtel-Innocenti', slugDrive: 'https://drive.google.com/drive/u/0/folders/13gJXRu86YngD6bSGdGnt4qmun2H9Lg_a' },
   ];
-    return (
+  return (
     <div className='pb-10'>
       <div className="w-full hidden lg:flex">
         <Swiper
@@ -167,9 +167,9 @@ export default function ArterySection () {
           modules={[Pagination, Navigation]}
         >
           {slidesData.map((slide) => (
-          <SwiperSlide key={slide.number}>
-            <SlideContent {...slide} />
-          </SwiperSlide>
+            <SwiperSlide key={slide.number}>
+              <SlideContent {...slide} />
+            </SwiperSlide>
           ))}
         </Swiper>
       </div>
@@ -178,9 +178,9 @@ export default function ArterySection () {
           <div key={slide.number}>
             <SlideContentSm {...slide} />
           </div>
-          ))}
+        ))}
       </div>
     </div>
-    
+
   )
 }

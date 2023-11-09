@@ -16,7 +16,7 @@ export default function Calendar() {
 			<div className="w-96 h-auto ">
 				<div className="flex justify-between items-center">
 					<h1 className="select-none font-bold ml-2 text-primary-focus text-lg flex flex-row items-center gap-2">
-                        <BsFillCalendarCheckFill/>
+						<BsFillCalendarCheckFill />
 						{months[today.month()]}, {today.year()}
 					</h1>
 					<div className="flex gap-4 items-center ">

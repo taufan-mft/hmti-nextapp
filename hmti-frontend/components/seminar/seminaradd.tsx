@@ -7,39 +7,11 @@ import { BiBulb, BiCalendarEvent, BiSolidNews } from "react-icons/bi";
 import { LuCalendar } from "react-icons/lu"
 import { Reveal } from "../utils/reveal";
 import moment from "moment";
-import { SyntheticEvent, useState } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 export default function SeminarForm() {
     const date = moment().format('LL')
     const day = moment().format('dddd')
-
-    const [nama, setNama] = useState("");
-    const [nim, setNim] = useState("");
-    const [kategori, setKategori] = useState("");
-    const router = useRouter();
-
-    async function handleSubmit(e: SyntheticEvent) {
-        e.preventDefault();
-        await fetch(process.env.SEMINAR_API_ADD, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                nama: nama,
-                nim: nim,
-                kategori: kategori,
-            })
-        });
-
-
-        setNama("");
-        setNim("");
-        setKategori("");
-        router.refresh();
-    }
 
     return (
         <div>

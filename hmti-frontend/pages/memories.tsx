@@ -13,7 +13,7 @@ interface Igambar {
   name: string,
 }
 
-function Memories(props: Iprops) {
+function Memories(props: Readonly<Iprops>) {
   const { dataGambar } = props;
   return (
     <>
@@ -46,7 +46,6 @@ export async function getServerSideProps() {
   const res = await fetch(process.env.DRIVEIMAGE_API);
   const data = await res.json();
   const dataGambar = data.data
-  console.log(dataGambar)
 
   return {
     props: {
