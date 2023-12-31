@@ -65,7 +65,10 @@ export default function SeminarForm() {
         </div>
             <div className="flex items-center flex-col brightness-100 mb-10">
                 <div className="w-full sm:w-2/3  border-x sm:border-b bg-white sm:rounded-b-xl">
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf2ot97cOYOKZwxRw_hPe_HlL8ZqvOdF_3f6OP2DylFrLAerA/viewform?embedded=true" className="w-full h-[170vh] sm:h-[170vh] lg:h-[170vh] xl:h-[165vh] rounded-b-xl"/>
+                    <iframe 
+                    title="Form Pendataan Seminar Teknik Industri"
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSdLFbDyqFjT_bSA3mSWf_wZGKdXNN5vRxppn0vKsb_og810ZA/viewform?embedded=true" 
+                    className="w-full h-[170vh] sm:h-[170vh] lg:h-[170vh] xl:h-[165vh] rounded-b-xl"/>
                 </div>
                 <Link href="/seminar" className="btn btn-primary sm:w-2/3 w-5/6 mt-8">Back To Seminar Event List</Link>
             </div>

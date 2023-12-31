@@ -1,9 +1,9 @@
 import Head from "next/head";
+import moment from 'moment';
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import SeminarHero from "@/components/seminar/seminarhero";
 import SeminarSection from "@/components/seminar/seminarcontent";
-import moment from 'moment';
 
 export async function getServerSideProps() {
   const res = await fetch(process.env.SEMINAR_API);

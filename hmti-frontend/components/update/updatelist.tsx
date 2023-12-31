@@ -3,25 +3,31 @@ import placeholder from "@/public/ruangkonten.png";
 import logoKabinet from "@/public/logoKabinet.jpg"
 import { BsInstagram, BsLinkedin, BsPersonFill, BsYoutube } from "react-icons/bs";
 import Link from "next/link";
-import newsData from "@/news.json"
+import moment from 'moment';
 import { BiRightArrowAlt } from "react-icons/bi";
 import { Reveal } from "../utils/reveal";
 
-export default function UpdateList() {
+interface Iprops {
+  dataNews: Inews[]
+}
+
+interface Inews {
+  cover: string,
+  judul: string,
+  kategori: string,
+  shortdesc: string,
+  tanggal: string,
+  content: string,
+  slug: string,
+  author: string,
+}
+
+const UpdateList: React.FC<Iprops> = ({ dataNews }) => {
+
   interface KabinetProps {
     kabinet: string;
     logo: StaticImageData;
     customText: string;
-  }
-
-  interface NewsProps {
-    author: string;
-    title: string;
-    description: string;
-    url: string;
-    urlToImage: string;
-    publishedAt: string;
-    content: string;
   }
 
   const hmtiNow = [
@@ -56,58 +62,6 @@ export default function UpdateList() {
     )
   }
 
-  const UpdateList: React.FC<NewsProps> = ({
-    author,
-    title,
-    description,
-    url,
-    urlToImage,
-    publishedAt,
-  }: NewsProps) => {
-    return (
-      <div className='mt-4 bg-base-100 rounded-lg transition-transform duration-500 scale-95 hover:scale-100' key={url}>
-        <Link rel="preload" href='#'>
-          <div className="flex flex-row">
-            <div className="w-56 h-auto basis-1/3">
-              <img className="h-full w-full rounded-l-lg object-cover"
-                src={urlToImage} alt={title}
-              />
-            </div>
-            <div className="flex flex-col sm:ml-5 ml-2 basis-2/3 pt-3 sm:pr-10 pr-5 tracking-normal sm:tracking-wider">
-              <Reveal>
-                <div className="text-sm opacity-50 flex items-center gap-2">
-                  <BsPersonFill className="mt-0.5" /> {author}
-                </div>
-              </Reveal>
-              <Reveal>
-                <div className="sm:text-2xl text-lg line-clamp-2 font-bold text-transparent bg-clip-text bg-gradient-to-r bg-base-content hover:from-secondary hover:to-primary">
-                  {title}
-                </div>
-              </Reveal>
-              <Reveal>
-                <div className="mt-1 sm:text-lg text-sm line-clamp-2 sm:tracking-wide text-justify">
-                  {description}
-                </div>
-              </Reveal>
-              <Reveal>
-                <div className="sm:text-sm text-xs mt-1 opacity-20">
-                  {publishedAt}
-                </div>
-              </Reveal>
-              <div className='flex my-3 items-center'>
-                <Reveal>
-                  <div className='btn border-0 text-base-100 btn-sm font-bold btn-primary transition ease-in-out hover:scale-105 duration-300 inline-flex items-center'>
-                    Read More
-                    <BiRightArrowAlt size={20} />
-                  </div>
-                </Reveal>
-              </div>
-            </div>
-          </div>
-        </Link>
-      </div>
-    );
-  };
   return (
     <div className="flex flex-row gap-4 mx-2 xl:mx-36">
       <div className="w-full">
@@ -120,10 +74,53 @@ export default function UpdateList() {
             </Reveal>
             <hr className="border-b-2 -mt-0.5 border-base-content grow opacity-50" />
           </div>
-          {newsData.map((news) => (
-            <div key={news.url}>
-              <UpdateList {...news} />
-            </div>
+          {dataNews.map((news : Inews) => (
+              <div className='mt-4 bg-base-100 rounded-lg transition-transform duration-500 scale-95 hover:scale-100' 
+              key={news.slug}>
+                <Link rel="preload" href='#'>
+                  <div className="flex flex-row">
+                    <div className="w-56 h-auto basis-1/3">
+                      <Image 
+                        className="h-full w-full rounded-l-lg object-cover"
+                        src={news.cover} 
+                        alt={news.judul}
+                        height={300}
+                        width={400}
+                      />
+                    </div>
+                    <div className="flex flex-col sm:ml-5 ml-2 basis-2/3 pt-3 sm:pr-10 pr-5 tracking-normal sm:tracking-wider">
+                      <Reveal>
+                        <div className="text-sm opacity-50 flex items-center gap-2 mb-1">
+                          <BsPersonFill className="mt-0.5" /> <p className="line-clamp-1">{news.author}</p>
+                        </div>
+                      </Reveal>
+                      <Reveal>
+                        <div className="sm:text-xl text-lg line-clamp-2 font-bold text-transparent bg-clip-text bg-gradient-to-r bg-base-content hover:from-secondary hover:to-primary">
+                          {news.judul}
+                        </div>
+                      </Reveal>
+                      <Reveal>
+                        <div className="mt-1 text-sm sm:line-clamp-3 line-clamp-2 sm:tracking-wide text-justify">
+                          {news.shortdesc}
+                        </div>
+                      </Reveal>
+                      <Reveal>
+                        <div className="sm:text-sm text-xs mt-1 opacity-20">
+                        {moment(news.tanggal).startOf('day').fromNow()}
+                        </div>
+                      </Reveal>
+                      <div className='flex my-3 items-center'>
+                        <Reveal>
+                          <div className='btn border-0 text-base-100 btn-sm font-bold btn-primary transition ease-in-out hover:scale-105 duration-300 inline-flex items-center'>
+                            Read More
+                            <BiRightArrowAlt size={20} />
+                          </div>
+                        </Reveal>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
           ))}
         </div>
       </div>
@@ -181,3 +178,5 @@ export default function UpdateList() {
     </div>
   );
 };
+
+export default UpdateList;

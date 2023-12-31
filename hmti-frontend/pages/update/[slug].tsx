@@ -31,8 +31,8 @@ export async function getServerSideProps() {
   }
 }
 
-function Post(props: Readonly<Iprops>) {
-  const { dataNews } = props;
+function Update({ params }: any) {
+  console.log(params)
   return (
     <>
       <Head>
@@ -46,12 +46,11 @@ function Post(props: Readonly<Iprops>) {
         </section>
         <section>
           <UpdateContent />
-        </section>
-        <section className="pt-36">
-          <h2 className='block lg:text-2xl text-3xl cursor-pointer font-bold tracking-wider text-center'>
-            RELATED ARTICLE
-          </h2>
-          <NewsCard dataNews={dataNews} />
+          <div className="pt-36">
+            <h2 className='block lg:text-2xl text-3xl cursor-pointer font-bold tracking-wider text-center'>
+              RELATED ARTICLE {params}
+            </h2>
+          </div>
         </section>
         <section className="">
           <Footer />
@@ -61,5 +60,5 @@ function Post(props: Readonly<Iprops>) {
   );
 };
 
-export default Post;
+export default Update;
 

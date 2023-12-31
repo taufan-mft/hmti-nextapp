@@ -1,11 +1,49 @@
+import Head from "next/head";
 import HeroUpdate from "@/components/update/updatehero";
 import UpdateList from "@/components/update/updatelist";
-import { NextPage } from "next";
-import Head from "next/head";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
-const Update: NextPage = () => {
+export async function getServerSideProps() {
+  const res = await fetch(process.env.NEWS_API);
+  const data = await res.json();
+
+  const dataNews = data.sort(function (a: any, b: any) {
+    let tanggalAwal = new Date(a.tanggal),
+      tanggalAkhir = new Date(b.tanggal)
+    if (tanggalAwal > tanggalAkhir) {
+      return
+    }
+    if (tanggalAkhir > tanggalAwal) {
+      return
+    }
+  })
+  console.log(dataNews)
+
+  return {
+    props: {
+      dataNews
+    }
+  }
+}
+
+interface Iprops {
+  dataNews: Inews[]
+}
+
+interface Inews {
+  cover: string,
+  judul: string,
+  kategori: string,
+  shortdesc: string,
+  tanggal: string,
+  content: string,
+  slug: string,
+  author: string,
+}
+
+function Update(props: Readonly<Iprops>) {
+  const { dataNews } = props;
   return (
     <>
       <Head>
@@ -21,7 +59,7 @@ const Update: NextPage = () => {
           <HeroUpdate />
         </section>
         <section className="py-10">
-          <UpdateList />
+          <UpdateList dataNews={dataNews}/>
         </section>
         <section className="">
           <Footer />
