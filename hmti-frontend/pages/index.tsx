@@ -8,6 +8,7 @@ import Contact from "@/components/contact";
 import Billboard from "@/components/billboard";
 import TextSection from "@/components/text";
 import { Reveal } from "@/components/utils/reveal";
+import Feature from "@/components/feature";
 
 interface Iprops {
   dataGambar: Igambar[],
@@ -45,6 +46,9 @@ function Home(props: Readonly<Iprops>) {
       </section>
       <section className="sm:m-4 m-2">
         <HeroSection />
+      </section>
+      <section className="sm:m-4">
+        <Feature />
       </section>
       <section className="sm:m-4">
         <TextSection />
@@ -85,12 +89,20 @@ export default Home;
 export async function getServerSideProps() {
   const res = await fetch(process.env.DRIVEIMAGE_API);
   const data = await res.json();
-  const dataGambar = data.data
+  const dataGambar = data.data.slice(0,7);
 
   const res2 = await fetch(process.env.NEWS_API);
-  const dataNews = await res2.json();
-  console.log(dataNews)
-
+  const news = await res2.json();
+  const dataNews = news.sort(function (a: any, b: any) {
+    let tanggalAwal = new Date(a.tanggal),
+      tanggalAkhir = new Date(b.tanggal)
+    if (tanggalAwal < tanggalAkhir) {
+      return 1
+    }
+    if (tanggalAkhir < tanggalAwal) {
+      return -1
+    }
+  }).slice(0,10);
   return {
     props: {
       dataGambar,

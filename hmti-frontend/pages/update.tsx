@@ -11,11 +11,11 @@ export async function getServerSideProps() {
   const dataNews = data.sort(function (a: any, b: any) {
     let tanggalAwal = new Date(a.tanggal),
       tanggalAkhir = new Date(b.tanggal)
-    if (tanggalAwal > tanggalAkhir) {
-      return
+    if (tanggalAwal < tanggalAkhir) {
+      return 1
     }
-    if (tanggalAkhir > tanggalAwal) {
-      return
+    if (tanggalAkhir < tanggalAwal) {
+      return -1
     }
   })
   console.log(dataNews)

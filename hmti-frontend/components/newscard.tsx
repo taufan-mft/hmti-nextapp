@@ -51,7 +51,7 @@ const NewsCard: React.FC<Iprops> = ({ dataNews }) => {
                         }
                         return (
                             <SwiperSlide key={news.slug} onClick={handleClick}>
-                                <article className='m-2 rounded-lg shadow-md transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
+                                <article className='my-2 mx-1 rounded-lg shadow-md transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
                                     <div className='w-full h-36 px-4 pt-4 mb-2'>
                                         <div className="relative group hover:bg-black rounded-lg h-full w-full cursor-pointer object-cover overflow-hidden">
                                             <Image
@@ -64,7 +64,7 @@ const NewsCard: React.FC<Iprops> = ({ dataNews }) => {
                                         </div>
                                     </div>
                                     <div className='flex flex-col mt-2 px-4'>
-                                        <div className='flex justify-between mb-3'>
+                                        <div className='flex justify-between mb-3 -mx-2 lg:scale-95'>
                                             <Reveal>
                                                 <div className='btn btn-xs text-primary text-xs hover:text-secondary'>
                                                     <div className='flex flex-row items-center gap-1'>
@@ -83,9 +83,9 @@ const NewsCard: React.FC<Iprops> = ({ dataNews }) => {
                                                 </Reveal>
                                             </div>
                                         </div>
-                                        <h2 className='mb-2 text-lg font-bold line-clamp-2 hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary'>
+                                        <h2 className='mb-2 text-lg font-bold '>
                                             <Reveal>
-                                                <div>
+                                                <div className='hover:text-transparent hover:bg-clip-text bg-gradient-to-r hover:from-secondary hover:to-primary line-clamp-2'>
                                                     {news.judul}
                                                 </div>
                                             </Reveal>
