@@ -9,7 +9,7 @@ export default function Feature() {
         <div className='flex justify-center'>
             <Link 
             href="/artery"
-            className='m-2 w-60 flex items-center rounded-lg shadow-md transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
+            className='flex w-60 my-2 items-center rounded-lg shadow-md transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
                 <div className='ml-2 my-2 p-2 rounded-lg text-info bg-info bg-opacity-30'>
                     <FaGraduationCap size={50} />
                 </div>
@@ -30,7 +30,7 @@ export default function Feature() {
             </Link>
             <Link 
             href="/update"
-            className='m-2 w-60 flex items-center rounded-lg shadow-md transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
+            className='hidden lg:flex my-2 w-60 items-center rounded-lg shadow-md transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
                 <div className='ml-2 my-2 p-2 rounded-lg text-primary bg-primary bg-opacity-30'>
                     <LuNewspaper size={50} />
                 </div>
@@ -51,7 +51,7 @@ export default function Feature() {
             </Link>
             <Link 
             href="/seminar"
-            className='m-2 w-60 flex items-center rounded-lg shadow-md transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
+            className='hidden sm:flex my-2 w-60 items-center rounded-lg shadow-md transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
                 <div className='ml-2 my-2 p-2 rounded-lg text-secondary bg-secondary bg-opacity-30'>
                     <MdCoPresent size={50} />
                 </div>
@@ -72,14 +72,14 @@ export default function Feature() {
             </Link>
             <Link 
             href="#"
-            className='m-2 w-60 flex items-center rounded-lg shadow-md transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
+            className='my-2 w-60 flex items-center rounded-lg shadow-md transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
                 <div className='ml-2 my-2 p-2 rounded-lg text-accent bg-accent bg-opacity-30'>
                     <FaPeopleGroup size={50} />
                 </div>
                 <div className='flex flex-col px-4'>
                     <h2 className='text-lg font-bold'>
                         <Reveal>
-                            <div>
+                            <div className='line-clamp-1'>
                                 Kahim Election
                             </div>
                         </Reveal>
