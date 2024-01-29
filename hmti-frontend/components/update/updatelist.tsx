@@ -77,7 +77,7 @@ const UpdateList: React.FC<Iprops> = ({ dataNews }) => {
           {dataNews.map((news : Inews) => (
               <div className='mt-4 bg-base-100 rounded-lg transition-transform duration-500 scale-95 hover:scale-100' 
               key={news.slug}>
-                <Link rel="preload" href='#'>
+                <Link rel="preload" href={`/update/${news.slug}`}>
                   <div className="flex flex-row">
                     <div className="w-56 h-auto basis-1/3">
                       <Image 

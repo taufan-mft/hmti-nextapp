@@ -2,10 +2,23 @@ import Head from "next/head";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import UpdateContent from "@/components/update/updatecontent";
-import NewsCard from "@/components/newscard";
+
+
+export async function getServerSideProps({params}:any) {
+  const apiUrl = `${process.env.NEWS_API}${params.slug}`
+
+  const res = await fetch(apiUrl);
+  const dataNews = await res.json();
+  console.log(apiUrl)
+  return {
+    props: {
+      dataNews
+    }
+  }
+}
 
 interface Iprops {
-  dataNews: Inews[]
+  dataNews: Inews
 }
 
 interface Inews {
@@ -19,24 +32,12 @@ interface Inews {
   author: string,
 }
 
-export async function getServerSideProps() {
-  const res = await fetch(process.env.NEWS_API);
-  const dataNews = await res.json();
-  console.log(dataNews)
 
-  return {
-    props: {
-      dataNews
-    }
-  }
-}
-
-function Update({ params }: any) {
-  console.log(params)
+function UpdateDetail({dataNews}: Readonly<Iprops>) {
   return (
     <>
       <Head>
-        <title>HMTI Update - Judul Berita</title>
+        <title>HMTI Update </title>
         <meta name="description" content="Bersama prabu meraih impian sejak 2015" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
@@ -45,14 +46,9 @@ function Update({ params }: any) {
           <Navbar />
         </section>
         <section>
-          <UpdateContent />
-          <div className="pt-36">
-            <h2 className='block lg:text-2xl text-3xl cursor-pointer font-bold tracking-wider text-center'>
-              RELATED ARTICLE {params}
-            </h2>
-          </div>
+          <UpdateContent {...dataNews}/>
         </section>
-        <section className="">
+        <section className="mt-36">
           <Footer />
         </section>
       </div>
@@ -60,5 +56,5 @@ function Update({ params }: any) {
   );
 };
 
-export default Update;
+export default UpdateDetail;
 
