@@ -1,14 +1,39 @@
 import HeroAbout from "@/components/about/abouthero";
-
-import { NextPage } from "next";
 import Head from "next/head";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Disclaimer from "@/components/about/aboutdisclaimer";
 import AboutDescription from "@/components/about/aboutdescription";
 import AboutGoals from "@/components/about/aboutgoals";
+import AboutKabinet from "@/components/about/aboutkabinet"
 
-const About: NextPage = () => {
+export async function getServerSideProps() {
+  const response = await fetch(process.env.KABINET_API);
+  const dataKabinet = await response.json();
+
+  return {
+    props: {
+      dataKabinet
+    }
+  }
+}
+
+interface Iprops {
+  dataKabinet: Ikabinet[]
+}
+
+interface Ikabinet {
+  nama: string,
+  ketua: string,
+  tahun: string,
+  slug: string,
+  cover: string,
+  struktur: string,
+  konten: string,
+}
+
+function About(props: Readonly<Iprops>) {
+  const { dataKabinet } = props;
   return (
     <>
       <Head>
@@ -28,6 +53,9 @@ const About: NextPage = () => {
         </section>
         <section className="py-5">
           <AboutGoals />
+        </section>
+        <section className="py-5">
+          <AboutKabinet dataKabinet={dataKabinet}/>
         </section>
         <section className="py-5">
           <Disclaimer />

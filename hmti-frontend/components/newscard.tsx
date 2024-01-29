@@ -138,8 +138,8 @@ const NewsCard: React.FC<Iprops> = ({ dataNews }) => {
                                                 className="h-full w-full object-cover transition-transform duration-500 group-hover:opacity-50 group-hover:scale-125"
                                                 src={news.cover}
                                                 alt={news.judul}
-                                                height={500}
-                                                width={500}
+                                                height={100}
+                                                width={200}
                                             />
                                         </div>
                                     </div>

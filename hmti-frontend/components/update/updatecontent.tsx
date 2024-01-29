@@ -1,10 +1,11 @@
 import Image from "next/image";
-import placeholder from "@/public/spiderman-unchsoed.jpg";
 import backdrop from "@/public/backdrop.png";
 import { BiBulb, BiCalendarEvent, BiSolidNews } from "react-icons/bi";
 import { FaUserAlt } from "react-icons/fa"
 import { Reveal } from "../utils/reveal";
 import moment from 'moment';
+import React, { useState, useEffect } from "react";
+
 interface News {
     cover: string,
     judul: string,
@@ -15,7 +16,13 @@ interface News {
 }
 
 const UpdateContent = ({ cover, judul, kategori, tanggal, content, author }: News) => {
-    function removeHTMLTags(html: string): string {
+    const [cleanedText, setCleanedText] = useState('');
+
+    useEffect(() => {
+        setCleanedText(removeHTMLTags(content));
+    }, [content]);
+
+    const removeHTMLTags = (html:any) => {
         const temporaryElement = document.createElement("div");
         temporaryElement.innerHTML = html;
         
@@ -27,9 +34,6 @@ const UpdateContent = ({ cover, judul, kategori, tanggal, content, author }: New
     
         return temporaryElement.innerHTML;
     }
-    
-    const cleanedText = removeHTMLTags(content);
-    console.log(cleanedText);
     return (
         <div>
                 <div className="flex flex-col items-center -space-y-20">
@@ -85,7 +89,7 @@ const UpdateContent = ({ cover, judul, kategori, tanggal, content, author }: New
                             width={800}
                             alt={judul}
                         />
-                        <div dangerouslySetInnerHTML={{__html: cleanedText}} className="mt-6 text-justify"/>
+                        <div className="mt-6 text-justify" dangerouslySetInnerHTML={{__html:cleanedText}}/>
                     </div>
                 </div>
         </div>

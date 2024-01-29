@@ -71,7 +71,7 @@ export default function Feature() {
                 </div>
             </Link>
             <Link 
-            href="https://hmti-unsoed.org/artery/"
+            href="https://hmti-unsoed.org/pemira/"
             className='my-2 w-60 flex items-center rounded-lg shadow-md transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
                 <div className='ml-2 my-2 p-2 rounded-lg text-accent bg-accent bg-opacity-30'>
                     <FaPeopleGroup size={50} />
@@ -80,13 +80,13 @@ export default function Feature() {
                     <h2 className='text-lg font-bold'>
                         <Reveal>
                             <div className='line-clamp-1'>
-                                Kahim Election
+                                Pemira 
                             </div>
                         </Reveal>
                     </h2>
                     <Reveal>
                         <p className='font-normal text-sm line-clamp-4'>
-                        Choose your best Ketua Himpunan
+                        Choose your own best ketua himpunan
                         </p>
                     </Reveal>
                 </div>

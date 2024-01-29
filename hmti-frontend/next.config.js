@@ -7,8 +7,8 @@ const nextConfig = {
     SEMINAR_API: process.env.SEMINAR_API,
     DRIVEIMAGE_API: process.env.DRIVEIMAGE_API,
     NEWS_API: process.env.NEWS_API,
-    KABINET_API: process.env.NEWS_API,
-    MAHASISWA_API: process.env.NEWS_API,
+    KABINET_API: process.env.KABINET_API,
+    MAHASISWA_API: process.env.MAHASISWA_API,
   },
   images: {
     remotePatterns: [
