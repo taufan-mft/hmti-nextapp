@@ -42,7 +42,7 @@ export default function Footer() {
                                         <Link rel="preload" href="/organization" className="hover:underline">Organization</Link>
                                     </li>
                                     <li>
-                                        <Link rel="preload" href="https://hmti-unsoed.org/halloffame/" className="hover:underline">Hall of Fame</Link>
+                                        <Link rel="preload" href="https://hmti-unsoed.com/halloffame/" className="hover:underline">Hall of Fame</Link>
                                     </li>
                                 </ul>
                             </div>

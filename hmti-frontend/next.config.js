@@ -26,7 +26,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'hmti-unsoed.org'
+        hostname: 'hmti-unsoed.com'
       },
 
       //For Development

@@ -54,7 +54,7 @@ export default function Navbar() {
               <Link rel="preload" href="#">About</Link>
               <ul className="p-2">
                 <li><Link rel="preload" href="/organization">Organization</Link></li>
-                <li><Link rel="preload" href="https://hmti-unsoed.org/halloffame/">Hall of Fame</Link></li>
+                <li><Link rel="preload" href="https://hmti-unsoed.com/halloffame/">Hall of Fame</Link></li>
               </ul>
             </li>
             <li><Link href="/artery">Artery</Link></li>
@@ -104,7 +104,7 @@ export default function Navbar() {
                   <Link rel="preload" href="/organization">Organization</Link>
                 </li>
                 <li className="transition-transform duration-300 hover:scale-110 scale-100">
-                  <Link rel="preload" href="https://hmti-unsoed.org/halloffame/">Hall of Fame</Link>
+                  <Link rel="preload" href="https://hmti-unsoed.com/halloffame/">Hall of Fame</Link>
                 </li>
               </ul>
             </details>

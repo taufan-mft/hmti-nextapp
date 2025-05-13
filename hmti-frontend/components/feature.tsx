@@ -71,7 +71,7 @@ export default function Feature() {
                 </div>
             </Link>
             <Link 
-            href="https://hmti-unsoed.org/pemira/"
+            href="https://hmti-unsoed.com/pemira/"
             className='my-2 w-60 flex items-center rounded-lg shadow-md transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
                 <div className='ml-2 my-2 p-2 rounded-lg text-accent bg-accent bg-opacity-30'>
                     <FaPeopleGroup size={50} />

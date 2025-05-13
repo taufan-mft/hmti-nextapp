@@ -42,7 +42,7 @@ export default function ArterySection() {
   }: SlideProps) => {
     return (
       <div>
-        <a href="https://hmti-unsoed.org/artery/">
+        <a href="https://hmti-unsoed.com/artery/">
           <div className='w-auto rounded-lg pb-3 shadow-md bg-base-100 transition-transform duration-500 hover:scale-100 hover:shadow-lg scale-95 cursor-pointer'>
             <div className='flex flex-col pt-6 px-4'>
               <Reveal>
@@ -106,7 +106,7 @@ export default function ArterySection() {
   }: SlideProps) => {
     return (
       <div className='mt-4'>
-        <Link rel="preload" href="https://hmti-unsoed.org/artery">
+        <Link rel="preload" href="https://hmti-unsoed.com/artery">
           <div className='justify-center rounded-lg shadow-md bg-base-100 transition-transform duration-500 hover:scale-110 hover:shadow-lg scale-100 cursor-pointer'>
             <div className='flex flex-row justify-start py-3 px-3'>
               <div className='w-14'>

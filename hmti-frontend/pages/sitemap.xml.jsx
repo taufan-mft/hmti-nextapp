@@ -5,28 +5,28 @@ function generateSiteMap(posts) {
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <!--We manually set the two URLs we know already-->
       <url>
-        <loc>https://hmti-unsoed.org/</loc>
+        <loc>https://hmti-unsoed.com/</loc>
       </url>
       <url>
-        <loc>https://hmti-unsoed.org/organization</loc>
+        <loc>https://hmti-unsoed.com/organization</loc>
       </url>
       <url>
-        <loc>https://hmti-unsoed.org/update</loc>
+        <loc>https://hmti-unsoed.com/update</loc>
       </url>
       <url>
-        <loc>https://hmti-unsoed.org/memories</loc>
+        <loc>https://hmti-unsoed.com/memories</loc>
       </url>
       <url>
-        <loc>https://hmti-unsoed.org/artery</loc>
+        <loc>https://hmti-unsoed.com/artery</loc>
       </url>
       <url>
-        <loc>https://hmti-unsoed.org/seminar</loc>
+        <loc>https://hmti-unsoed.com/seminar</loc>
       </url>
       <url>
-      <loc>https://hmti-unsoed.org/seminar/add</loc>
+      <loc>https://hmti-unsoed.com/seminar/add</loc>
       </url>
       <url>
-        <loc>https://hmti-unsoed.org/insider</loc>
+        <loc>https://hmti-unsoed.com/insider</loc>
       </url>
       ${posts
         .map(({ id }) => {
