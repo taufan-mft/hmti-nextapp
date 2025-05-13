@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 5777",
     "lint": "next lint",
     "test": "echo No tests found.",
     "format": "prettier --write --ignore-path=.gitignore .",
